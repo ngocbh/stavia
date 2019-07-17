@@ -1,7 +1,11 @@
 # Byte-compiled / optimized / DLL files
-__pycache__/
+*/__pycache__/
 *.py[cod]
 *$py.class
+
+# sublime
+*.sublime-project
+*.sublime-workspace
 
 # C extensions
 *.so
