@@ -1,0 +1,177 @@
+76 O NUMBER
+/ O NUMBER
+3 O NUMBER
+số O B_STREET
+7 O I_STREET
+
+Dự O PRO_TYPE
+án O PRO_TYPE
+4 O B_PRO
+- O OTHER
+Nguyễn O B_STREET
+Tri O I_STREET
+Phương O I_STREET
+Phường O WARD_TYPE
+Hòa O B_WARD
+Cường O I_WARD
+Bắc O I_WARD
+Hải O B_DIST
+Châu O I_DIST
+Đà O B_CITY
+Nẵng O I_CITY
+
+nguyễn O B_STREET
+tất O I_STREET
+thành O I_STREET
+vĩnh O B_DIST
+yên O I_DIST
+
+mình O OTHER
+cần O OTHER
+1 O OTHER
+ship O OTHER
+từ O OTHER
+6 O NUMBER
+180 O NUMBER
+/ O NUMBER
+79 O NUMBER
+nam O B_STREET
+dư O I_STREET
+, O OTHER
+lĩnh O B_WARD
+nam O B_WARD
+
+du O PRO_TYPE
+an O PRO_TYPE
+n02 O B_PRO
+- O I_PRO
+t3 O I_PRO
+ngoai O I_PRO
+giao O I_PRO
+doan O I_PRO
+xuan O B_WARD
+dinh O I_WARD
+bac O B_DIST
+tu O I_DIST
+liem O I_DIST
+
+hoa O B_PRO
+binh O I_PRO
+green O I_PRO
+city O I_PRO
+hai O B_DIST
+ba O I_DIST
+trung O I_DIST
+, O OTHER
+ha O B_CITY
+noi O I_CITY
+
+đường O B_STREET
+3 O I_STREET
+, O OTHER
+tân O B_WARD
+kiểng O I_WARD
+quận O B_DIST
+7 O I_DIST
+
+đường O B_STREET
+145 O I_STREET
+- O OTHER
+phước O B_WARD
+long O I_WARD
+b O I_WARD
+- O OTHER
+hồ O B_CITY
+chí O I_CITY
+minh O I_CITY
+
+Minh O OTHER
+can O OTHER
+nguoi O OTHER
+ship O OTHER
+tu O OTHER
+dong O B_DIST
+anh O I_DIST
+ve O OTHER
+160 O NUMBER
+hoang O B_DIST
+mai O I_DIST
+
+Tiến O B_WARD
+Xuân O I_WARD
+, O OTHER
+Thạch O B_DIST
+Thất O I_DIST
+
+32 O NUMBER
+/ O NUMBER
+51 O NUMBER
+/ O NUMBER
+229 O NUMBER
+- O OTHER
+Hàng O B_STREET
+Kênh O I_STREET
+- O OTHER
+Lê O B_DIST
+Chân O I_DIST
+- O OTHER
+Hải O B_CITY
+Phòng O I_CITY
+
+giao O OTHER
+tại O OTHER
+33 O NUMBER
+trung O B_STREET
+hòa O I_STREET
+
+đường O STREET_TYPE
+trần O B_STREET
+quý O I_STREET
+cáp O I_STREET
+- O OTHER
+đống O B_DIST
+đa O I_DIST
+
+Đường O B_STREET
+6 O I_STREET
+- O OTHER
+Bến O B_DIST
+Lức O I_DIST
+- O OTHER
+Long O B_CITY
+An O I_CITY
+
+Duong O STREET_TYPE
+Quoc O B_STREET
+Lo O I_STREET
+10 O I_STREET
+Vu O B_DIST
+Ban O I_DIST
+
+Du O PRO_TYPE
+an O PRO_TYPE
+Khu O B_PRO
+do O I_PRO
+thi O I_PRO
+moi O I_PRO
+Duong O I_PRO
+Noi O I_PRO
+- O OTHER
+Ha O B_DIST
+Dong O I_DIST
+ha O B_CITY
+Noi O I_CITY
+
+Xã O WARD_TYPE
+Chánh O B_WARD
+Mỹ O I_WARD
+- O OTHER
+Đường O B_STREET
+1 O I_STREET
+- O OTHER
+Thủ O B_DIST
+Dầu O I_DIST
+Một O I_DIST
+- O OTHER
+Bình O B_CITY
+Dương O I_CITY

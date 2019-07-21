@@ -1,0 +1,7 @@
+#for visualize graph
+pydot
+graphviz
+
+#for crf
+pycrfsuite
+nltk

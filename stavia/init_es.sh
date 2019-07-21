@@ -72,5 +72,5 @@ curl -X PUT "localhost:9200/smart_address_tf" -H 'Content-Type: application/json
         }
 }
 '
-curl -H 'Content-Type: application/x-ndjson' -XPOST 'localhost:9200/smart_address_tf/doc/_bulk?pretty' --data-binary @data/rat_data.json
+curl -H 'Content-Type: application/x-ndjson' -XPOST 'localhost:9200/smart_address_tf/doc/_bulk?pretty' --data-binary @$1
 #!/usr/bin/env bash

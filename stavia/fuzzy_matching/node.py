@@ -18,6 +18,12 @@ class Node():
         self.pid = pid
         self.MCS = MCS
 
+    def __repr__(self):
+        return str(self.__dict__)
+
+    def __str__(self):
+        return str(self.__dict__)
+
     def __hash__(self):
         return hash(self.value + self.label)
 
