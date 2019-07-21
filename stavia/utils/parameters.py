@@ -36,3 +36,8 @@ USE_RAT=False
 CRF_MODEL_FILE=os.path.join(WORKING_DIR, '_data/crf{}.model'.format('_norat' if USE_RAT == False else '_rat'))
 RAT_DICT_FILE=os.path.join(WORKING_DIR, '_data/rat_dict.json')
 
+#RERANKING
+TRAIN_FINAL_FILE=os.path.join(WORKING_DIR, '_data/train_final{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else ''))
+MODEL_FINAL_FILE=os.path.join(WORKING_DIR, '_data/final.model')
+
+

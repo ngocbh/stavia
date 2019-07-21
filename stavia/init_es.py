@@ -32,7 +32,7 @@ def post_data():
 def init_es():
 	response = requests.head(URI)
 	if response.status_code == 200:
-		print('ElasticSearch has been initialized before, skip init!')
+		# print('ElasticSearch has been initialized before, skip init!')
 		return
 
 	delete_exist_package()

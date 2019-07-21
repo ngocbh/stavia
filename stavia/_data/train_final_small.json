@@ -1,0 +1,236 @@
+{
+    "data": [
+        {
+            "testid": 0,
+            "noisy_add": "tựu liệt đi nghĩa tân cầu giấy . hàng siêu nhẹ . ứng 900k phí 40k đi ngay lh 0976 881 808",
+            "std_add": {
+                "id": 6575,
+                "street": "nghĩa tân",
+                "ward": "None",
+                "district": "cầu giấy",
+                "city": "hà nội"
+            },
+            "tokens": [
+                "Tựu Liệt",
+                "đi",
+                "Nghĩa Tân",
+                "Cầu giấy",
+                ".",
+                "Hàng",
+                "siêu",
+                "nhẹ",
+                ".",
+                "Ứng",
+                "900k",
+                ".",
+                "Phí",
+                "40k",
+                ".",
+                "đi",
+                "ngay",
+                "LH",
+                "0976",
+                "881",
+                "808"
+            ],
+            "labels": [
+                "STREET",
+                "OTHER",
+                "STREET",
+                "DISTRICT",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "OTHER"
+            ],
+            "entities": {
+                "street": "nghĩa tân",
+                "district": "cầu giấy"
+            }
+        },
+        {
+            "testid": 1,
+            "noisy_add": "đỗ bá , đà nẵng",
+            "std_add": {
+                "id": 12291,
+                "street": "đỗ bá",
+                "ward": "None",
+                "district": "ngũ hành sơn",
+                "city": "đà nẵng"
+            },
+            "tokens": [
+                "Đường",
+                "Đỗ Bá",
+                ",",
+                "Ngũ Hành Sơn",
+                ",",
+                "Đà Nẵng"
+            ],
+            "labels": [
+                "STREET_TYPE",
+                "STREET",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "đỗ bá",
+                "district": "ngũ hành sơn",
+                "city": "đà nẵng"
+            }
+        },
+        {
+            "testid": 2,
+            "noisy_add": "Đường Phạm Văn Đồng , Phường Tam Phú , Thủ Đức , Hồ Chí Minh",
+            "std_add": {
+                "id": 6036,
+                "street": "phạm văn đồng",
+                "ward": "None",
+                "district": "thủ đức",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "Đường",
+                "Phạm Văn Đồng",
+                ",",
+                "Phường",
+                "Tam Phú",
+                ",",
+                "Thủ Đức",
+                ",",
+                "Hồ Chí Minh"
+            ],
+            "labels": [
+                "STREET_TYPE",
+                "STREET",
+                "OTHER",
+                "WARD_TYPE",
+                "WARD",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "phạm văn đồng",
+                "ward": "tam phú",
+                "district": "thủ đức",
+                "city": "hồ chí minh"
+            }
+        },
+        {
+            "testid": 3,
+            "noisy_add": "9B/18 Miếu Hai Xã - Lê Chân - Hải Phòng",
+            "std_add": {
+                "id": 13967,
+                "street": "miếu hai xã",
+                "ward": "None",
+                "district": "lê chân",
+                "city": "hải phòng"
+            },
+            "tokens": [
+                "9B/18",
+                "Đường",
+                "Miếu Hai Xã",
+                "-",
+                "Lê Chân",
+                "-",
+                "Hải Phòng"
+            ],
+            "labels": [
+                "NUMBER",
+                "STREET_TYPE",
+                "STREET",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "miếu hai xã",
+                "district": "lê chân",
+                "city": "hải phòng"
+            }
+        },
+        {
+            "testid": 4,
+            "noisy_add": "long giang , phước long , bình phước",
+            "std_add": {
+                "id": 18446,
+                "street": "None",
+                "ward": "long giang",
+                "district": "phước long",
+                "city": "bình phước"
+            },
+            "tokens": [
+                "Xã",
+                "Long Giang",
+                ",",
+                "Phước Long",
+                ",",
+                "Bình Phước"
+            ],
+            "labels": [
+                "WARD_TYPE",
+                "WARD",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "ward": "long giang",
+                "district": "phước long",
+                "city": "bình phước"
+            }
+        },
+        {
+            "testid": 5,
+            "noisy_add": "Dự án Park View Residence , Hà Đông , Hà Nội",
+            "std_add": {
+                "id": 7480,
+                "street": "None",
+                "ward": "None",
+                "district": "hà đông",
+                "city": "hà nội"
+            },
+            "tokens": [
+                "Dự",
+                "án",
+                "Park View Residence",
+                ",",
+                "Hà Đông",
+                ",",
+                "Hà Nội"
+            ],
+            "labels": [
+                "PRO_TYPE",
+                "PRO_TYPE",
+                "PRO",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "pro": "park view residence",
+                "district": "hà đông",
+                "city": "hà nội"
+            }
+        }
+    ]
+}
