@@ -16,7 +16,10 @@ try:
 except:
     pass
 
-URI = HOST+"smart_address/_search"
+URI = HOST+"smart_address"
+SEARCHING_URI = HOST+"smart_address/_search"
+CONFIGURATION_FILE=os.path.join(WORKING_DIR, '_data/configuration.json')
+RAT_FILE=os.path.join(WORKING_DIR, '_data/rat_data.json')
 FUZZINESS=0
 QUERY_SIZE=1000
 SLOP=2

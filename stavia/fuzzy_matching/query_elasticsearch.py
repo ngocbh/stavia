@@ -32,7 +32,7 @@ def match(address, field):
 	})
 
 	headers = {'Content-Type': 'application/json'}
-	response = requests.get(URI, data=query, headers=headers)
+	response = requests.get(SEARCHING_URI, data=query, headers=headers)
 	results = json.loads(response.text)
 	return results["hits"]["hits"]
 

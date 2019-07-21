@@ -16,3 +16,39 @@ def tag(inp):
 
 	return words,tagger.tag(x)
 
+def detect_entity(inp):
+	tokens, labels = tag(inp)
+	entities = {}
+
+	n = len(tokens)
+	buff = ''
+	lbuff = ''
+	isEntity = False
+
+	for i in range(n):
+		if (labels[i][0] == 'I'):
+			buff += ' ' + tokens[i]
+		else:
+			if isEntity == True:
+				key = lbuff.lower() 
+				entities[key] = buff
+
+			buff = tokens[i]
+			if labels[i][0] == 'B':
+				if labels[i] == 'B_DIST':
+					lbuff = 'DISTRICT'
+				elif labels[i] == 'B_PRO':
+					lbuff = 'NAME'
+				else:
+					lbuff = labels[i][2:]
+				isEntity = True
+			else:
+				lbuff = labels[i]
+				isEntity = False
+
+	if isEntity == True:
+		key = lbuff.lower() 
+		entities[key] = buff
+
+	return entities
+

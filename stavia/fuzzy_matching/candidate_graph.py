@@ -154,15 +154,15 @@ class CandidateGraph():
 		G = pydot.Dot(graph_type='digraph')
 		
 		for key, node in self.nodes.items():
-			gnode = pydot.Node(str(node.label) + '\n' + node.value + '\n' + str(node.score),style='filled', fillcolor='yellow')
+			gnode = pydot.Node(str(node.id) + '\n' + str(node.label) + '\n' + node.value + '\n' + str(node.score),style='filled', fillcolor='yellow')
 			G.add_node(gnode)
 
 		for frid, to_set in self.edges.items():
 			for toid in list(to_set):
 				frnode = self.nodes[frid]
 				tonode = self.nodes[toid]
-				edge = pydot.Edge(str(frnode.label) + '\n' + frnode.value + '\n' + str(frnode.score), 
-					str(tonode.label) + '\n' + tonode.value + '\n' + str(tonode.score))
+				edge = pydot.Edge(str(frnode.id) + '\n' + str(frnode.label) + '\n' + frnode.value + '\n' + str(frnode.score), 
+					str(tonode.id) + '\n' + str(tonode.label) + '\n' + tonode.value + '\n' + str(tonode.score))
 				G.add_edge(edge)
 
 		G.write_png('candidate_graph.png')
