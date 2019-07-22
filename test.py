@@ -1,3 +1,3 @@
 import stavia
 
-stavia.standardize('bệnh viện bách khoa, bạch mai hai ba trung hoan kiem')
+print(stavia.standardize(u'bach mai hai ba trung ha noi'))
