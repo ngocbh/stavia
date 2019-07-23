@@ -1,0 +1,262 @@
+{
+    "data": [
+        {
+            "testid": 0,
+            "raw_add": "Hưng Gia 2 - Phú Mỹ Hưng , Quận 7 , Hồ Chí Minh",
+            "noisy_add": "Hưng Gia 2 - Phú Mỹ Hưng , Quận 7 , Hồ Chí Minh",
+            "std_add": {
+                "id": 4163,
+                "street": "hưng gia 2",
+                "ward": "None",
+                "district": "quận 7",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "Hưng Gia 2",
+                "-",
+                "Phú Mỹ Hưng",
+                ",",
+                "Quận 7",
+                ",",
+                "Hồ Chí Minh"
+            ],
+            "labels": [
+                "STREET",
+                "OTHER",
+                "WARD",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "hưng gia 2",
+                "ward": "phú mỹ hưng",
+                "district": "quận 7",
+                "city": "hồ chí minh"
+            }
+        },
+        {
+            "testid": 1,
+            "raw_add": "430/83B , Đường Điện Biên Phủ , Bình Thạnh , Hồ Chí Minh",
+            "noisy_add": "430/83b , điện biên phủ , hồ chí minh",
+            "std_add": {
+                "id": 824,
+                "street": "điện biên phủ",
+                "ward": "None",
+                "district": "bình thạnh",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "430/83B",
+                ",",
+                "Đường",
+                "Điện Biên Phủ",
+                ",",
+                "Bình Thạnh",
+                ",",
+                "Hồ Chí Minh"
+            ],
+            "labels": [
+                "NUMBER",
+                "OTHER",
+                "STREET_TYPE",
+                "STREET",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "điện biên phủ",
+                "district": "bình thạnh",
+                "city": "hồ chí minh"
+            }
+        },
+        {
+            "testid": 2,
+            "raw_add": "Dự án Centa Park Tân Bình , Đường Âu Cơ , Tân Bình , Hồ Chí Minh",
+            "noisy_add": "centa park tan binh , au co , ho chi minh",
+            "std_add": {
+                "id": 5162,
+                "street": "âu cơ",
+                "ward": "None",
+                "district": "tân bình",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "dự",
+                "án",
+                "centa park tân bình",
+                ",",
+                "đường",
+                "âu cơ",
+                ",",
+                "tân bình",
+                ",",
+                "hồ chí minh"
+            ],
+            "labels": [
+                "PRO_TYPE",
+                "PRO_TYPE",
+                "PRO",
+                "OTHER",
+                "STREET_TYPE",
+                "STREET",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "pro": "centa park tân bình",
+                "street": "âu cơ",
+                "district": "tân bình",
+                "city": "hồ chí minh"
+            }
+        },
+        {
+            "testid": 3,
+            "raw_add": "32 Đường 13 Lý Phục Man , KP3 , P.Bình Thuận , Q.7",
+            "noisy_add": "32 Đường 13 Lý Phục Man , KP3 , P.Bình Thuận , Q.7",
+            "std_add": {
+                "id": 4177,
+                "street": "lý phục man",
+                "ward": "None",
+                "district": "quận 7",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "32",
+                "Đường 13",
+                "Lý Phục Man",
+                ",",
+                "KP3",
+                ",",
+                "P.Bình Thuận",
+                ",",
+                "Q.7"
+            ],
+            "labels": [
+                "NUMBER",
+                "STREET",
+                "STREET",
+                "OTHER",
+                "OTHER",
+                "OTHER",
+                "WARD",
+                "OTHER",
+                "DISTRICT"
+            ],
+            "entities": {
+                "street": "lý phục man",
+                "ward": "bình thuận",
+                "district": "quận 7"
+            }
+        },
+        {
+            "testid": 4,
+            "raw_add": "Quận 1 , Hồ Chí Minh",
+            "noisy_add": "quận 1 hồ chí minh",
+            "std_add": {
+                "id": 2377,
+                "street": "None",
+                "ward": "None",
+                "district": "quận 1",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "Quận 1",
+                ",",
+                "Hồ Chí Minh"
+            ],
+            "labels": [
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "district": "quận 1",
+                "city": "hồ chí minh"
+            }
+        },
+        {
+            "testid": 5,
+            "raw_add": "Đường Nguyễn Văn Tăng , Phường Long Trường , Quận 9 , Hồ Chí Minh",
+            "noisy_add": "Nguyễn Văn Tăng , Phường Long Trường , Quận 9",
+            "std_add": {
+                "id": 4951,
+                "street": "nguyễn văn tăng",
+                "ward": "None",
+                "district": "quận 9",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "Đường",
+                "Nguyễn Văn Tăng",
+                ",",
+                "Phường",
+                "Long Trường",
+                ",",
+                "Quận 9",
+                ",",
+                "Hồ Chí Minh"
+            ],
+            "labels": [
+                "STREET_TYPE",
+                "STREET",
+                "OTHER",
+                "WARD_TYPE",
+                "WARD",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "nguyễn văn tăng",
+                "ward": "long trường",
+                "district": "quận 9",
+                "city": "hồ chí minh"
+            }
+        },
+        {
+            "testid": 6,
+            "raw_add": "Phú Mỹ 2 , Phường Phú Mỹ , Quận 7 , Hồ Chí Minh",
+            "noisy_add": "phú mỹ 2 , quận 7",
+            "std_add": {
+                "id": 4278,
+                "street": "None",
+                "ward": "phú mỹ",
+                "district": "quận 7",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "Phú Mỹ 2",
+                ",",
+                "Phường",
+                "Phú Mỹ",
+                ",",
+                "Quận 7",
+                ",",
+                "Hồ Chí Minh"
+            ],
+            "labels": [
+                "STREET",
+                "OTHER",
+                "WARD_TYPE",
+                "WARD",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "phú mỹ 2",
+                "ward": "phú mỹ",
+                "district": "quận 7",
+                "city": "hồ chí minh"
+            }
+        }
+    ]
+}

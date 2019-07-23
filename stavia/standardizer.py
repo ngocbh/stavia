@@ -1,6 +1,5 @@
 from __future__ import absolute_import
 
-from sklearn.externals import joblib
 from .init_es import init_es
 from .fuzzy_matching.candidate_graph import CandidateGraph
 from .crf import tagger
@@ -8,13 +7,18 @@ from .feature_extraction import extract_features
 from .utils.parameters import *
 
 import copy
+import pickle
+
+model = None
 
 def rerank(raw_add, entities, candidates):
+	global model
 	X = []
 	for candidate in candidates:
 		X.append(extract_features(raw_add, entities, candidate))
 
-	model = joblib.load(MODEL_FINAL_FILE)
+	if model == None:
+		model = pickle.load(open(MODEL_FINAL_FILE, 'rb'))
 	y_preds = model.predict_proba(X)
 
 	ret = []

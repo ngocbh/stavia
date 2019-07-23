@@ -3,6 +3,9 @@ pydot
 graphviz
 
 #for crf
-pycrfsuite
+python-crfsuite
 nltk
 sklearn
+
+#for dump
+pickle

@@ -11,10 +11,12 @@ from .crf import tagger
 from .feature_extraction import extract_features
 
 import numpy as np
+import pickle
 
 
 def train():
 	raw_data = load_data(TRAIN_FINAL_FILE)
+	print('number of sample =', len(raw_data))
 
 	X_train = []
 	Y_train = []
@@ -30,12 +32,21 @@ def train():
 			X_train.append(extract_features(raw_add, crf_entities, candidate))
 			Y_train.append(1 if int(std_add['id']) == int(candidate['addr_id']) else 0)
 
-	model = LogisticRegression(C=1e20,verbose=1,max_iter=200,solver='lbfgs')
+	print('length of X_train', len(X_train))
+
+	model = LogisticRegression(C=1e20,verbose=1, fit_intercept=True, max_iter=1000)
 	model.fit(X_train, Y_train)
 
-	print('Training accuracy =',model.score(X_train, Y_train))
+	print('Model score',model.score(X_train, Y_train))
 
-	joblib.dump(model, MODEL_FINAL_FILE)
+	preds = model.predict(X_train)
+	acc = (Y_train == preds).mean()
+	print('training accuracy = ', acc)
+
+	print('Model parameters:')
+	print(model.intercept_, model.coef_)
+
+	pickle.dump(model, open(MODEL_FINAL_FILE, 'wb'))
 
 if __name__ == '__main__':
 	train()
