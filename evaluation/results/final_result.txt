@@ -1,2 +1,8 @@
-167 201
-accuracy = 0.8308457711442786 
+4 4
+accuracy = 1.0 
+score =12/12=1.0
+partial score
+city_score =4
+district_score =4
+ward_score =4
+street_score =4

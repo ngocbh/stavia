@@ -42,6 +42,7 @@ def train():
 
 	print('Extracing Feature -----> ')
 	init_es()
+	number_positive_sample = 0
 	for raw_add, std_add in raw_data:
 		graph = CandidateGraph.build_graph(raw_add)
 		graph.prune_by_beam_search(k=BEAM_SIZE)
@@ -50,12 +51,15 @@ def train():
 
 		for candidate in candidates:
 			X_data.append(extract_features(raw_add, crf_entities, candidate))
-			Y_data.append(1 if int(std_add['id']) == int(candidate['addr_id']) else 0)
+			Y_data.append(1 if str(candidate['addr_id']) in std_add else 0)
+			number_positive_sample += Y_data[-1]
+
+	print('Number Positive sample = ', number_positive_sample)
+	print('Number Sample = ', len(Y_data))
 
 	print('Spliting data')
 	X_train, X_dev, Y_train, Y_dev = train_test_split(X_data, Y_data, test_size=0.13, random_state=42)
 	print('length of X_train', len(X_train))
-
 	lambs = [0.000001, 0.00001, 0.0001, 0.0003, 0.0006, 0.0001, 0.001, 0.003, 0.006, 0.01, 0.03, 1, 1e20]
 	max_acc = 0
 	best_lamb = 0.00001
@@ -63,7 +67,7 @@ def train():
 	for lamb in lambs:
 		print('Hyperparameters Tuning ------------------>>>')
 		print('Lambda = ', lamb)
-		model = LogisticRegression(C=lamb,verbose=1, fit_intercept=True, max_iter=1000)
+		model = LogisticRegression(C=lamb,verbose=0, fit_intercept=True, max_iter=1000)
 		model.fit(X_train, Y_train)
 
 		print('training score',model.score(X_train, Y_train))

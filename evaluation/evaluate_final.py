@@ -21,6 +21,8 @@ TEST_FINAL_FILE='data/test_final{}.json'.format('_small' if IS_BUILDING_STAGE ==
 def evaluate_final():
 	data = load_data(TEST_FINAL_FILE)
 	true_sample = 0
+	score = 0
+	pscore = {'city': 0, 'district': 0, 'ward': 0, 'street': 0}
 	total_sample = 0
 
 	errors = []
@@ -30,9 +32,31 @@ def evaluate_final():
 		result = stavia.standardize(raw_add)
 		if result == None:
 			print('result error')
-		if int(result['addr_id']) == int(std_add['id']):
+		if str(result['addr_id']) in std_add:
 			true_sample += 1
+			score += 3
+			for field in FIELDS:
+				pscore[field] += 1
 		else:
+			max_score = 0
+			max_pscore = {'city': 0, 'district': 0, 'ward': 0, 'street': 0}
+			for _id, addr in std_add.items():
+				score_temp = 0
+				pscore_temp = {'city': 0, 'district': 0, 'ward': 0, 'street': 0}
+				for field in FIELDS:
+					if field in result and addr[field] != 'None':
+						if addr[field] == result[field]:
+							score_temp += 1
+							pscore_temp[field] += 1
+							continue
+					break
+				if score_temp > max_score:
+					max_score = score_temp
+					max_pscore = pscore_temp
+			score += max_score
+			for field in FIELDS:
+				pscore[field] += max_pscore[field]
+
 			error_sample = {}
 			error_sample['raw_add'] = raw_add
 			error_sample['result'] = result
@@ -45,6 +69,10 @@ def evaluate_final():
 	with codecs.open('results/final_result.txt', encoding='utf8', mode='w') as f:
 		f.write(str(true_sample) + ' ' + str(total_sample) + '\n')
 		f.write('accuracy = ' + str(true_sample/float(total_sample)) +' \n')
+		f.write('score =' + str(score) + '/' + str(total_sample*3) + '=' + str(score/float(total_sample*3)) + '\n')
+		f.write('partial score' + '\n')
+		for field in FIELDS:
+			f.write(field + '_score =' + str(pscore[field]) + '\n')
 
 	with codecs.open('results/error_pattern_final.json', encoding='utf8', mode='w') as f:
 		js_data = {'error': errors}

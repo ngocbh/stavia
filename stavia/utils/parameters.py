@@ -28,7 +28,7 @@ SLOP=2
 FIELDS=['city', 'district', 'ward', 'street']
 MAP_LEVEL={'country': 0, 'city': 1, 'district': 2, 'ward': 3, 'street': 4, 'name': 5}
 MAP_FIELD={0: 'country', 1: 'city', 2:'district', 3: 'ward', 4: 'street', 5: 'name'}
-BEAM_SIZE=4
+BEAM_SIZE=5
 
 #CRF
 CRF_TRAIN_FILE=os.path.join(WORKING_DIR, '_data/train_crf{}.txt'.format('_small' if IS_BUILDING_STAGE == 1 else ''))
