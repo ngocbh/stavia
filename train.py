@@ -1,6 +1,6 @@
-from stavia import train
+from stavia import logistic_regression as lr
 
-train.train()
+lr.train()
 
 
 

@@ -1,0 +1,42 @@
+{
+    "error": [
+        {
+            "testid": 1,
+            "raw_add": "430/83B , Đường Điện Biên Phủ , Bình Thạnh , Hồ Chí Minh",
+            "noisy_add": "430/83b , điện biên phủ , hồ chí minh",
+            "std_add": {
+                "id": 824,
+                "street": "điện biên phủ",
+                "ward": "None",
+                "district": "bình thạnh",
+                "city": "hồ chí minh"
+            },
+            "tokens": [
+                "430/83B",
+                ",",
+                "Đường",
+                "Điện Biên Phủ",
+                ",",
+                "Bình Thạnh",
+                ",",
+                "Hồ Chí Minh"
+            ],
+            "labels": [
+                "NUMBER",
+                "OTHER",
+                "STREET_TYPE",
+                "STREET",
+                "OTHER",
+                "DISTRICT",
+                "OTHER",
+                "CITY"
+            ],
+            "entities": {
+                "street": "điện biên phủ",
+                "district": "bình thạnh",
+                "city": "hồ chí minh"
+            },
+            "sagel_result": null
+        }
+    ]
+}

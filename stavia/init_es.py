@@ -47,4 +47,4 @@ def reinit_es():
 	print('Initialized')
 
 if __name__ == '__main__':
-	init_es()
+	reinit_es()

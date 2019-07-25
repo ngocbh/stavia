@@ -39,6 +39,7 @@ def match(address, field):
 def get_candidate(address, field):
 	#neu ko co ky tu co dau nao thi truy van tren truong khong dau???
 	if utils.contains_Vietchar(address) == False:
-		field = field +"_no"
+		field = field + '_no'
+	# address = utils.no_accent_vietnamese(address)
 	candidate = match(address, field)
 	return  candidate

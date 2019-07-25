@@ -31,7 +31,10 @@ def detect_entity(inp):
 		else:
 			if isEntity == True:
 				key = lbuff.lower() 
-				entities[key] = buff
+				if key not in entities:
+					entities[key] = [buff]
+				else:
+					entities[key].append(buff)
 
 			buff = tokens[i]
 			if labels[i][0] == 'B':
@@ -48,7 +51,11 @@ def detect_entity(inp):
 
 	if isEntity == True:
 		key = lbuff.lower() 
-		entities[key] = buff
+		if key not in entities :
+			entities[key] = [buff]
+		else:
+			entities[key].append(buff)
+
 
 	return entities
 

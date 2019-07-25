@@ -103,41 +103,59 @@ def extract_features(raw_add, entities, candidate):
 		if field not in entities or field not in candidate.keys():
 			features.append(0.0)
 		else:
-			features.append(1 if entities[field].lower() == candidate[field].lower() else 0)
+			value = 0
+			for entity in entities[field]:
+				value = max(value, 1 if entity.lower() == candidate[field].lower() else 0)
+			features.append(value)
 
 	#Entity Score with no_accent_vietnamese
 	for field in FIELDS:
 		if field not in entities or field not in candidate.keys():
 			features.append(0.0)
 		else:
-			features.append(1 if no_accent_vietnamese(entities[field].lower()) == no_accent_vietnamese(candidate[field].lower()) else 0)
+			value = 0
+			for entity in entities[field]:
+				value = max(value, 1 if no_accent_vietnamese(entity.lower()) == no_accent_vietnamese(candidate[field].lower()) else 0)
+			features.append(value)
 
 	#Jaccard Score
 	for field in FIELDS:
 		if field not in entities or field not in candidate.keys():
 			features.append(0.0)
 		else:
-			features.append(jaccard_similarity(entities[field], candidate[field]))
+			value = 0
+			for entity in entities[field]:
+				value = max(value,jaccard_similarity(entity, candidate[field]))
+			features.append(value)
 
 	#Jaccard Score with no_accent_vietnamese
 	for field in FIELDS:
 		if field not in entities or field not in candidate.keys():
 			features.append(0.0)
 		else:
-			features.append(jaccard_similarity(no_accent_vietnamese(entities[field]), no_accent_vietnamese(candidate[field])))
+			value = 0
+			for entity in entities[field]:
+				value = max(value, jaccard_similarity(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
+			features.append(value)
 
 	#Levenshtein Score
 	for field in FIELDS:
 		if field not in entities or field not in candidate.keys():
 			features.append(0.0)
 		else:
-			features.append(levenshtein_ratio_and_distance(entities[field], candidate[field]))
+			value = 0
+			for entity in entities[field]:
+				value = max(value, levenshtein_ratio_and_distance(entity.lower(), candidate[field].lower()))
+			features.append(value)
 
 	#Levenshtein Score with no_accent_vietnamese
 	for field in FIELDS:
 		if field not in entities or field not in candidate.keys():
 			features.append(0.0)
 		else:
-			features.append(levenshtein_ratio_and_distance(no_accent_vietnamese(entities[field]), no_accent_vietnamese(candidate[field])))
+			value = 0
+			for entity in entities[field]:
+				value = max(value, levenshtein_ratio_and_distance(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
+			features.append(value)
 
 	return features

@@ -37,9 +37,10 @@ def tokenize(inp):
 	words = []
 	word = ''
 	for char in inp:
-		if char == ' ' and len(word) != 0:
-			words.append(word)
-			word = ''
+		if char == ' ':
+			if len(word) != 0:
+				words.append(word)
+				word = ''
 		elif char in PUNCTUATIONS:
 			if len(word) != 0:
 				words.append(word)

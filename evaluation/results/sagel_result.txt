@@ -1,3 +1,0 @@
-true prediction	5985 
-total sample	11082
-accuracy		0.5400649702219816

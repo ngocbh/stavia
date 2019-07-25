@@ -146,7 +146,7 @@ class CandidateGraph():
 				addr[node.label] = node.value
 				addr[node.label + '_score'] = node.score
 				score += node.score
-			addr['addr_id'] = self.nodes[id_set[-1]].addr_id
+			addr['addr_id'] = int(self.nodes[id_set[-1]].addr_id)
 			ret.append(addr)
 		return ret
 
