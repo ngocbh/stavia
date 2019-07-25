@@ -13,6 +13,7 @@ from .feature_extraction import extract_features
 
 import numpy as np
 import pickle, copy
+import sys
 
 model = None
 
@@ -36,11 +37,13 @@ def judge(raw_add, entities, candidates):
 def train():
 	raw_data = load_data(TRAIN_FINAL_FILE)
 	print('number of sample =', len(raw_data))
+	sys.stdout.flush()
 
 	X_data = []
 	Y_data = []
 
 	print('Extracing Feature -----> ')
+	sys.stdout.flush()
 	init_es()
 	number_positive_sample = 0
 	for raw_add, std_add in raw_data:
@@ -56,8 +59,9 @@ def train():
 
 	print('Number Positive sample = ', number_positive_sample)
 	print('Number Sample = ', len(Y_data))
-
 	print('Spliting data')
+	sys.stdout.flush()
+
 	X_train, X_dev, Y_train, Y_dev = train_test_split(X_data, Y_data, test_size=0.13, random_state=42)
 	print('length of X_train', len(X_train))
 	lambs = [0.000001, 0.00001, 0.0001, 0.0003, 0.0006, 0.0001, 0.001, 0.003, 0.006, 0.01, 0.03, 1, 1e20]
@@ -67,7 +71,8 @@ def train():
 	for lamb in lambs:
 		print('Hyperparameters Tuning ------------------>>>')
 		print('Lambda = ', lamb)
-		model = LogisticRegression(C=lamb,verbose=0, fit_intercept=True, max_iter=1000)
+		sys.stdout.flush()
+		model = LogisticRegression(C=lamb,verbose=0, fit_intercept=True, max_iter=1000,class_weight='balanced')
 		model.fit(X_train, Y_train)
 
 		print('training score',model.score(X_train, Y_train))
@@ -75,6 +80,7 @@ def train():
 		preds = model.predict(X_dev)
 		acc = (Y_dev == preds).mean()
 		print('validation accuracy = ', acc)
+		sys.stdout.flush()
 
 		if acc > max_acc:
 			max_acc = acc
@@ -82,7 +88,8 @@ def train():
 
 	print("++++++++++++++ FINAL ROUND ++++++++++++")
 	print("Choose lambda = ", best_lamb)
-	model = LogisticRegression(C=best_lamb,verbose=0, fit_intercept=True, max_iter=1000)
+	sys.stdout.flush()
+	model = LogisticRegression(C=best_lamb,verbose=0, fit_intercept=True, max_iter=1000,class_weight='balanced')
 	model.fit(X_train, Y_train)
 
 
