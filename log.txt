@@ -1,67 +1,101 @@
-iter  1 act 1.246e+26 pre 1.107e+26 delta 2.203e-02 f 1.647e+26 |g| 1.149e+28 CG   1
-iter  2 act 1.563e+25 pre 1.285e+25 delta 2.203e-02 f 4.013e+25 |g| 2.603e+27 CG   1
-iter  3 act 3.334e+24 pre 2.819e+24 delta 2.203e-02 f 2.450e+25 |g| 8.074e+26 CG   1
-cg reaches trust region boundary
-iter  4 act 1.169e+24 pre 1.123e+24 delta 4.697e-02 f 2.117e+25 |g| 2.128e+26 CG   2
-cg reaches trust region boundary
-iter  5 act 1.553e+24 pre 1.545e+24 delta 1.879e-01 f 2.000e+25 |g| 4.468e+25 CG   2
-cg reaches trust region boundary
-iter  6 act 3.980e+24 pre 4.709e+24 delta 2.842e-01 f 1.844e+25 |g| 4.188e+25 CG   2
-iter  7 act 3.435e+23 pre 3.152e+23 delta 2.842e-01 f 1.446e+25 |g| 1.832e+26 CG   1
-cg reaches trust region boundary
-iter  8 act 1.513e+24 pre 1.698e+24 delta 2.842e-01 f 1.412e+25 |g| 2.722e+25 CG   4
-iter  9 act 1.853e+23 pre 1.741e+23 delta 2.842e-01 f 1.261e+25 |g| 1.184e+26 CG   1
-cg reaches trust region boundary
-iter 10 act 1.024e+24 pre 1.045e+24 delta 4.235e-01 f 1.242e+25 |g| 1.392e+25 CG   3
-cg reaches trust region boundary
-iter 11 act 9.053e+23 pre 8.198e+23 delta 5.536e-01 f 1.140e+25 |g| 3.398e+25 CG   4
-cg reaches trust region boundary
-iter 12 act 9.722e+23 pre 1.065e+24 delta 6.109e-01 f 1.049e+25 |g| 3.313e+25 CG   4
-iter 13 act 3.871e+22 pre 3.756e+22 delta 6.109e-01 f 9.522e+24 |g| 4.725e+25 CG   1
-cg reaches trust region boundary
-iter 14 act 7.312e+23 pre 7.410e+23 delta 6.426e-01 f 9.483e+24 |g| 4.726e+24 CG   5
-iter 15 act 2.110e+23 pre 1.891e+23 delta 6.426e-01 f 8.752e+24 |g| 3.858e+25 CG   2
-cg reaches trust region boundary
-iter 16 act 4.637e+23 pre 4.919e+23 delta 6.978e-01 f 8.541e+24 |g| 1.213e+25 CG   5
-iter 17 act 2.002e+23 pre 1.849e+23 delta 6.978e-01 f 8.077e+24 |g| 2.459e+25 CG   3
-cg reaches trust region boundary
-iter 18 act 3.734e+23 pre 3.517e+23 delta 8.040e-01 f 7.877e+24 |g| 1.071e+25 CG   5
-iter 19 act 1.733e+23 pre 1.765e+23 delta 8.040e-01 f 7.504e+24 |g| 1.794e+25 CG   3
-cg reaches trust region boundary
-iter 20 act 3.592e+23 pre 3.424e+23 delta 1.032e+00 f 7.330e+24 |g| 1.038e+25 CG   5
-iter 21 act 1.328e+23 pre 1.312e+23 delta 1.032e+00 f 6.971e+24 |g| 1.186e+25 CG   3
-cg reaches trust region boundary
-iter 22 act 3.374e+23 pre 3.314e+23 delta 1.330e+00 f 6.838e+24 |g| 7.147e+24 CG   4
-iter 23 act 1.175e+23 pre 1.138e+23 delta 1.330e+00 f 6.501e+24 |g| 1.246e+25 CG   3
-iter 24 act 8.667e+20 pre 8.626e+20 delta 1.330e+00 f 6.383e+24 |g| 5.955e+24 CG   1
-cg reaches trust region boundary
-iter 25 act 3.662e+23 pre 3.560e+23 delta 2.730e+00 f 6.383e+24 |g| 5.677e+23 CG   4
-iter 26 act 2.134e+22 pre 2.103e+22 delta 2.730e+00 f 6.016e+24 |g| 5.145e+24 CG   3
-cg reaches trust region boundary
-iter 27 act 3.621e+23 pre 3.436e+23 delta 3.212e+00 f 5.995e+24 |g| 9.914e+23 CG   5
-iter 28 act 5.552e+21 pre 5.495e+21 delta 3.212e+00 f 5.633e+24 |g| 1.390e+25 CG   1
-iter 29 act 1.470e+23 pre 1.303e+23 delta 3.212e+00 f 5.627e+24 |g| 7.562e+23 CG  11
-iter 30 act 1.077e+21 pre 1.072e+21 delta 3.212e+00 f 5.480e+24 |g| 5.845e+24 CG   1
-iter 31 act 3.858e+22 pre 3.658e+22 delta 3.212e+00 f 5.479e+24 |g| 2.798e+23 CG  15
-iter 32 act 5.533e+19 pre 5.528e+19 delta 3.212e+00 f 5.441e+24 |g| 1.298e+24 CG   1
-iter 33 act 5.920e+21 pre 5.785e+21 delta 3.212e+00 f 5.441e+24 |g| 7.650e+22 CG  20
-iter 34 act 1.238e+18 pre 1.238e+18 delta 3.212e+00 f 5.435e+24 |g| 1.926e+23 CG   1
+number of sample = 21807
+Extracing Feature -----> 
+Number Positive sample =  24231
+Number Sample =  2602691
+Spliting data
+length of X_train 2264341
+Hyperparameters Tuning ------------------>>>
+Lambda =  1e-06
+training score 0.9149840947101165
+validation accuracy =  0.9150229052756021
+Hyperparameters Tuning ------------------>>>
+Lambda =  1e-05
+training score 0.9506439180317805
+validation accuracy =  0.9508792670311808
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.0001
+training score 0.9609723093827299
+validation accuracy =  0.9610521649179843
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.0003
+training score 0.9616714090324735
+validation accuracy =  0.9614807152357027
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.0006
+training score 0.9629216624174539
+validation accuracy =  0.9626747450864489
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.0001
+training score 0.9609723093827299
+validation accuracy =  0.9610521649179843
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.001
+training score 0.9638539424936439
+validation accuracy =  0.9636766661740801
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.003
+training score 0.9664259932580826
+validation accuracy =  0.966312989507906
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.006
+training score 0.968041032688981
+validation accuracy =  0.9679414807152357
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.01
+training score 0.9698340488468831
+validation accuracy =  0.969830057632629
+Hyperparameters Tuning ------------------>>>
+Lambda =  0.03
+training score 0.9734788178988942
+validation accuracy =  0.9735687897147923
+Hyperparameters Tuning ------------------>>>
+Lambda =  1
+training score 0.9789033542209411
+validation accuracy =  0.9789833013152062
+Hyperparameters Tuning ------------------>>>
+Lambda =  1e+20
+training score 0.9798321012603667
+validation accuracy =  0.9798285798729127
+++++++++++++++ FINAL ROUND ++++++++++++
+Choose lambda =  1e+20
 /usr/local/lib/python3.5/dist-packages/sklearn/externals/joblib/__init__.py:15: DeprecationWarning: sklearn.externals.joblib is deprecated in 0.21 and will be removed in 0.23. Please import this functionality directly from joblib, which can be installed with: pip install joblib. If this warning is raised when loading pickled models, you may need to re-serialize those models with scikit-learn 0.21+.
   warnings.warn(msg, category=DeprecationWarning)
 /usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
   FutureWarning)
-number of sample = 43887
-length of X_train 2376530
-[LibLinear]Model score 0.9924907322861483
-training accuracy =  0.9924907322861483
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
+/usr/local/lib/python3.5/dist-packages/sklearn/linear_model/logistic.py:432: FutureWarning: Default solver will be changed to 'lbfgs' in 0.22. Specify a solver to silence this warning.
+  FutureWarning)
 Model parameters:
-[-0.00030787] [[-3.07865938e-02 -2.84849807e+00 -3.89120522e+00 -5.30282519e-01
-  -2.59961618e+00 -3.07865873e-04 -3.07865873e-04 -3.40209692e+00
-  -4.10118562e+00  6.34509034e-02  2.98455003e-02  1.96026277e-01
-   8.79597406e-02  2.30075679e-01  7.69553816e-02  6.19599628e-02
-  -9.33464922e-01  4.38451795e-01 -2.80289788e-01  5.77429071e-02
-   1.81653531e+00  2.45580827e+00 -7.87332306e-02 -1.42750982e-01
-   1.05179228e+00 -9.38034218e-01  3.17086726e+00  5.30220097e+00
-   3.30088034e+00  2.11722202e+00  2.74286832e-01 -6.25199765e-01
-   4.87263690e-02  1.12458038e+00 -1.28854515e-01 -1.75739217e-01
-   1.82349913e-01  1.89270594e+00]]
+[-0.00010006] [[-9.98682112e-03 -5.48046753e+00 -5.67521106e+00 -2.86420748e-01
+  -2.01042494e+00 -1.00064891e-04 -1.00064891e-04 -3.63808604e+00
+  -3.67819105e+00 -1.00064891e-04  1.94278391e-02  2.22472147e-02
+   4.38022076e-01  1.77588944e-01 -2.74181873e-01  6.19361004e+00
+   9.91392159e+00  1.36683999e+01 -2.74181873e-01  1.41086053e+00
+   7.74582891e+00 -2.00203698e+00  5.09385554e+00  4.75344496e+00
+   2.54191387e+01 -7.61866229e+00  6.80484035e-01 -3.45153847e+00
+  -4.47644498e+01 -5.79996601e+00 -2.33058606e+00  5.87442878e+00
+   1.08616475e+02  4.06280195e+01  3.04888223e+00 -6.00565718e+00
+  -9.92031708e+01 -2.99623092e+01]]

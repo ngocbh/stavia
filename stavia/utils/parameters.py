@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import os
 WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 # ITERMEDIATE
-IS_BUILDING_STAGE=1
+IS_BUILDING_STAGE=0
 VERBOSE=1
 
 #GLOBAL

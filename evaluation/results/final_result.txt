@@ -1,8 +1,8 @@
-288 300
-accuracy = 0.96 
-score =878/900=0.9755555555555555
+7339 7985
+accuracy = 0.9190983093299937 
+score =22890/23955=0.9555416405760802
 partial score
-city_score =297
-district_score =293
-ward_score =288
-street_score =288
+city_score =7811
+district_score =7740
+ward_score =7339
+street_score =7339
