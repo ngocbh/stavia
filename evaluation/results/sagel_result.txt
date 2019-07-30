@@ -1,8 +1,0 @@
-4341 7985
-accuracy = 0.5436443331246087 
-score =17056/23955=0.7120016697975371
-partial score
-city_score =6550
-district_score =6165
-ward_score =4341
-street_score =4341

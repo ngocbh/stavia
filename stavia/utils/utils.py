@@ -12,6 +12,28 @@ OUTTAB = "a" * 17 + "o" * 17 + "e" * 11 + "u" * 11 + "i" * 5 + "y" * 5 + "d" + \
 r = re.compile("|".join(INTAB))
 replaces_dict = dict(zip(INTAB, OUTTAB))
 
+def tokenize(inp):
+    inp = inp.strip()
+    words = []
+    word = ''
+    for char in inp:
+        if char == ' ':
+            if len(word) != 0:
+                words.append(word)
+                word = ''
+        elif char in PUNCTUATIONS:
+            if len(word) != 0:
+                words.append(word)
+                word = ''
+            words.append(char)
+        else:
+            word += char
+    if len(word) != 0:
+        words.append(word)
+
+    return words
+
+
 def no_accent_vietnamese(utf8_str):
     return r.sub(lambda m: replaces_dict[m.group(0)], utf8_str)
 

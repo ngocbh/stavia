@@ -1,7 +1,7 @@
 from __future__ import absolute_import
 
 from .utils.parameters import *
-from .utils.utils import contains_Vietchar, no_accent_vietnamese
+from .utils.utils import contains_Vietchar, no_accent_vietnamese, tokenize
 from nltk import ngrams
 
 import re
@@ -69,93 +69,97 @@ def c_score(string1, string2):
 			c += len(i.split(" "))
 	return 0
 
-def extract_features(raw_add, entities, candidate):
-	features = []
+def tokenize_field(name, field):
+	if field == 'district':
+		field = 'DIST'
+	else:
+		field = field.upper()
+	words = tokenize(name)
+	labels = []
+	if (len(words)) != 0:
+		labels.append('B_' + field)
+	for _ in range(len(words)-1):
+		labels.append('I_' + field)
+	return words, labels
+
+
+def extract_features(raw_add, words, labels, entities, candidate):
+	features = {}
 	#Bias
-	features.append(100)
+	features.update({'bias': 1})
+	#Lexical feature
+	for field in FIELDS:
+		if field in candidate.keys():
+			cdd_words, cdd_labels = tokenize_field(candidate[field], field)
+			for cdd_word, cdd_label in zip(cdd_words, cdd_labels):
+				for word, label in zip(words, labels):
+					if label == cdd_label:
+						features.update({'cdd:{}:{}:{}'.format(cdd_label,cdd_word,word.lower()): 1})
 
 	#Admin_level in crf
 	for field in FIELDS:
 		if field in entities:
-			features.append(1)
-		else:
-			features.append(0)
+			features.update({'crf:{}:lv'.format(field) :  1})
 
 	#Admin_level in candidate
 	for field in FIELDS:
 		if field in candidate.keys():
-			features.append(1)
-		else:
-			features.append(0)
+			features.update({'cdd:{}:lv'.format(field) : 1})
 
 	#Is contain vietnamese character
-	features.append(1 if contains_Vietchar(raw_add) == True else 0)
+	if contains_Vietchar(raw_add) == True:
+		features.update({'isVietnamese': 1})
 
 	#Elastic Score
 	for field in FIELDS:
 		if field + '_score' in candidate.keys():
-			features.append(float(candidate[field+'_score']))
-		else:
-			features.append(0.0)
+			features.update({'el:{}:s'.format(field) : float(candidate[field+'_score'])} )
 
 	#Entity Score
 	for field in FIELDS:
-		if field not in entities or field not in candidate.keys():
-			features.append(0.0)
-		else:
+		if field in entities and field in candidate.keys():
 			value = 0
 			for entity in entities[field]:
 				value = max(value, 1 if entity.lower() == candidate[field].lower() else 0)
-			features.append(value)
+			features.update({'en:{}:s'.format(field): value})
 
 	#Entity Score with no_accent_vietnamese
 	for field in FIELDS:
-		if field not in entities or field not in candidate.keys():
-			features.append(0.0)
-		else:
+		if field in entities and field in candidate.keys():
 			value = 0
 			for entity in entities[field]:
 				value = max(value, 1 if no_accent_vietnamese(entity.lower()) == no_accent_vietnamese(candidate[field].lower()) else 0)
-			features.append(value)
+			features.update({'e:{}:sn'.format(field): value})
 
 	#Jaccard Score
 	for field in FIELDS:
-		if field not in entities or field not in candidate.keys():
-			features.append(0.0)
-		else:
+		if field in entities and field in candidate.keys():
 			value = 0
 			for entity in entities[field]:
 				value = max(value,jaccard_similarity(entity, candidate[field]))
-			features.append(value)
+			features.update({'j:{}:s'.format(field): value})
 
 	#Jaccard Score with no_accent_vietnamese
 	for field in FIELDS:
-		if field not in entities or field not in candidate.keys():
-			features.append(0.0)
-		else:
+		if field in entities and field in candidate.keys():
 			value = 0
 			for entity in entities[field]:
 				value = max(value, jaccard_similarity(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
-			features.append(value)
+			features.update({'j:{}:sn'.format(field): value})
 
 	#Levenshtein Score
 	for field in FIELDS:
-		if field not in entities or field not in candidate.keys():
-			features.append(0.0)
-		else:
-			value = 0
+		if field in entities and field in candidate.keys():
 			for entity in entities[field]:
 				value = max(value, levenshtein_ratio_and_distance(entity.lower(), candidate[field].lower()))
-			features.append(value)
+			features.update({'l:{}:s'.format(field): value})
 
 	#Levenshtein Score with no_accent_vietnamese
 	for field in FIELDS:
-		if field not in entities or field not in candidate.keys():
-			features.append(0.0)
-		else:
+		if field in entities and field in candidate.keys():
 			value = 0
 			for entity in entities[field]:
 				value = max(value, levenshtein_ratio_and_distance(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
-			features.append(value)
+			features.update({'l:{}:sn'.format(field): value})
 
 	return features

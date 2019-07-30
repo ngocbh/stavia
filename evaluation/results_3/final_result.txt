@@ -1,0 +1,8 @@
+7339 7985
+accuracy = 0.9190983093299937 
+score =22890/23955=0.9555416405760802
+partial score
+city_score =7811
+district_score =7740
+ward_score =7339
+street_score =7339

@@ -16,8 +16,9 @@ def tag(inp):
 
 	return words,tagger.tag(x)
 
-def detect_entity(inp):
-	tokens, labels = tag(inp)
+def detect_entity(inp, tokens=None, labels=None):
+	if tokens == None or labels == None:
+		tokens, labels = tag(inp)
 	entities = {}
 
 	n = len(tokens)
