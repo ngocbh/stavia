@@ -143,7 +143,7 @@ class LogLinearModel:
 				print('* Reason: %s' % (information['task']))
 		print('* Likelihood: %s' % str(log_likelihood))
 	
-	def fit(self, X, y, squared_sigma=0.001):
+	def fit(self, X, y, squared_sigma=10):
 		start_time = time.time()
 		print('[%s] Start training' % datetime.datetime.now())
 
