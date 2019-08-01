@@ -8,7 +8,7 @@ from sklearn.model_selection import train_test_split
 
 from .utils.parameters import *
 from .utils.utils import create_status
-from .data_processing import load_data
+from .data_processing import load_data, preprocess
 from .init_es import init_es
 from .fuzzy_matching.candidate_graph import CandidateGraph
 from .crf import tagger
@@ -33,8 +33,10 @@ def _callback(params):
 	SUB_ITERATION_NUM = 0
 
 
+
 class LogLinearModel:
 	params = None
+	lambda_reg = None
 	feature_set = None
 	learning_rate = 0.01
 	num_iter = 10000
@@ -43,22 +45,21 @@ class LogLinearModel:
 
 	# For L-BFGS
 	GRADIENT = None
-	squared_sigmas = [0.000001, 0.000003, 0.000009, \
+	lambda_regs = [0.000001, 0.000003, 0.000009, \
 					0.00001, 0.00003, 0.00009, \
 					0.0001, 0.0003, 0.0009, \
 					0.001, 0.003, 0.009, \
 					0.01, 0.03, 0.09, \
 					0.1, 0.3, 0.9,\
-					1, 3, 9,\
-					1e3, 3e3, 9e3,\
-					1e5]
+					1]
 
-	def __init__(self, learning_rate=0.01, num_iter=10000, fit_intercept=True, verbose=False):
+	def __init__(self, learning_rate=0.01, num_iter=10000, fit_intercept=True, verbose=False, lambda_reg=0.0001):
 		self.learning_rate = learning_rate
 		self.num_iter = num_iter
 		self.fit_intercept = fit_intercept
 		self.verbose = verbose
 		self.feature_set = FeatureSet()
+		self.lambda_reg = lambda_reg
 
 	def __softmax(self, potential):
 		potential = np.exp(potential)
@@ -70,32 +71,36 @@ class LogLinearModel:
 		"""
 		Calculate likelihood and gradient
 		"""
-		X, y, feature_set, squared_sigma, verbose, sign = args
+		X, y, feature_set, lambda_reg, empirical_weights, verbose, sign = args
 
 		no_example = len(X)
 		total_logZ = 0
 		total_logProb = 0
-		empirical_weights = np.zeros(len(feature_set))
 		expected_weights = np.zeros(len(feature_set))
+		for t in range(len(X)):
+			# example_features = X[t], example_labels = y[t]
 
-		for example_features, example_labels in zip(X, y):
-			feature_table = np.asarray(feature_set.get_feature_table(example_features))
-			potential = np.dot(feature_table, params)
-			# print(np.sum(feature_table,axis=0))
-			empirical_weights = empirical_weights + np.dot(feature_table.T , np.asarray(example_labels))
-			#scaling 
+			potential = np.zeros(len(X[t]))
+			for i in range(len(X[t])):
+				#candidate_features = X[t][i], candidate_label = y[t][i]
+				potential[i] = feature_set.calc_inner_product(X[t][i], params)
+
+			#scaling
 			potential = potential - np.max(potential, keepdims=True)
 
-			total_logProb += np.sum(np.multiply(potential, np.asarray(example_labels)))
+			for i in range(len(X[t])):
+				total_logProb += potential[i] * y[t][i]
+
 			potential, Z = self.__softmax(potential)
-			expected_weights = expected_weights + np.dot(potential.T, feature_table).T
+
+			for i in range(len(X[t])):
+				feature_set.calc_inner_sum(expected_weights, X[t][i], potential[i])
 
 			total_logZ += log(Z)
 
-		log_likelihood = total_logProb - total_logZ - np.sum(np.multiply(params,params))/(squared_sigma*2)
 
-		gradients = empirical_weights - expected_weights - params/squared_sigma
-		self.GRADIENT = gradients
+		log_likelihood = total_logProb - total_logZ - (lambda_reg/2) * np.sum(np.multiply(params,params))
+		gradients = empirical_weights - expected_weights - lambda_reg * params
 
 		global SUB_ITERATION_NUM
 		if verbose:
@@ -106,31 +111,31 @@ class LogLinearModel:
 
 		SUB_ITERATION_NUM += 1
 
-		return sign * log_likelihood
+		return sign * log_likelihood, sign * gradients
 
 
 	def __gradient(self, params, *args):
 		"""
 		Calculate gradient
 		"""
-		_, _, _, _, _,  sign = args
+		_, _, _, _, _, _, sign = args
 		return sign * self.GRADIENT
 
 
-
-	def __estimate_parameters(self, X, y, squared_sigma, verbose):
-		print('* Squared sigma:', squared_sigma)
+	def __estimate_parameters(self, X, y, lambda_reg, verbose):
+		print('* Lambda:', lambda_reg)
 		print('* Start L-BGFS')
 		print('   ========================')
 		print('   iter(sit): likelihood')
 		print('   ------------------------')
 
-		self.params, log_likelihood, information = \
-				fmin_l_bfgs_b(func=self.__log_likelihood, fprime=self.__gradient,
+		params, log_likelihood, information = \
+				fmin_l_bfgs_b(func=self.__log_likelihood,
 							  x0=np.zeros(len(self.feature_set)),
-							  args=(X, y, self.feature_set, squared_sigma, verbose, -1.0),
-							  epsilon=1e-9,
-							  maxls=self.num_iter,
+							  args=(X, y, self.feature_set, lambda_reg, 
+							  	self.feature_set.get_empirical_weights(), verbose, -1.0),
+							  maxls=100,
+							  maxiter=self.num_iter,
 							  callback=_callback)
 
 		print('   ========================')
@@ -142,17 +147,18 @@ class LogLinearModel:
 			if 'task' in information.keys():
 				print('* Reason: %s' % (information['task']))
 		print('* Likelihood: %s' % str(log_likelihood))
+
+		return params
 	
-	def fit(self, X, y, squared_sigma=10):
+	def fit(self, X, y):
 		start_time = time.time()
 		print('[%s] Start training' % datetime.datetime.now())
 
-		self.feature_set.scan(X)
+		X = self.feature_set.scan(X, y)
 		print('Number of feature = ', len(self.feature_set))
 
-		self.__estimate_parameters(X, y, squared_sigma, verbose = self.verbose)
+		self.params = self.__estimate_parameters(X, y, self.lambda_reg, verbose = self.verbose)
 
-		print(self.params)
 		elapsed_time = time.time() - start_time
 		print('* Elapsed time: %f' % elapsed_time)
 		print('* [%s] Training done' % datetime.datetime.now())
@@ -160,68 +166,79 @@ class LogLinearModel:
 	def fit_regularized(self, X_train, y_train, X_dev, y_dev):
 		start_time = time.time()
 		print('[%s] Start training' % datetime.datetime.now())
-
-		self.feature_set.scan(X_train)
-		print('Number of feature = ', len(self.feature_set))
+		X_train = self.feature_set.scan(X_train, y_train)
 
 		max_acc = 0
-		best_squared_sigma = -1
-		for squared_sigma in self.squared_sigmas:
-			self.__estimate_parameters(X_train, y_train, squared_sigma, verbose = False)
+		self.lambda_reg = -1
+		for lambda_reg in self.lambda_regs:
+			self.params = self.__estimate_parameters(X_train, y_train, lambda_reg, verbose = False)
 			acc = self.score(X_dev, y_dev)
 			if acc > max_acc:
 				max_acc = acc
-				best_squared_sigma = squared_sigma
-			print('testing', squared_sigma, acc)
+				self.lambda_reg = lambda_reg
+			print('testing on = ', lambda_reg, acc)
 
-		print('Choose Squared Sigma = ' , best_squared_sigma)
-		print('Final Round')
-		self.__estimate_parameters(X_train, y_train, best_squared_sigma, verbose = False)
-		acc = self.score(X_train, y_train)
+		print('Choose hyperparameter for regularization, lambda = ' , self.lambda_reg)
+		print('---------Final Round--------')
+		self.params = self.__estimate_parameters(X_train, y_train, self.lambda_reg, verbose = False)
+		acc = self.score(X_train, y_train, hashed=True)
 		print('Training Score = ', acc)
 		acc = self.score(X_dev, y_dev)
 		print('Development Score = ', acc)
 
 	
-	def predict_proba(self, example_features):
-		feature_table = self.feature_set.get_feature_table(example_features)
-		potential = np.dot(feature_table, self.params)
+	def predict_proba(self, example_features, hashed=False):
+		if hashed == False:
+			example_features = self.feature_set.hash_feature(example_features)
+
+		potential = np.zeros(len(example_features))
+		for i in range(len(example_features)):
+			potential[i] = self.feature_set.calc_inner_product(example_features[i], self.params)
+
 		prob, _ = self.__softmax(potential)
+		# print(prob)
 		return list(prob)
 
-	def predict(self, example_features):
-		prob = self.predict_proba(example_features)
+	def predict(self, example_features, hashed=False):
+		prob = self.predict_proba(example_features,hashed)
 		max_prob = max(prob)
 		max_index = prob.index(max_prob)
 		return max_prob, max_index
 
-	def score(self, X_test, y_test):
+	def score(self, X_test, y_test, hashed=False):
 		true_example = 0
 		total_example = 0
 		for example_features, example_labels in zip(X_test, y_test):
-			prob, index = self.predict(example_features)
+			prob, index = self.predict(example_features,hashed)
 			if example_labels[index] == 1:
 				true_example += 1
 			total_example += 1
 		return true_example / float(total_example)
-
 
 def train():
 	raw_data = load_data(TRAIN_FINAL_FILE)
 	print('number of sample =', len(raw_data))
 	sys.stdout.flush()
 
-	X_data = []
-	Y_data = []
+	data = preprocess(raw_data)
+
+	with codecs.open('new_training_data.json', encoding='utf8', mode='w') as f:
+		jstr = json.dumps(data,ensure_ascii=False, indent=4)
+		f.write(jstr)
 
 	print('Extracing Feature -----> ')
 	sys.stdout.flush()
 
 	init_es()
-	status = iter(create_status(len(raw_data)))
+	status = iter(create_status(len(data)))
+	X_data = []
+	Y_data = []
 
 	number_positive_sample = 0
-	for raw_add, std_add in raw_data:
+	for raw_add, std_add in data:
+		if len(std_add) > 1:
+			raise Exception('Too many positive candidate per example', raw_add, std_add)
+
 		graph = CandidateGraph.build_graph(raw_add)
 		graph.prune_by_beam_search(k=BEAM_SIZE)
 		candidates = graph.extract_address()
@@ -229,21 +246,27 @@ def train():
 		crf_entities = tagger.detect_entity(raw_add, words, labels)
 		example_features = []
 		example_labels = []
+		pos_per_ex = 0
 		for candidate in candidates:
 			example_features.append(extract_features(raw_add, words, labels, crf_entities, candidate))
 			example_labels.append(1 if str(candidate['addr_id']) in std_add else 0)
 			number_positive_sample += example_labels[-1]
-		X_data.append(example_features)
-		Y_data.append(example_labels)
+			pos_per_ex += example_labels[-1]
+
+		# if pos_per_ex == 0:
+		# 	raise Exception('positive candidate per example != 1 ', raw_add, std_add, pos_per_ex)
+		if pos_per_ex == 1:
+			X_data.append(example_features)
+			Y_data.append(example_labels)
 		next(status)
 
 	with codecs.open('x.json', encoding='utf8', mode='w') as f:
-		js_str = json.dumps(X_data, ensure_ascii=False, indent=4)
-		f.write(js_str)
+		jstr = json.dumps(X_data,ensure_ascii=False, indent=4)
+		f.write(jstr)
 
 	with codecs.open('y.json', encoding='utf8', mode='w') as f:
-		js_str = json.dumps(Y_data, ensure_ascii=False, indent=4)
-		f.write(js_str)
+		jstr = json.dumps(Y_data,ensure_ascii=False, indent=4)
+		f.write(jstr)
 
 	print('Number Positive sample = ', number_positive_sample)
 	print('Number Sample = ', len(Y_data))
@@ -252,7 +275,7 @@ def train():
 
 	X_train, X_dev, y_train, y_dev = train_test_split(X_data, Y_data, test_size=0.13, random_state=42)
 
-	model = LogLinearModel(learning_rate=0.0001, num_iter=3000, verbose=True)
+	model = LogLinearModel(lambda_reg=0.00001,num_iter=3000, verbose=True)
 	# model.fit_regularized(X_train, y_train, X_dev, y_dev)
 	model.fit(X_train, y_train)
 	print('Training score = ', model.score(X_train, y_train))
