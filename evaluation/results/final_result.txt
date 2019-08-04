@@ -1,0 +1,8 @@
+287 300
+accuracy = 0.9566666666666667 
+score =877/900=0.9744444444444444
+partial score
+city_score =297
+district_score =293
+ward_score =287
+street_score =287

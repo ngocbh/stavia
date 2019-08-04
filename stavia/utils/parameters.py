@@ -5,6 +5,7 @@ WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 # ITERMEDIATE
 IS_BUILDING_STAGE=0
 VERBOSE=1
+METHOD='llm' #llm for log-linear model and lr for logistic regression
 
 #GLOBAL
 PUNCTUATIONS=',.-()#|/\\'
@@ -38,6 +39,6 @@ RAT_DICT_FILE=os.path.join(WORKING_DIR, '_data/rat_dict.json')
 
 #RERANKING
 TRAIN_FINAL_FILE=os.path.join(WORKING_DIR, '_data/train_final{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else ''))
-MODEL_FINAL_FILE=os.path.join(WORKING_DIR, '_data/final.model')
+MODEL_FINAL_FILE=os.path.join(WORKING_DIR, '_data/final_{}.model'.format(METHOD))
 
 

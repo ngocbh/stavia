@@ -222,10 +222,6 @@ def train():
 
 	data = preprocess(raw_data)
 
-	# with codecs.open('new_training_data.json', encoding='utf8', mode='w') as f:
-	# 	jstr = json.dumps(data,ensure_ascii=False, indent=4)
-	# 	f.write(jstr)
-
 	print('Extracing Feature -----> ')
 	sys.stdout.flush()
 
@@ -259,14 +255,6 @@ def train():
 			X_data.append(example_features)
 			Y_data.append(example_labels)
 		next(status)
-
-	# with codecs.open('x.json', encoding='utf8', mode='w') as f:
-	# 	jstr = json.dumps(X_data,ensure_ascii=False, indent=4)
-	# 	f.write(jstr)
-
-	# with codecs.open('y.json', encoding='utf8', mode='w') as f:
-	# 	jstr = json.dumps(Y_data,ensure_ascii=False, indent=4)
-	# 	f.write(jstr)
 
 	print('Number Positive sample = ', number_positive_sample)
 	print('Number Sample = ', len(Y_data))
