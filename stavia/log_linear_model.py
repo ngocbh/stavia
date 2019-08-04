@@ -45,12 +45,12 @@ class LogLinearModel:
 
 	# For L-BFGS
 	GRADIENT = None
-	lambda_regs = [0.000001, 0.000003, 0.000009, \
-					0.00001, 0.00003, 0.00009, \
-					0.0001, 0.0003, 0.0009, \
-					0.001, 0.003, 0.009, \
-					0.01, 0.03, 0.09, \
-					0.1, 0.3, 0.9,\
+	lambda_regs = [0.000001, 0.000005, \
+					0.00001, 0.00005, \
+					0.0001, 0.0005, \
+					0.001, 0.005, \
+					# 0.01, 0.05, \
+					# 0.1, 0.5, \
 					1]
 
 	def __init__(self, learning_rate=0.01, num_iter=10000, fit_intercept=True, verbose=False, lambda_reg=0.0001):
@@ -263,9 +263,9 @@ def train():
 
 	X_train, X_dev, y_train, y_dev = train_test_split(X_data, Y_data, test_size=0.13, random_state=42)
 
-	model = LogLinearModel(lambda_reg=0.00001,num_iter=3000, verbose=True)
-	# model.fit_regularized(X_train, y_train, X_dev, y_dev)
-	model.fit(X_train, y_train)
+	model = LogLinearModel(lambda_reg=0.00001,num_iter=2000, verbose=True)
+	model.fit_regularized(X_train, y_train, X_dev, y_dev)
+	# model.fit(X_train, y_train)
 	print('Training score = ', model.score(X_train, y_train))
 	print('Development score = ', model.score(X_dev, y_dev))
 

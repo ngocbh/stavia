@@ -1,8 +1,8 @@
-287 300
-accuracy = 0.9566666666666667 
-score =877/900=0.9744444444444444
+285 300
+accuracy = 0.95 
+score =874/900=0.9711111111111111
 partial score
 city_score =297
-district_score =293
-ward_score =287
-street_score =287
+district_score =292
+ward_score =285
+street_score =285

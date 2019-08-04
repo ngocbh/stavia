@@ -3,7 +3,7 @@ from __future__ import absolute_import
 import os
 WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 # ITERMEDIATE
-IS_BUILDING_STAGE=0
+IS_BUILDING_STAGE=1
 VERBOSE=1
 METHOD='llm' #llm for log-linear model and lr for logistic regression
 
@@ -33,12 +33,12 @@ BEAM_SIZE=5
 
 #CRF
 CRF_TRAIN_FILE=os.path.join(WORKING_DIR, '_data/train_crf{}.txt'.format('_small' if IS_BUILDING_STAGE == 1 else ''))
-USE_RAT=False
+USE_RAT=True
 CRF_MODEL_FILE=os.path.join(WORKING_DIR, '_data/crf{}.model'.format('_norat' if USE_RAT == False else '_rat'))
 RAT_DICT_FILE=os.path.join(WORKING_DIR, '_data/rat_dict.json')
 
 #RERANKING
 TRAIN_FINAL_FILE=os.path.join(WORKING_DIR, '_data/train_final{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else ''))
 MODEL_FINAL_FILE=os.path.join(WORKING_DIR, '_data/final_{}.model'.format(METHOD))
-
+USE_LEXICAL_FEATURES=False
 

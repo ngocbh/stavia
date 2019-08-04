@@ -88,13 +88,14 @@ def extract_features(raw_add, words, labels, entities, candidate):
 	#Bias
 	features.update({'bias': 1})
 	#Lexical feature
-	for field in FIELDS:
-		if field in candidate.keys():
-			cdd_words, cdd_labels = tokenize_field(candidate[field], field)
-			for cdd_word, cdd_label in zip(cdd_words, cdd_labels):
-				for word, label in zip(words, labels):
-					if label == cdd_label:
-						features.update({'cdd:{}:{}:{}'.format(cdd_label,cdd_word,word.lower()): 1})
+	if USE_LEXICAL_FEATURES == True:
+		for field in FIELDS:
+			if field in candidate.keys():
+				cdd_words, cdd_labels = tokenize_field(candidate[field], field)
+				for cdd_word, cdd_label in zip(cdd_words, cdd_labels):
+					for word, label in zip(words, labels):
+						if label == cdd_label:
+							features.update({'cdd:{}:{}:{}'.format(cdd_label,cdd_word,word.lower()): 1})
 
 	#Admin_level in crf
 	for field in FIELDS:
