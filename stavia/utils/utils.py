@@ -99,7 +99,7 @@ def create_status(n, size=50):
         s = '<{0}>'.format(done+todo)
         per = int(step*100/_max) if i != n-1 else 100
         s += ' ' + str(per) + '% ' + str(i) + '/' + str(n)
-        if not todo:
+        if i == n-1:
             s+='\n'        
         if i>0:
             s = '\r'+s

@@ -151,6 +151,7 @@ def extract_features(raw_add, words, labels, entities, candidate):
 	#Levenshtein Score
 	for field in FIELDS:
 		if field in entities and field in candidate.keys():
+			value = 0
 			for entity in entities[field]:
 				value = max(value, levenshtein_ratio_and_distance(entity.lower(), candidate[field].lower()))
 			features.update({'l:{}:s'.format(field): value})

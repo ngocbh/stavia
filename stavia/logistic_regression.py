@@ -9,7 +9,6 @@ from .data_processing import load_data
 from .init_es import init_es
 from .fuzzy_matching.candidate_graph import CandidateGraph
 from .crf import tagger
-from .feature_extraction import extract_features
 from .utils.utils import contains_Vietchar, no_accent_vietnamese
 from nltk import ngrams
 
@@ -175,7 +174,7 @@ def extract_features(raw_add, entities, candidate):
 
 	return features
 
-def judge(raw_add, entities, candidates):
+def lr_judge(raw_add, entities, candidates):
 	global model
 	X = []
 	for candidate in candidates:
@@ -214,6 +213,14 @@ def train():
 			X_data.append(extract_features(raw_add, crf_entities, candidate))
 			Y_data.append(1 if str(candidate['addr_id']) in std_add else 0)
 			number_positive_sample += Y_data[-1]
+
+	with codecs.open('x.json', encoding='utf8', mode='w') as f:
+		jstr = json.dumps(X_data, ensure_ascii=False, indent=4)
+		f.write(jstr)
+
+	with codecs.open('y.json', encoding='utf8', mode='w') as f:
+		jstr = json.dumps(Y_data, ensure_ascii=False, indent=4)
+		f.write(jstr)
 
 	print('Number Positive sample = ', number_positive_sample)
 	print('Number Sample = ', len(Y_data))

@@ -6,7 +6,7 @@ from .crf import tagger
 from .feature_extraction import extract_features
 from .utils.parameters import *
 from .log_linear_model import LogLinearModel
-from .logistic_regression import judge as lr_judge
+from .logistic_regression import lr_judge
 import copy
 import pickle
 
