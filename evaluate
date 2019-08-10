@@ -1,0 +1,3 @@
+#!/bin/bash
+cd evaluation
+python3 evaluate_final.py

@@ -26,7 +26,7 @@ def preprocess(raw_data):
 			for _id, add in std_add.items():
 				add_lv = 0
 				for key, value in add.items():
-					if key in MAP_LEVEL:
+					if key in MAP_LEVEL and value != 'None':
 						add_lv = max(add_lv, MAP_LEVEL[key])
 
 				if add_lv > best_add_lv:

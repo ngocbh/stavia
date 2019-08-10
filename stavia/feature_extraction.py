@@ -98,70 +98,76 @@ def extract_features(raw_add, words, labels, entities, candidate):
 							features.update({'cdd:{}:{}:{}'.format(cdd_label,cdd_word,word.lower()): 1})
 
 	#Admin_level in crf
+	crf_max_lv = 0
 	for field in FIELDS:
 		if field in entities:
 			features.update({'crf:{}:lv'.format(field) :  1})
+			crf_max_lv = max(crf_max_lv, MAP_LEVEL[field])
 
+	features.update({'crf_max_lv' : crf_max_lv})
 	#Admin_level in candidate
+	cdd_max_lv = 0
 	for field in FIELDS:
 		if field in candidate.keys():
 			features.update({'cdd:{}:lv'.format(field) : 1})
+			cdd_max_lv = max(cdd_max_lv, MAP_LEVEL[field])
 
-	#Is contain vietnamese character
-	if contains_Vietchar(raw_add) == True:
-		features.update({'isVietnamese': 1})
+	features.update({'cdd_max_lv' : cdd_max_lv})
+
+	features.update({'diff_lv': abs(cdd_max_lv - crf_max_lv)})
 
 	#Elastic Score
 	for field in FIELDS:
 		if field + '_score' in candidate.keys():
 			features.update({'el:{}:s'.format(field) : float(candidate[field+'_score'])} )
 
-	#Entity Score
-	for field in FIELDS:
-		if field in entities and field in candidate.keys():
-			value = 0
-			for entity in entities[field]:
-				value = max(value, 1 if entity.lower() == candidate[field].lower() else 0)
-			features.update({'en:{}:s'.format(field): value})
 
-	#Entity Score with no_accent_vietnamese
-	for field in FIELDS:
-		if field in entities and field in candidate.keys():
-			value = 0
-			for entity in entities[field]:
-				value = max(value, 1 if no_accent_vietnamese(entity.lower()) == no_accent_vietnamese(candidate[field].lower()) else 0)
-			features.update({'e:{}:sn'.format(field): value})
-
-	#Jaccard Score
-	for field in FIELDS:
-		if field in entities and field in candidate.keys():
-			value = 0
-			for entity in entities[field]:
-				value = max(value,jaccard_similarity(entity, candidate[field]))
-			features.update({'j:{}:s'.format(field): value})
-
-	#Jaccard Score with no_accent_vietnamese
-	for field in FIELDS:
-		if field in entities and field in candidate.keys():
-			value = 0
-			for entity in entities[field]:
-				value = max(value, jaccard_similarity(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
-			features.update({'j:{}:sn'.format(field): value})
-
-	#Levenshtein Score
-	for field in FIELDS:
-		if field in entities and field in candidate.keys():
-			value = 0
-			for entity in entities[field]:
-				value = max(value, levenshtein_ratio_and_distance(entity.lower(), candidate[field].lower()))
-			features.update({'l:{}:s'.format(field): value})
-
-	#Levenshtein Score with no_accent_vietnamese
-	for field in FIELDS:
-		if field in entities and field in candidate.keys():
-			value = 0
-			for entity in entities[field]:
-				value = max(value, levenshtein_ratio_and_distance(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
-			features.update({'l:{}:sn'.format(field): value})
+	cvc = contains_Vietchar(raw_add)
+	if cvc == True:
+		#Is contain vietnamese character
+		features.update({'isVietnamese': 1})
+		#Entity Score
+		for field in FIELDS:
+			if field in entities and field in candidate.keys():
+				value = 0
+				for entity in entities[field]:
+					value = max(value, 1 if entity.lower() == candidate[field].lower() else 0)
+				features.update({'en:{}:s'.format(field): value})
+		#Jaccard Score
+		for field in FIELDS:
+			if field in entities and field in candidate.keys():
+				value = 0
+				for entity in entities[field]:
+					value = max(value,jaccard_similarity(entity, candidate[field]))
+				features.update({'j:{}:s'.format(field): value})
+		#Levenshtein Score
+		for field in FIELDS:
+			if field in entities and field in candidate.keys():
+				value = 0
+				for entity in entities[field]:
+					value = max(value, levenshtein_ratio_and_distance(entity.lower(), candidate[field].lower()))
+				features.update({'l:{}:s'.format(field): value})
+	else:
+		#Entity Score with no_accent_vietnamese
+		for field in FIELDS:
+			if field in entities and field in candidate.keys():
+				value = 0
+				for entity in entities[field]:
+					value = max(value, 1 if no_accent_vietnamese(entity.lower()) == no_accent_vietnamese(candidate[field].lower()) else 0)
+				features.update({'e:{}:sn'.format(field): value})
+		#Jaccard Score with no_accent_vietnamese
+		for field in FIELDS:
+			if field in entities and field in candidate.keys():
+				value = 0
+				for entity in entities[field]:
+					value = max(value, jaccard_similarity(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
+				features.update({'j:{}:sn'.format(field): value})
+		#Levenshtein Score with no_accent_vietnamese
+		for field in FIELDS: 
+			if field in entities and field in candidate.keys():
+				value = 0
+				for entity in entities[field]:
+					value = max(value, levenshtein_ratio_and_distance(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower())))
+				features.update({'l:{}:sn'.format(field): value})
 
 	return features

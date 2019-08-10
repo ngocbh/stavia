@@ -15,21 +15,23 @@ import numpy as np
 
 IS_BUILDING_STAGE = 1
 
-TEST_FINAL_FILE='data/test_final{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '')
+TEST_FINAL_FILE='data/test_final{}_{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '', DATASET_ID)
 
 
 def evaluate_final():
 	data = load_data(TEST_FINAL_FILE)
+	print('DATASET_ID =',DATASET_ID)
+	print('MODEL_ID =',MODEL_ID)
 	true_sample = 0
 	score = 0
 	pscore = {'city': 0, 'district': 0, 'ward': 0, 'street': 0}
 	total_sample = 0
+	sagel_error = 0
 
 	errors = []
-
 	status = iter(create_status(len(data)))
 	for raw_add, std_add in data:
-		result = stavia.standardize(raw_add)
+		result, ranked_list, crf_entities, words, labels = stavia.standardize4testing(raw_add)
 		if result == None:
 			print('result error')
 		if str(result['addr_id']) in std_add:
@@ -38,6 +40,7 @@ def evaluate_final():
 			for field in FIELDS:
 				pscore[field] += 1
 		else:
+			error_sample = {}
 			max_score = 0
 			max_pscore = {'city': 0, 'district': 0, 'ward': 0, 'street': 0}
 			for _id, addr in std_add.items():
@@ -48,6 +51,8 @@ def evaluate_final():
 						if addr[field] == result[field]:
 							score_temp += 1
 							pscore_temp[field] += 1
+							if field == 'district':
+								error_sample['type'] = 'true_district'
 							continue
 					break
 				if score_temp > max_score:
@@ -57,24 +62,45 @@ def evaluate_final():
 			for field in FIELDS:
 				pscore[field] += max_pscore[field]
 
-			error_sample = {}
 			error_sample['raw_add'] = raw_add
 			error_sample['result'] = result
 			error_sample['std_add'] = std_add
+
+			true_candidate = []
+			for candidate in ranked_list:
+				if str(candidate['addr_id']) in std_add:
+					true_candidate.append(candidate)
+
+			error_sample['true_candidate'] = true_candidate
+			error_sample['crf_entities'] = crf_entities
+			error_sample['crf_tag'] = [[word,label] for word, label in zip(words,labels)]
+			if len(true_candidate) == 0:
+				sagel_error += 1
 			errors.append(error_sample)
+
+
 
 		total_sample += 1
 		next(status)
 
-	with codecs.open('results/final_result.txt', encoding='utf8', mode='w') as f:
+	print(str(true_sample) + ' ' + str(total_sample) + '\n')
+	print('sagel_error' + str(sagel_error))
+	print('accuracy = ' + str(true_sample/float(total_sample)) +' \n')
+	print('score =' + str(score) + '/' + str(total_sample*3) + '=' + str(score/float(total_sample*3)) + '\n')
+	print('partial score' + '\n')
+	for field in FIELDS:
+		print(field + '_score =' + str(pscore[field]) + '\n')
+
+	with codecs.open('results/final_result_{}.txt'.format(MODEL_ID), encoding='utf8', mode='w') as f:
 		f.write(str(true_sample) + ' ' + str(total_sample) + '\n')
+		f.write('sagel_error' + str(sagel_error) + '\n')
 		f.write('accuracy = ' + str(true_sample/float(total_sample)) +' \n')
 		f.write('score =' + str(score) + '/' + str(total_sample*3) + '=' + str(score/float(total_sample*3)) + '\n')
 		f.write('partial score' + '\n')
 		for field in FIELDS:
 			f.write(field + '_score =' + str(pscore[field]) + '\n')
 
-	with codecs.open('results/error_pattern_final.json', encoding='utf8', mode='w') as f:
+	with codecs.open('results/error_pattern_final_{}.json'.format(MODEL_ID), encoding='utf8', mode='w') as f:
 		js_data = {'error': errors}
 		jstr = json.dumps(js_data,ensure_ascii=False, indent=4)
 		f.write(jstr)

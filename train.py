@@ -1,7 +1,12 @@
 from stavia import log_linear_model as llm
 from stavia import logistic_regression as lr
 from stavia.crf import trainer
-
+from stavia.utils.parameters import *
+#test rsync
 # trainer.train_crf()
-llm.train()
-# lr.train()
+print('METHOD=',METHOD)
+print('MODEL_ID=',MODEL_ID)
+if METHOD == 'llm':
+	llm.train()
+else:
+	lr.train()

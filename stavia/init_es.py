@@ -44,7 +44,7 @@ def reinit_es():
 	delete_exist_package()
 	put_configuration()
 	post_data()
-	print('Initialized')
+	print('Re-Initialized')
 
 if __name__ == '__main__':
 	reinit_es()

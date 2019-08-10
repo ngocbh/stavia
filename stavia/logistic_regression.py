@@ -214,14 +214,6 @@ def train():
 			Y_data.append(1 if str(candidate['addr_id']) in std_add else 0)
 			number_positive_sample += Y_data[-1]
 
-	with codecs.open('x.json', encoding='utf8', mode='w') as f:
-		jstr = json.dumps(X_data, ensure_ascii=False, indent=4)
-		f.write(jstr)
-
-	with codecs.open('y.json', encoding='utf8', mode='w') as f:
-		jstr = json.dumps(Y_data, ensure_ascii=False, indent=4)
-		f.write(jstr)
-
 	print('Number Positive sample = ', number_positive_sample)
 	print('Number Sample = ', len(Y_data))
 	print('Spliting data')

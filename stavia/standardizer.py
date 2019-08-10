@@ -48,3 +48,48 @@ def standardize(addr, method=METHOD):
 	result = max(ranked_list, key=lambda element: element['score'])
 	return result
 
+
+def llm_judge_4_testing(addr, words, labels, crf_entities, candidates):
+	global model
+	if model == None:
+		model = pickle.load(open(MODEL_FINAL_FILE, 'rb'))
+
+	example_features = []
+	for i in range(len(candidates)):
+		candidate = candidates[i]
+		candidate_features = extract_features(addr, words, labels, crf_entities, candidate)
+		example_features.append(candidate_features)
+		candidate['features'] = {}
+		for feature, value in candidate_features.items():
+			candidate['features'][feature] = value
+
+
+
+	y_prob = model.predict_proba(example_features)
+
+	ret = []
+	for i in range(len(candidates)):
+		candidate = copy.deepcopy(candidates[i])
+		candidate['score'] = y_prob[i]
+		ret.append(candidate)
+	return ret
+
+
+def standardize4testing(addr, method=METHOD):
+	init_es()
+
+	graph = CandidateGraph.build_graph(addr)
+	graph.prune_by_beam_search(k=BEAM_SIZE)
+	
+	candidates = graph.extract_address()
+	words, labels = tagger.tag(addr)
+	crf_entities = tagger.detect_entity(addr, words, labels)
+	if METHOD == 'lr':
+		ranked_list = lr_judge(addr, crf_entities, candidates)
+	else:
+		ranked_list = llm_judge_4_testing(addr, words, labels, crf_entities, candidates)
+	# print(ranked_list)
+	result = max(ranked_list, key=lambda element: element['score'])
+	return result, ranked_list, crf_entities, words, labels
+
+

@@ -273,6 +273,7 @@ def train():
 	print(model.params)
 
 	pickle.dump(model, open(MODEL_FINAL_FILE, 'wb'))
+	print('Saved at ', MODEL_FINAL_FILE)
 	
 # if __name__ == '__main__':
 	# print(judge('doan ke thien cau giay ha noi'))
