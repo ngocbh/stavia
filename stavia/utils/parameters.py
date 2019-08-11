@@ -6,7 +6,7 @@ WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 IS_BUILDING_STAGE=1
 VERBOSE=True
 METHOD='llm' #llm for log-linear model and lr for logistic regression
-DATASET_ID=2
+DATASET_ID=1
 PARAMS_ID=1
 
 #TOSTR

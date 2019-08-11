@@ -7,6 +7,7 @@ from .feature_extraction import extract_features
 from .utils.parameters import *
 from .log_linear_model import LogLinearModel
 from .logistic_regression import lr_judge
+from .fuzzy_matching import sagel
 import copy
 import pickle
 
@@ -89,12 +90,12 @@ def standardize4testing(addr, method=METHOD):
 		ranked_list = lr_judge(addr, crf_entities, candidates)
 	else:
 		ranked_list = llm_judge_4_testing(addr, crf_entities, candidates)
-	# print(ranked_list)
+		
 	if len(ranked_list) == 0:
 		result = {'error': 'no candidate matched'}
 	else: 
 		result = max(ranked_list, key=lambda element: element['score'])
-		
+	
 	return result, ranked_list, crf_entities, words, labels
 
 

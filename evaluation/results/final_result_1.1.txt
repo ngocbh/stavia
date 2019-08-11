@@ -1,9 +1,9 @@
-280 300
+284 300
 sagel_error6
-accuracy = 0.9333333333333333 
-score =872/900=0.9688888888888889
+accuracy = 0.9466666666666667 
+score =881/900=0.9788888888888889
 partial score
 city_score =299
-district_score =293
-ward_score =280
-street_score =280
+district_score =298
+ward_score =284
+street_score =284
