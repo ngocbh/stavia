@@ -19,12 +19,13 @@ def tag(inp):
 def detect_entity(inp, tokens=None, labels=None):
 	if tokens == None or labels == None:
 		tokens, labels = tag(inp)
-	entities = {}
+	entities = []
 
 	n = len(tokens)
 	buff = ''
 	lbuff = ''
 	isEntity = False
+	loc = 0
 
 	for i in range(n):
 		if (labels[i][0] == 'I'):
@@ -32,10 +33,8 @@ def detect_entity(inp, tokens=None, labels=None):
 		else:
 			if isEntity == True:
 				key = lbuff.lower() 
-				if key not in entities:
-					entities[key] = [buff]
-				else:
-					entities[key].append(buff)
+				entities.append((buff, key, str(loc)))
+				loc += 1
 
 			buff = tokens[i]
 			if labels[i][0] == 'B':
@@ -52,10 +51,8 @@ def detect_entity(inp, tokens=None, labels=None):
 
 	if isEntity == True:
 		key = lbuff.lower() 
-		if key not in entities :
-			entities[key] = [buff]
-		else:
-			entities[key].append(buff)
+		entities.append((buff, key, str(loc)))
+		loc += 1
 
 
 	return entities

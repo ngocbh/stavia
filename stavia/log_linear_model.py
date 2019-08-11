@@ -255,13 +255,12 @@ def train():
 		graph = CandidateGraph.build_graph(raw_add)
 		graph.prune_by_beam_search(k=BEAM_SIZE)
 		candidates = graph.extract_address()
-		words, labels = tagger.tag(raw_add)
-		crf_entities = tagger.detect_entity(raw_add, words, labels)
+		crf_entities = tagger.detect_entity(raw_add)
 		example_features = []
 		example_labels = []
 		pos_per_ex = 0
 		for candidate in candidates:
-			example_features.append(extract_features(raw_add, words, labels, crf_entities, candidate))
+			example_features.append(extract_features(raw_add, crf_entities, candidate))
 			example_labels.append(1 if str(candidate['addr_id']) in std_add else 0)
 			number_positive_sample += example_labels[-1]
 			pos_per_ex += example_labels[-1]

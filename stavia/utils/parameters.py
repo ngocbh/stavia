@@ -28,14 +28,14 @@ SEARCHING_URI = HOST+"smart_address/_search"
 CONFIGURATION_FILE=os.path.join(WORKING_DIR, '_data/configuration.json')
 RAT_FILE=os.path.join(WORKING_DIR, '_data/rat_data.json')
 FUZZINESS=1
-QUERY_SIZE=4000
+QUERY_SIZE=3000
 SLOP=0
 
 #CANDIDATE GRAPH
 FIELDS=['city', 'district', 'ward', 'street']
 MAP_LEVEL={'country': 0, 'city': 1, 'district': 2, 'ward': 3, 'street': 4, 'name': 5}
 MAP_FIELD={0: 'country', 1: 'city', 2:'district', 3: 'ward', 4: 'street', 5: 'name'}
-BEAM_SIZE=10
+BEAM_SIZE=8
 
 #CRF
 CRF_TRAIN_FILE=os.path.join(WORKING_DIR, '_data/train_crf{}.txt'.format('_small' if IS_BUILDING_STAGE == 1 else ''))
