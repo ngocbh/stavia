@@ -11,7 +11,7 @@ from stavia.utils.parameters import *
 
 import json
 
-TEST_FINAL_FILE='data/test_final{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '')
+TEST_FINAL_FILE='data/test_final{}_{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '', DATASET_ID)
 
 IS_BUILDING_STAGE = 1
 
@@ -27,6 +27,7 @@ def evaluate_sagel():
 	status = iter(create_status(len(data)))
 	for raw_add, std_add in data:
 		graph = CandidateGraph.build_graph(raw_add)
+
 		result = sagel.get_sagel_answer(graph)
 		if result == None:
 			print('result error')

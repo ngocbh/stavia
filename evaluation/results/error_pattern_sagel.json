@@ -1,0 +1,1466 @@
+{
+    "error": [
+        {
+            "raw_add": "Mình cần người ship từ đồng anh về 160 hoàng mai",
+            "result": {
+                "score": 20.544242,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "addr_id": "8022",
+                "district": "hoàng mai",
+                "district_score": 10.888895,
+                "street": "hoàng mai",
+                "street_score": 9.655347
+            },
+            "std_add": {
+                "8162": {
+                    "id": 8162,
+                    "ward": "None",
+                    "district": "hoàng mai",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự án Mỹ Thái 1 , Quận 7 , HỒ Chí Minh",
+            "result": {
+                "score": 53.140367000000005,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 12.244581,
+                "addr_id": "4074",
+                "district": "quận 7",
+                "district_score": 12.626178,
+                "street": "đường 20",
+                "street_score": 0
+            },
+            "std_add": {
+                "4435": {
+                    "id": 4435,
+                    "ward": "None",
+                    "district": "quận 7",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Yết Kiêu , Hà Đông , Hà Nội",
+            "result": {
+                "score": 53.140367000000005,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 8.2382345,
+                "addr_id": "7398",
+                "district": "hà đông",
+                "district_score": 13.29128,
+                "ward": "yết kiêu",
+                "ward_score": 27.961111
+            },
+            "std_add": {
+                "7381": {
+                    "id": 7381,
+                    "ward": "None",
+                    "district": "hà đông",
+                    "street": "yết kiêu",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "du cau giay - cau giay - ha noi",
+            "result": {
+                "score": 55.1306,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 5.267511,
+                "addr_id": "6537",
+                "district": "cầu giấy",
+                "district_score": 16.028519,
+                "street": "cầu giấy",
+                "street_score": 30.517586
+            },
+            "std_add": {
+                "6767": {
+                    "id": 6767,
+                    "ward": "None",
+                    "district": "cầu giấy",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự án Mỹ Phú 3 - Đường 10 - Phường Tân Phú - Quận 7 - Hồ Chí Minh",
+            "result": {
+                "score": 66.18859,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 15.094713,
+                "district": "quận 7",
+                "district_score": 12.626178,
+                "addr_id": "4257",
+                "street": "tân phú",
+                "street_score": 21.401024
+            },
+            "std_add": {
+                "4059": {
+                    "id": 4059,
+                    "ward": "None",
+                    "district": "quận 7",
+                    "street": "đường 10",
+                    "city": "hồ chí minh"
+                },
+                "4283": {
+                    "id": 4283,
+                    "ward": "tân phú",
+                    "district": "quận 7",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Phường Láng Hạ , Đống Đa , Hà Nội",
+            "result": {
+                "score": 66.18859,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 5.267511,
+                "addr_id": "6981",
+                "district": "đống đa",
+                "district_score": 16.486263,
+                "street": "láng hạ",
+                "street_score": 31.471758
+            },
+            "std_add": {
+                "7055": {
+                    "id": 7055,
+                    "ward": "láng hạ",
+                    "district": "đống đa",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "huỳnh hạo double land 282 pxl q.phú nhuận",
+            "result": {
+                "score": 66.18859,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 0,
+                "addr_id": "2077",
+                "district": "phú nhuận",
+                "district_score": 9.300379,
+                "street": "nguyễn thị quỳnh",
+                "street_score": 0
+            },
+            "std_add": {
+                "2149": {
+                    "id": 2149,
+                    "ward": "None",
+                    "district": "phú nhuận",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "dự án fusion suites da nang beach - sơn trà - đà nẵng",
+            "result": {
+                "score": 66.18859,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "đà nẵng",
+                "city_score": 12.4447155,
+                "district": "sơn trà",
+                "district_score": 12.444716,
+                "addr_id": "12979",
+                "street": "tản đà",
+                "street_score": 17.107746
+            },
+            "std_add": {
+                "13088": {
+                    "id": 13088,
+                    "ward": "None",
+                    "district": "sơn trà",
+                    "street": "None",
+                    "city": "đà nẵng"
+                }
+            }
+        },
+        {
+            "raw_add": "đường quốc lộ 43",
+            "result": {
+                "score": 68.37330700000001,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "lai châu",
+                "city_score": 0,
+                "district": "tam đường",
+                "district_score": 0,
+                "addr_id": "25503",
+                "street": "quốc lộ 4d",
+                "street_score": 13.396531
+            },
+            "std_add": {
+                "10806": {
+                    "id": 10806,
+                    "ward": "None",
+                    "district": "thuận an",
+                    "street": "quốc lộ 43",
+                    "city": "bình dương"
+                }
+            }
+        },
+        {
+            "raw_add": "hoàng gia tô hiệu hà đông đi 23 phan chu trinh , b nào đi được lh mình 0963 . 575 482",
+            "result": {
+                "score": 68.37330700000001,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hà đông",
+                "district_score": 8.023769,
+                "addr_id": "7350",
+                "street": "tô hiệu",
+                "street_score": 19.873055
+            },
+            "std_add": {
+                "7318": {
+                    "id": 7318,
+                    "ward": "None",
+                    "district": "hà đông",
+                    "street": "phan chu trinh",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "đông thủ thiêm , phường bình trưng đông quận 2 hồ chí minh",
+            "result": {
+                "score": 68.37330700000001,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 11.998462,
+                "district": "quận 2",
+                "district_score": 12.392838,
+                "addr_id": "3402",
+                "ward": "thủ thiêm",
+                "ward_score": 29.223633
+            },
+            "std_add": {
+                "3398": {
+                    "id": 3398,
+                    "ward": "bình trưng đông",
+                    "district": "quận 2",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Đường 8 Lý Phục Man , Phường Bình Thuận , Quận 7 , Hồ Chí Minh",
+            "result": {
+                "score": 68.37330700000001,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 12.689377,
+                "district": "quận 7",
+                "district_score": 12.626178,
+                "addr_id": "4177",
+                "street": "lý phục man",
+                "street_score": 30.89215
+            },
+            "std_add": {
+                "4277": {
+                    "id": 4277,
+                    "ward": "bình thuận",
+                    "district": "quận 7",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "duong tan thoi 2",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 0,
+                "district": "quận 2",
+                "district_score": 0,
+                "addr_id": "3357",
+                "street": "tân thới hiệp 10",
+                "street_score": 11.479444
+            },
+            "std_add": {
+                "1737": {
+                    "id": 1737,
+                    "ward": "None",
+                    "district": "hóc môn",
+                    "street": "tân thới 2",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự án Thành phố Giao Lưu , Bắc Từ Liêm , Hà Nội",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 13.494848,
+                "district": "nam từ liêm",
+                "district_score": 13.494846,
+                "addr_id": "8492",
+                "street": "lưu hữu phước",
+                "street_score": 0
+            },
+            "std_add": {
+                "6531": {
+                    "id": 6531,
+                    "ward": "None",
+                    "district": "bắc từ liêm",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "phú sơn - đường nguyễn trãi - phú sơn - thanh hóa - thanh hóa",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "thanh hóa",
+                "city_score": 14.6387615,
+                "district": "sầm sơn",
+                "district_score": 18.787575,
+                "addr_id": "33519",
+                "street": "nguyễn trãi",
+                "street_score": 28.153158
+            },
+            "std_add": {
+                "33762": {
+                    "id": 33762,
+                    "ward": "None",
+                    "district": "thanh hóa",
+                    "street": "nguyễn trãi",
+                    "city": "thanh hóa"
+                },
+                "33894": {
+                    "id": 33894,
+                    "ward": "phú sơn",
+                    "district": "thanh hóa",
+                    "street": "None",
+                    "city": "thanh hóa"
+                }
+            }
+        },
+        {
+            "raw_add": "tòa nhà hoàng gia tô hiệu hà đông - đi 23 phan chu trinh , b nào đi được lh mình 0963 . 575 . 482",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hà đông",
+                "district_score": 8.023769,
+                "addr_id": "7350",
+                "street": "tô hiệu",
+                "street_score": 19.873055
+            },
+            "std_add": {
+                "7318": {
+                    "id": 7318,
+                    "ward": "None",
+                    "district": "hà đông",
+                    "street": "phan chu trinh",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Du an Samiri Sala , Quan 2 Ho Chi Minh",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 9.817582,
+                "addr_id": "3251",
+                "district": "quận 2",
+                "district_score": 12.336712,
+                "street": "kp3",
+                "street_score": 0
+            },
+            "std_add": {
+                "3490": {
+                    "id": 3490,
+                    "ward": "None",
+                    "district": "quận 2",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Duong An Duong An Duong",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hải phòng",
+                "city_score": 0,
+                "addr_id": "13388",
+                "district": "an dương",
+                "district_score": 7.4373093,
+                "ward": "an dương",
+                "ward_score": 15.726316
+            },
+            "std_add": {
+                "13348": {
+                    "id": 13348,
+                    "ward": "None",
+                    "district": "an dương",
+                    "street": "an dương",
+                    "city": "hải phòng"
+                }
+            }
+        },
+        {
+            "raw_add": "du an can ho vinh tuong , binh tan , ho chi minh",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 10.739391,
+                "district": "bình tân",
+                "district_score": 12.374965,
+                "addr_id": "374",
+                "street": "đường 19",
+                "street_score": 0
+            },
+            "std_add": {
+                "785": {
+                    "id": 785,
+                    "ward": "None",
+                    "district": "bình tân",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Phường Nghĩa Tân , Cầu Giấy , Hà Nội",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 5.267511,
+                "addr_id": "6575",
+                "district": "cầu giấy",
+                "district_score": 16.028519,
+                "street": "nghĩa tân",
+                "street_score": 25.970455
+            },
+            "std_add": {
+                "6661": {
+                    "id": 6661,
+                    "ward": "nghĩa tân",
+                    "district": "cầu giấy",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Ruby City , Long Bien , hn",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "addr_id": "8258",
+                "district": "long biên",
+                "district_score": 7.6311555,
+                "street": "long biên",
+                "street_score": 11.727584
+            },
+            "std_add": {
+                "8352": {
+                    "id": 8352,
+                    "ward": "None",
+                    "district": "long biên",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự án Linh Tây - Thủ Đức - Hồ Chí Minh",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 8.869508,
+                "addr_id": "6012",
+                "district": "thủ đức",
+                "district_score": 12.901925,
+                "street": "linh tây",
+                "street_score": 25.009644
+            },
+            "std_add": {
+                "6199": {
+                    "id": 6199,
+                    "ward": "None",
+                    "district": "thủ đức",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự N02-T3 Ngoại Giao Đoàn , Xã Xuân Đỉnh",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "bắc từ liêm",
+                "district_score": 0,
+                "addr_id": "6469",
+                "street": "xuân đỉnh",
+                "street_score": 12.621268
+            },
+            "std_add": {
+                "6483": {
+                    "id": 6483,
+                    "ward": "xuân đỉnh",
+                    "district": "bắc từ liêm",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Petro Town Tan Thanh , Ba Ria Vung Tau",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bà rịa vũng tàu",
+                "city_score": 8.815067,
+                "addr_id": "15503",
+                "district": "vũng tàu",
+                "district_score": 15.666023,
+                "ward": "thắng nhất",
+                "ward_score": 0
+            },
+            "std_add": {
+                "15262": {
+                    "id": 15262,
+                    "ward": "None",
+                    "district": "tân thành",
+                    "street": "None",
+                    "city": "bà rịa vũng tàu"
+                }
+            }
+        },
+        {
+            "raw_add": "duong phuc xa - ha noi",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 5.267511,
+                "addr_id": "7373",
+                "district": "hà đông",
+                "district_score": 6.351384,
+                "street": "xa la",
+                "street_score": 11.28581
+            },
+            "std_add": {
+                "6282": {
+                    "id": 6282,
+                    "ward": "None",
+                    "district": "ba đình",
+                    "street": "phúc xá",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": ", quận Phú Nhuận , Hồ Chí Minh",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 7.575225,
+                "addr_id": "2077",
+                "district": "phú nhuận",
+                "district_score": 14.207101,
+                "street": "nguyễn thị quỳnh",
+                "street_score": 0
+            },
+            "std_add": {
+                "2149": {
+                    "id": 2149,
+                    "ward": "None",
+                    "district": "phú nhuận",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "đường 6 kp3 phường linh xuân",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 0,
+                "district": "thủ đức",
+                "district_score": 0,
+                "addr_id": "6014",
+                "street": "linh xuân",
+                "street_score": 10.272651
+            },
+            "std_add": {
+                "6146": {
+                    "id": 6146,
+                    "ward": "linh xuân",
+                    "district": "thủ đức",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                },
+                "3251": {
+                    "id": 3251,
+                    "ward": "None",
+                    "district": "quận 2",
+                    "street": "kp3",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "đường 35 - phường linh đông thủ đức hồ chí minh",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 8.810452,
+                "addr_id": "6011",
+                "district": "thủ đức",
+                "district_score": 12.901925,
+                "street": "linh đông",
+                "street_score": 23.616287
+            },
+            "std_add": {
+                "5904": {
+                    "id": 5904,
+                    "ward": "None",
+                    "district": "thủ đức",
+                    "street": "đường 35",
+                    "city": "hồ chí minh"
+                },
+                "6143": {
+                    "id": 6143,
+                    "ward": "linh đông",
+                    "district": "thủ đức",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "vạn phúc - simco sông đà - phường vạn phúc đường lê văn lương - hà đông - hn",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 11.742221,
+                "district": "hà đông",
+                "district_score": 8.023769,
+                "addr_id": "7369",
+                "street": "vạn phúc",
+                "street_score": 18.963615
+            },
+            "std_add": {
+                "7395": {
+                    "id": 7395,
+                    "ward": "vạn phúc",
+                    "district": "hà đông",
+                    "street": "None",
+                    "city": "hà nội"
+                },
+                "7285": {
+                    "id": 7285,
+                    "ward": "None",
+                    "district": "hà đông",
+                    "street": "lê văn lương",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Mình cần Ship từ time City sang Mễ trì , ứng 850k , ai nhận ạ",
+            "result": {
+                "score": 69.636922,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "nam từ liêm",
+                "district_score": 0,
+                "addr_id": "8494",
+                "street": "mễ trì",
+                "street_score": 20.160835
+            },
+            "std_add": {
+                "8556": {
+                    "id": 8556,
+                    "ward": "mễ trì",
+                    "district": "nam từ liêm",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "xã đàn , thổ quan , đống đa , hà nội",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 5.267511,
+                "addr_id": "7025",
+                "district": "đống đa",
+                "district_score": 16.486263,
+                "street": "thổ quan",
+                "street_score": 33.569645
+            },
+            "std_add": {
+                "7065": {
+                    "id": 7065,
+                    "ward": "thổ quan",
+                    "district": "đống đa",
+                    "street": "None",
+                    "city": "hà nội"
+                },
+                "7045": {
+                    "id": 7045,
+                    "ward": "None",
+                    "district": "đống đa",
+                    "street": "xã đàn",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự án The Sun City Ba Tơ , Đường Trịnh Quang Nghị , Phường 7 , Quận 8 , Hồ Chí Minh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 15.094713,
+                "district": "quận 8",
+                "district_score": 12.689377,
+                "addr_id": "4498",
+                "street": "ba tơ",
+                "street_score": 28.73013
+            },
+            "std_add": {
+                "4648": {
+                    "id": 4648,
+                    "ward": "phường 7",
+                    "district": "quận 8",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                },
+                "4622": {
+                    "id": 4622,
+                    "ward": "None",
+                    "district": "quận 8",
+                    "street": "trịnh quang nghị",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Thanh My Loi",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 0,
+                "district": "quận 2",
+                "district_score": 0,
+                "addr_id": "3362",
+                "street": "thạnh mỹ lợi",
+                "street_score": 12.408661
+            },
+            "std_add": {
+                "3392": {
+                    "id": 3392,
+                    "ward": "thạnh mỹ lợi",
+                    "district": "quận 2",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Thôn Sằn , Xã Cổ Loa , Đông Anh , Hà Nội",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 9.362857,
+                "addr_id": "6866",
+                "district": "đông anh",
+                "district_score": 14.870927,
+                "street": "cổ loa",
+                "street_score": 31.06052
+            },
+            "std_add": {
+                "6913": {
+                    "id": 6913,
+                    "ward": "cổ loa",
+                    "district": "đông anh",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự án Khu đô thị Nam Thăng Long - Ciputra , Tây Hồ , Hà Nội",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 9.9642105,
+                "addr_id": "8872",
+                "district": "tây hồ",
+                "district_score": 15.386533,
+                "street": "lạc long quân",
+                "street_score": 16.41718
+            },
+            "std_add": {
+                "8952": {
+                    "id": 8952,
+                    "ward": "None",
+                    "district": "tây hồ",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "du an jamona city , quan 7 , ho chi minh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 7.519099,
+                "addr_id": "4074",
+                "district": "quận 7",
+                "district_score": 12.570052,
+                "street": "đường 20",
+                "street_score": 0
+            },
+            "std_add": {
+                "4435": {
+                    "id": 4435,
+                    "ward": "None",
+                    "district": "quận 7",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "379/3/32 - đường tân hòa đông - bình tân",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình thuận",
+                "city_score": 10.616754,
+                "district": "bắc bình",
+                "district_score": 8.379778,
+                "addr_id": "18457",
+                "ward": "bình tân",
+                "ward_score": 5.8959627
+            },
+            "std_add": {
+                "713": {
+                    "id": 713,
+                    "ward": "None",
+                    "district": "bình tân",
+                    "street": "tân hòa đông",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Trước 4h chiều nay , mình cần ship 1 đơn từ 23 Lạc Trung đến Thái Hà . Ứng 1 . 150k , phí ship 30k . B nào đi ib mình",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hai bà trưng",
+                "district_score": 0,
+                "addr_id": "7527",
+                "street": "lạc trung",
+                "street_score": 13.202289
+            },
+            "std_add": {
+                "7017": {
+                    "id": 7017,
+                    "ward": "None",
+                    "district": "đống đa",
+                    "street": "thái hà",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "du an khu do thi quang minh - me linh ha noi",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 9.248944,
+                "addr_id": "8368",
+                "district": "mê linh",
+                "district_score": 16.783524,
+                "street": "quang minh",
+                "street_score": 26.23958
+            },
+            "std_add": {
+                "8414": {
+                    "id": 8414,
+                    "ward": "None",
+                    "district": "mê linh",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Bai Chay - Quang Ninh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "quảng ninh",
+                "city_score": 6.0162287,
+                "addr_id": "30440",
+                "district": "hạ long",
+                "district_score": 0,
+                "street": "bãi cháy",
+                "street_score": 22.288582
+            },
+            "std_add": {
+                "30596": {
+                    "id": 30596,
+                    "ward": "bãi cháy",
+                    "district": "hạ long",
+                    "street": "None",
+                    "city": "quảng ninh"
+                }
+            }
+        },
+        {
+            "raw_add": "mình cần 1 ship từ 6 , ngõ 180/79 nam dư lĩnh nam",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hoàng mai",
+                "district_score": 0,
+                "addr_id": "8033",
+                "street": "lĩnh nam",
+                "street_score": 12.811885
+            },
+            "std_add": {
+                "7544": {
+                    "id": 7544,
+                    "ward": "None",
+                    "district": "hai bà trưng",
+                    "street": "nam dư",
+                    "city": "hà nội"
+                },
+                "8038": {
+                    "id": 8038,
+                    "ward": "None",
+                    "district": "hoàng mai",
+                    "street": "nam dư",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "du an my phuoc 2 duong na11 , thoi hoa , ben cat",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình dương",
+                "city_score": 0,
+                "district": "bến cát",
+                "district_score": 11.840047,
+                "addr_id": "9442",
+                "street": "mỹ phước 2",
+                "street_score": 25.22005
+            },
+            "std_add": {
+                "9464": {
+                    "id": 9464,
+                    "ward": "None",
+                    "district": "bến cát",
+                    "street": "na11",
+                    "city": "bình dương"
+                },
+                "9596": {
+                    "id": 9596,
+                    "ward": "thới hòa",
+                    "district": "bến cát",
+                    "street": "None",
+                    "city": "bình dương"
+                }
+            }
+        },
+        {
+            "raw_add": "dự án bencat center point bến cát bình dương",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình dương",
+                "city_score": 14.37081,
+                "district": "bến cát",
+                "district_score": 14.3708105,
+                "addr_id": "9373",
+                "street": "đại lộ bình dương",
+                "street_score": 16.156193
+            },
+            "std_add": {
+                "9629": {
+                    "id": 9629,
+                    "ward": "None",
+                    "district": "bến cát",
+                    "street": "None",
+                    "city": "bình dương"
+                }
+            }
+        },
+        {
+            "raw_add": "Dự án TMC Thăng Long - 01 Lương Yên Đường Lương Yên , Phường Bạch Đằng , Hà Nội",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 11.059031,
+                "district": "long biên",
+                "district_score": 8.712859,
+                "addr_id": "8258",
+                "street": "long biên",
+                "street_score": 10.70322
+            },
+            "std_add": {
+                "7538": {
+                    "id": 7538,
+                    "ward": "None",
+                    "district": "hai bà trưng",
+                    "street": "lương yên",
+                    "city": "hà nội"
+                },
+                "7612": {
+                    "id": 7612,
+                    "ward": "bạch đằng",
+                    "district": "hai bà trưng",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Trước 4h chiều nay , mình cần ship 1 đơn từ 23 Lạc Trung đến Thái Hà . Ứng 1 . 150k , phí ship 30k . B nào đi ib mình",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hai bà trưng",
+                "district_score": 0,
+                "addr_id": "7527",
+                "street": "lạc trung",
+                "street_score": 13.202289
+            },
+            "std_add": {
+                "7017": {
+                    "id": 7017,
+                    "ward": "None",
+                    "district": "đống đa",
+                    "street": "thái hà",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Cửa Lấp Dương Tơ",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "kiên giang",
+                "city_score": 0,
+                "district": "phú quốc",
+                "district_score": 0,
+                "addr_id": "24978",
+                "street": "dương tơ",
+                "street_score": 14.400404
+            },
+            "std_add": {
+                "25002": {
+                    "id": 25002,
+                    "ward": "dương tơ",
+                    "district": "phú quốc",
+                    "street": "None",
+                    "city": "kiên giang"
+                }
+            }
+        },
+        {
+            "raw_add": "Thạnh Mỹ Lợi - Quận 2 - Hồ Chí Minh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 11.6715765,
+                "addr_id": "3362",
+                "district": "quận 2",
+                "district_score": 12.392838,
+                "street": "thạnh mỹ lợi",
+                "street_score": 26.279797
+            },
+            "std_add": {
+                "3392": {
+                    "id": 3392,
+                    "ward": "thạnh mỹ lợi",
+                    "district": "quận 2",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "pho thuong mai starlight city , ben cat , binh duong",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình dương",
+                "city_score": 14.37081,
+                "district": "bến cát",
+                "district_score": 14.109743,
+                "addr_id": "9373",
+                "street": "đại lộ bình dương",
+                "street_score": 14.04632
+            },
+            "std_add": {
+                "9629": {
+                    "id": 9629,
+                    "ward": "None",
+                    "district": "bến cát",
+                    "street": "None",
+                    "city": "bình dương"
+                }
+            }
+        },
+        {
+            "raw_add": "Tân Chánh Hiệp , Quận 12 , Hồ Chí Minh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 11.986788,
+                "district": "quận 12",
+                "district_score": 11.986788,
+                "addr_id": "2861",
+                "street": "tân chánh hiệp",
+                "street_score": 24.940321
+            },
+            "std_add": {
+                "3077": {
+                    "id": 3077,
+                    "ward": "tân chánh hiệp",
+                    "district": "quận 12",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "dự án khu đô thị kim văn - kim lũ (golden silk) - hoàng mai hà nội",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 14.947439,
+                "addr_id": "8026",
+                "district": "hoàng mai",
+                "district_score": 16.156406,
+                "street": "kim đồng",
+                "street_score": 22.140804
+            },
+            "std_add": {
+                "8162": {
+                    "id": 8162,
+                    "ward": "None",
+                    "district": "hoàng mai",
+                    "street": "None",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Khu dân cư Đồng An , Phường Bình Hòa , Thuận An , Bình Dương",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình dương",
+                "city_score": 16.036777,
+                "district": "thuận an",
+                "district_score": 15.015264,
+                "addr_id": "10753",
+                "street": "khu dân cư vĩnh phú",
+                "street_score": 31.44584
+            },
+            "std_add": {
+                "10885": {
+                    "id": 10885,
+                    "ward": "bình hòa",
+                    "district": "thuận an",
+                    "street": "None",
+                    "city": "bình dương"
+                }
+            }
+        },
+        {
+            "raw_add": "cần ship từ đối diện cây xăng yên sở 1 bọc nhỏ tới số 30 76 trung văn . ứng 1tr230 ship 70k sđt 01697008600",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hoàng mai",
+                "district_score": 0,
+                "addr_id": "8084",
+                "street": "yên sở",
+                "street_score": 13.459137
+            },
+            "std_add": {
+                "8545": {
+                    "id": 8545,
+                    "ward": "None",
+                    "district": "nam từ liêm",
+                    "street": "trung văn",
+                    "city": "hà nội"
+                }
+            }
+        },
+        {
+            "raw_add": "Screc Tower Quận 3 Hồ Chí Minh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 7.575225,
+                "addr_id": "3524",
+                "district": "quận 3",
+                "district_score": 13.463401,
+                "street": "lý thái tổ",
+                "street_score": 0
+            },
+            "std_add": {
+                "3624": {
+                    "id": 3624,
+                    "ward": "None",
+                    "district": "quận 3",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Khu Phu My Hung - Phuong Tan Phong Quan 7",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 0,
+                "district": "quận 7",
+                "district_score": 7.66333,
+                "addr_id": "4180",
+                "street": "mỹ hưng",
+                "street_score": 17.456942
+            },
+            "std_add": {
+                "4282": {
+                    "id": 4282,
+                    "ward": "tân phong",
+                    "district": "quận 7",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "Xuân Thới Thượng 9",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 0,
+                "district": "hóc môn",
+                "district_score": 0,
+                "addr_id": "1864",
+                "street": "xuân thới thượng",
+                "street_score": 12.441451
+            },
+            "std_add": {
+                "1902": {
+                    "id": 1902,
+                    "ward": "None",
+                    "district": "hóc môn",
+                    "street": "xuân thới thượng 9",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "đường bình thành - hồ chí minh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "thanh hóa",
+                "city_score": 0,
+                "district": "thạch thành",
+                "district_score": 4.8261623,
+                "addr_id": "33553",
+                "street": "hồ chí minh",
+                "street_score": 17.426067
+            },
+            "std_add": {
+                "507": {
+                    "id": 507,
+                    "ward": "None",
+                    "district": "bình tân",
+                    "street": "bình thành",
+                    "city": "hồ chí minh"
+                }
+            }
+        },
+        {
+            "raw_add": "đường thái nguyên",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "thái nguyên",
+                "city_score": 8.86356,
+                "addr_id": "32837",
+                "district": "thái nguyên",
+                "district_score": 9.998761,
+                "street": "ga thái nguyên",
+                "street_score": 8.843896
+            },
+            "std_add": {
+                "24591": {
+                    "id": 24591,
+                    "ward": "None",
+                    "district": "nha trang",
+                    "street": "thái nguyên",
+                    "city": "khánh hòa"
+                }
+            }
+        },
+        {
+            "raw_add": ", Đường 6 , KP3 , Phường Linh Xuân , Q. Thủ Đức , Hồ Chí Minh",
+            "result": {
+                "score": 84.83683,
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 12.901925,
+                "district": "thủ đức",
+                "district_score": 12.901925,
+                "addr_id": "6014",
+                "street": "linh xuân",
+                "street_score": 23.174576
+            },
+            "std_add": {
+                "6146": {
+                    "id": 6146,
+                    "ward": "linh xuân",
+                    "district": "thủ đức",
+                    "street": "None",
+                    "city": "hồ chí minh"
+                }
+            }
+        }
+    ]
+}

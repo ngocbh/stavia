@@ -3,6 +3,16 @@
 *.py[cod]
 *$py.class
 
+#for testing 
+x.pickle
+x_344_loss020.pickle
+x_345_loss10.pickle
+x_346_loss946.pickle
+y.pickle
+y_345_loss10.pickle
+raw_data.json
+data.json
+
 # sublime
 *.sublime-project
 *.sublime-workspace

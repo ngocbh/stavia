@@ -1,0 +1,9 @@
+279 300
+sagel_error7
+accuracy = 0.93 
+score =869/900=0.9655555555555555
+partial score
+city_score =298
+district_score =292
+ward_score =279
+street_score =279

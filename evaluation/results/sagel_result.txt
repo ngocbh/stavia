@@ -1,0 +1,8 @@
+242 300
+accuracy = 0.8066666666666666 
+score =825/900=0.9166666666666666
+partial score
+city_score =296
+district_score =287
+ward_score =242
+street_score =242

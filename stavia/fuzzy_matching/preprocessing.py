@@ -38,11 +38,11 @@ def preprocess_address(addr):
         addr = addr.replace(".", ". ")
 
     # remove duplicate n-gram
-    max_gram = int(len(addr.split(" "))/2)
-    for i in range(2, max_gram+1):
-        duplicate = get_duplicate(addr,i)
-        if len(duplicate.keys()) != 0:
-            for dup_word in duplicate.keys():
-                addr = addr.replace(dup_word,"",duplicate.get(dup_word))
+    # max_gram = int(len(addr.split(" "))/2)
+    # for i in range(2, max_gram+1):
+    #     duplicate = get_duplicate(addr,i)
+    #     if len(duplicate.keys()) != 0:
+    #         for dup_word in duplicate.keys():
+    #             addr = addr.replace(dup_word,"",duplicate.get(dup_word))
 
     return addr.replace("  "," ",10)

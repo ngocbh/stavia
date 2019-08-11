@@ -45,7 +45,11 @@ def standardize(addr, method=METHOD):
 	else:
 		ranked_list = llm_judge(addr, words, labels, crf_entities, candidates)
 	# print(ranked_list)
-	result = max(ranked_list, key=lambda element: element['score'])
+	if len(ranked_list) == 0:
+		result = {'error': 'no candidate matched'}
+	else: 
+		result = max(ranked_list, key=lambda element: element['score'])
+		
 	return result
 
 
@@ -89,7 +93,11 @@ def standardize4testing(addr, method=METHOD):
 	else:
 		ranked_list = llm_judge_4_testing(addr, words, labels, crf_entities, candidates)
 	# print(ranked_list)
-	result = max(ranked_list, key=lambda element: element['score'])
+	if len(ranked_list) == 0:
+		result = {'error': 'no candidate matched'}
+	else: 
+		result = max(ranked_list, key=lambda element: element['score'])
+		
 	return result, ranked_list, crf_entities, words, labels
 
 

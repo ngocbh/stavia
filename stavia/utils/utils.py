@@ -33,6 +33,19 @@ def tokenize(inp):
 
     return words
 
+def generate_ngrams_word_level(address, n=2):
+    tokens = tokenize(address)
+    ret = []
+
+    m = len(tokens)
+    for i in range(m-n+1):
+        ngram = ' '.join(tokens[i:i+n])
+        rest = ' '.join(tokens[:i] + tokens[i+n:])
+        ret.append((ngram, rest))
+
+    return ret
+
+
 
 def no_accent_vietnamese(utf8_str):
     return r.sub(lambda m: replaces_dict[m.group(0)], utf8_str)

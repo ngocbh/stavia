@@ -17,9 +17,9 @@ def visit_graph_sagel(graph, node, stack, result):
 		for child_id in childs:
 			return visit_graph_sagel(graph, graph.nodes[child_id], stack, result)
 
-	if node.type == Type.EXPLICIT:
-		stack_copy = copy_stack(stack)
-		result.append(stack_copy)
+	# if node.type == Type.EXPLICIT:
+	stack_copy = copy_stack(stack)
+	result.append(stack_copy)
 
 	stack.pop()
 	return stack, result
@@ -30,7 +30,6 @@ def get_sagel_answer(graph):
 	result = []
 
 	stack, result = visit_graph_sagel(graph, graph.root, stack, result)
-
 	if len(result) == 0:
 		return None
 		

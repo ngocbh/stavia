@@ -220,7 +220,21 @@ def train():
 	print('number of sample =', len(raw_data))
 	sys.stdout.flush()
 
+	# with codecs.open('raw_data.json', encoding='utf8', mode='w') as f:
+	# 	jstr = json.dumps(raw_data, indent=4, ensure_ascii=False)
+	# 	f.write(jstr)
+
+	# with codecs.open('raw_data.json', encoding='utf8', mode='r') as f:
+	# 	raw_data = json.load(f)
+
 	data = preprocess(raw_data)
+
+	# with codecs.open('data.json', encoding='utf8', mode='w') as f:
+	# 	jstr = json.dumps(data, indent=4, ensure_ascii=False)
+	# 	f.write(jstr)
+
+	# with codecs.open('data.json', encoding='utf8', mode='r') as f:
+	# 	data = json.load(f)
 
 	print('Extracing Feature -----> ')
 	sys.stdout.flush()
@@ -229,6 +243,9 @@ def train():
 	status = iter(create_status(len(data)))
 	X_data = []
 	Y_data = []
+
+	X_test = {}
+	Y_test = {}
 
 	number_positive_sample = 0
 	for raw_add, std_add in data:
@@ -254,7 +271,18 @@ def train():
 		if pos_per_ex == 1:
 			X_data.append(example_features)
 			Y_data.append(example_labels)
+			X_test[raw_add] = {}
+			X_test[raw_add]['candidates'] = candidates
+			X_test[raw_add]['std_add'] = std_add
+			X_test[raw_add]['crf_entities'] = crf_entities
+
 		next(status)
+
+	# pickle.dump(X_test, open('x.pickle', 'wb'))
+	# pickle.dump(Y_test, open('y.pickle', 'wb'))
+
+	# X_data = pickle.load(open('x.pickle', 'rb'))
+	# Y_data = pickle.load(open('y.pickle', 'rb'))
 
 	print('Number Positive sample = ', number_positive_sample)
 	print('Number Sample = ', len(Y_data))
