@@ -1,0 +1,9 @@
+1399 1500
+sagel_error44
+accuracy = 0.9326666666666666 
+score =4359/4500=0.9686666666666667
+partial score
+city_score =1488
+district_score =1472
+ward_score =1399
+street_score =1399

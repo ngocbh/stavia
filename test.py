@@ -6,7 +6,9 @@ from stavia.fuzzy_matching import sagel
 from stavia.utils.utils import create_status
 from stavia.utils.parameters import *
 
-graph = CandidateGraph.build_graph('Dự án Mỹ Thái 1 , Quận 7 , HỒ Chí Minh')
-result = sagel.get_sagel_answer(graph)
-print(result)
-# print(stavia.standardize(u'Phố Hàng Chiếu , Hà Nội'))
+import stavia
+
+# graph = CandidateGraph.build_graph('Dự án Mỹ Thái 1 , Quận 7 , HỒ Chí Minh')
+# result = sagel.get_sagel_answer(graph)
+# print(result)
+print(stavia.standardize(u'vinh lai lam thao phu tho'))

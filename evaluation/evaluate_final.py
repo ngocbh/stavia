@@ -34,7 +34,13 @@ def evaluate_final():
 		result, ranked_list, crf_entities, words, labels = stavia.standardize4testing(raw_add)
 		if result == None:
 			print('result error')
-		if str(result['addr_id']) in std_add:
+		if 'addr_id' not in result:
+			error_sample['raw_add'] = raw_add
+			error_sample['std_add'] = std_add
+			error_sample['result'] = result
+			error_sample['type'] = 'key error'
+			error_sample['crf_entities'] = crf_entities
+		elif str(result['addr_id']) in std_add:
 			true_sample += 1
 			score += 3
 			for field in FIELDS:
