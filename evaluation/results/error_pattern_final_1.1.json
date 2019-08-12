@@ -1,831 +1,74 @@
 {
     "error": [
         {
-            "std_add": {
-                "13088": {
-                    "street": "None",
-                    "id": 13088,
-                    "ward": "None",
-                    "district": "sơn trà",
-                    "city": "đà nẵng"
-                }
-            },
-            "result": {
-                "country": "việt nam",
-                "country_score": 0,
-                "score": 0.9928050220802435,
-                "district": "sơn trà",
-                "street": "tản đà",
-                "city": "đà nẵng",
-                "features": {
-                    "els_cdd:min_lv": 17.107746,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "crf:name:lv": 1,
-                    "crf:city:lv": 1,
-                    "el:street:s": 17.107746,
-                    "2:city:city:lvt": 1.0,
-                    "cdd:city:lv": 1,
-                    "1:district:district:lvt": 1.0,
-                    "2:city:city:en": 1,
-                    "cdd:street:lv": 1,
-                    "bias": 1,
-                    "el:district:s": 12.444716,
-                    "2:city:city:jc": 1.0,
-                    "el:city:s": 12.4447155,
-                    "1:district:district:jc": 1.0,
-                    "crf:district:lv": 1,
-                    "1:district:district:en": 1
-                },
-                "city_score": 12.4447155,
-                "street_score": 17.107746,
-                "addr_id": 12979,
-                "district_score": 12.444716
-            },
             "type": "true_district",
-            "raw_add": "dự án fusion suites da nang beach - sơn trà - đà nẵng",
-            "true_candidate": [],
-            "crf_tag": [
-                [
-                    "dự",
-                    "PRO_TYPE"
-                ],
-                [
-                    "án",
-                    "PRO_TYPE"
-                ],
-                [
-                    "fusion",
-                    "B_PRO"
-                ],
-                [
-                    "suites",
-                    "I_PRO"
-                ],
-                [
-                    "da",
-                    "I_PRO"
-                ],
-                [
-                    "nang",
-                    "I_PRO"
-                ],
-                [
-                    "beach",
-                    "I_PRO"
-                ],
-                [
-                    "-",
-                    "OTHER"
-                ],
-                [
-                    "sơn",
-                    "B_DIST"
-                ],
-                [
-                    "trà",
-                    "I_DIST"
-                ],
-                [
-                    "-",
-                    "OTHER"
-                ],
-                [
-                    "đà",
-                    "B_CITY"
-                ],
-                [
-                    "nẵng",
-                    "I_CITY"
-                ]
-            ],
-            "crf_entities": [
-                [
-                    "fusion suites da nang beach",
-                    "name",
-                    "0"
-                ],
-                [
-                    "sơn trà",
-                    "district",
-                    "1"
-                ],
-                [
-                    "đà nẵng",
-                    "city",
-                    "2"
-                ]
-            ]
-        },
-        {
-            "std_add": {
-                "7318": {
-                    "street": "phan chu trinh",
-                    "id": 7318,
-                    "ward": "None",
-                    "district": "hà đông",
-                    "city": "hà nội"
-                }
-            },
+            "raw_add": "Du an KDC Nam Hung Vuong binh tan , ho chi minh",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.9999999999987719,
-                "district": "hà đông",
-                "street": "tô hiệu",
-                "city": "hà nội",
-                "features": {
-                    "1:street:street:en": 1,
-                    "els_cdd:min_lv": 19.873055,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "3:street:street:lvt": 0.2857142857142857,
-                    "crf:name:lv": 1,
-                    "el:street:s": 19.873055,
-                    "2:district:district:lvt": 1.0,
-                    "2:district:district:en": 1,
-                    "cdd:city:lv": 1,
-                    "3:street:street:en": 0,
-                    "1:street:street:lvt": 1.0,
-                    "crf:street:lv": 1,
-                    "cdd:street:lv": 1,
-                    "1:street:street:jc": 1.0,
-                    "2:district:district:jc": 1.0,
-                    "bias": 1,
-                    "el:district:s": 11.638902,
-                    "3:street:street:jc": 0.0,
-                    "el:city:s": 0.0,
-                    "crf:district:lv": 1
-                },
-                "city_score": 0,
-                "street_score": 19.873055,
-                "addr_id": 7350,
-                "district_score": 11.638902
-            },
-            "type": "true_district",
-            "raw_add": "hoàng gia tô hiệu hà đông đi 23 phan chu trinh , b nào đi được lh mình 0963 . 575 482",
-            "true_candidate": [
-                {
-                    "country": "việt nam",
-                    "country_score": 0,
-                    "score": 1.389031168277982e-27,
-                    "district": "hà đông",
-                    "street": "phan chu trinh",
-                    "city": "hà nội",
-                    "features": {
-                        "1:street:street:en": 0,
-                        "els_cdd:min_lv": 19.854132,
-                        "isVietnamese": 1,
-                        "cdd:district:lv": 1,
-                        "3:street:street:lvt": 1.0,
-                        "crf:name:lv": 1,
-                        "el:street:s": 19.854132,
-                        "2:district:district:lvt": 1.0,
-                        "2:district:district:en": 1,
-                        "cdd:city:lv": 1,
-                        "3:street:street:en": 1,
-                        "1:street:street:lvt": 0.2857142857142857,
-                        "crf:street:lv": 1,
-                        "cdd:street:lv": 1,
-                        "1:street:street:jc": 0.0,
-                        "2:district:district:jc": 1.0,
-                        "bias": 1,
-                        "el:district:s": 11.638902,
-                        "3:street:street:jc": 1.0,
-                        "el:city:s": 0.0,
-                        "crf:district:lv": 1
-                    },
-                    "city_score": 0,
-                    "street_score": 19.854132,
-                    "addr_id": 7318,
-                    "district_score": 11.638902
-                }
-            ],
-            "crf_tag": [
-                [
-                    "hoàng",
-                    "B_PRO"
-                ],
-                [
-                    "gia",
-                    "I_PRO"
-                ],
-                [
-                    "tô",
-                    "B_STREET"
-                ],
-                [
-                    "hiệu",
-                    "I_STREET"
-                ],
-                [
-                    "hà",
-                    "B_DIST"
-                ],
-                [
-                    "đông",
-                    "I_DIST"
-                ],
-                [
-                    "đi",
-                    "OTHER"
-                ],
-                [
-                    "23",
-                    "NUMBER"
-                ],
-                [
-                    "phan",
-                    "B_STREET"
-                ],
-                [
-                    "chu",
-                    "I_STREET"
-                ],
-                [
-                    "trinh",
-                    "I_STREET"
-                ],
-                [
-                    ",",
-                    "OTHER"
-                ],
-                [
-                    "b",
-                    "OTHER"
-                ],
-                [
-                    "nào",
-                    "OTHER"
-                ],
-                [
-                    "đi",
-                    "OTHER"
-                ],
-                [
-                    "được",
-                    "OTHER"
-                ],
-                [
-                    "lh",
-                    "OTHER"
-                ],
-                [
-                    "mình",
-                    "OTHER"
-                ],
-                [
-                    "0963",
-                    "OTHER"
-                ],
-                [
-                    ".",
-                    "OTHER"
-                ],
-                [
-                    "575",
-                    "OTHER"
-                ],
-                [
-                    "482",
-                    "OTHER"
-                ]
-            ],
-            "crf_entities": [
-                [
-                    "hoàng gia",
-                    "name",
-                    "0"
-                ],
-                [
-                    "tô hiệu",
-                    "street",
-                    "1"
-                ],
-                [
-                    "hà đông",
-                    "district",
-                    "2"
-                ],
-                [
-                    "phan chu trinh",
-                    "street",
-                    "3"
-                ]
-            ]
-        },
-        {
-            "std_add": {
-                "4277": {
-                    "street": "None",
-                    "id": 4277,
-                    "ward": "bình thuận",
-                    "district": "quận 7",
-                    "city": "hồ chí minh"
-                }
-            },
-            "result": {
-                "country": "việt nam",
-                "country_score": 0,
-                "score": 0.9947009976913637,
-                "district": "quận 7",
-                "street": "lý phục man",
                 "city": "hồ chí minh",
+                "city_score": 10.739391,
+                "district": "bình tân",
+                "district_score": 10.739391,
+                "street": "đường 5a",
+                "street_score": 0,
+                "addr_id": 470,
                 "features": {
-                    "0:street:street:jc": 0.5294117647058824,
-                    "0:street:street:en": 0,
-                    "els_cdd:min_lv": 30.89215,
-                    "isVietnamese": 1,
                     "bias": 1,
-                    "el:street:s": 30.89215,
-                    "2:district:district:en": 1,
-                    "cdd:city:lv": 1,
-                    "2:district:district:jc": 1.0,
-                    "el:district:s": 15.094713,
-                    "el:city:s": 15.091586,
-                    "crf:district:lv": 1,
-                    "0:street:street:lvt": 0.7333333333333333,
-                    "3:city:city:jc": 1.0,
-                    "crf:city:lv": 1,
-                    "2:district:district:lvt": 1.0,
-                    "3:city:city:lvt": 1.0,
-                    "3:city:city:en": 1,
-                    "crf:street:lv": 1,
-                    "cdd:street:lv": 1,
-                    "cdd:district:lv": 1,
-                    "crf:ward:lv": 1
-                },
-                "city_score": 15.091586,
-                "street_score": 30.89215,
-                "addr_id": 4177,
-                "district_score": 15.094713
-            },
-            "type": "true_district",
-            "raw_add": "Đường 8 Lý Phục Man , Phường Bình Thuận , Quận 7 , Hồ Chí Minh",
-            "true_candidate": [
-                {
-                    "ward": "bình thuận",
-                    "score": 0.005299002307019099,
-                    "country_score": 0,
-                    "country": "việt nam",
-                    "district": "quận 7",
-                    "city": "hồ chí minh",
-                    "ward_score": 20.21632,
-                    "city_score": 15.091586,
-                    "features": {
-                        "els_cdd:min_lv": 20.21632,
-                        "isVietnamese": 1,
-                        "bias": 1,
-                        "2:district:district:en": 1,
-                        "cdd:city:lv": 1,
-                        "2:district:district:jc": 1.0,
-                        "el:district:s": 15.094713,
-                        "el:city:s": 15.091586,
-                        "el:ward:s": 20.21632,
-                        "crf:district:lv": 1,
-                        "1:ward:ward:lvt": 1.0,
-                        "3:city:city:jc": 1.0,
-                        "crf:city:lv": 1,
-                        "2:district:district:lvt": 1.0,
-                        "1:ward:ward:jc": 1.0,
-                        "3:city:city:lvt": 1.0,
-                        "3:city:city:en": 1,
-                        "crf:street:lv": 1,
-                        "cdd:district:lv": 1,
-                        "1:ward:ward:en": 1,
-                        "crf:ward:lv": 1,
-                        "cdd:ward:lv": 1
-                    },
-                    "addr_id": 4277,
-                    "district_score": 15.094713
-                }
-            ],
-            "crf_tag": [
-                [
-                    "Đường",
-                    "B_STREET"
-                ],
-                [
-                    "8",
-                    "I_STREET"
-                ],
-                [
-                    "Lý",
-                    "I_STREET"
-                ],
-                [
-                    "Phục",
-                    "I_STREET"
-                ],
-                [
-                    "Man",
-                    "I_STREET"
-                ],
-                [
-                    ",",
-                    "OTHER"
-                ],
-                [
-                    "Phường",
-                    "WARD_TYPE"
-                ],
-                [
-                    "Bình",
-                    "B_WARD"
-                ],
-                [
-                    "Thuận",
-                    "I_WARD"
-                ],
-                [
-                    ",",
-                    "OTHER"
-                ],
-                [
-                    "Quận",
-                    "B_DIST"
-                ],
-                [
-                    "7",
-                    "I_DIST"
-                ],
-                [
-                    ",",
-                    "OTHER"
-                ],
-                [
-                    "Hồ",
-                    "B_CITY"
-                ],
-                [
-                    "Chí",
-                    "I_CITY"
-                ],
-                [
-                    "Minh",
-                    "I_CITY"
-                ]
-            ],
-            "crf_entities": [
-                [
-                    "Đường 8 Lý Phục Man",
-                    "street",
-                    "0"
-                ],
-                [
-                    "Bình Thuận",
-                    "ward",
-                    "1"
-                ],
-                [
-                    "Quận 7",
-                    "district",
-                    "2"
-                ],
-                [
-                    "Hồ Chí Minh",
-                    "city",
-                    "3"
-                ]
-            ]
-        },
-        {
-            "std_add": {
-                "7318": {
-                    "street": "phan chu trinh",
-                    "id": 7318,
-                    "ward": "None",
-                    "district": "hà đông",
-                    "city": "hà nội"
-                }
-            },
-            "result": {
-                "country": "việt nam",
-                "country_score": 0,
-                "score": 0.9999999999974545,
-                "district": "hà đông",
-                "street": "tô hiệu",
-                "city": "hà nội",
-                "features": {
-                    "1:street:street:en": 1,
-                    "els_cdd:min_lv": 19.873055,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "3:street:street:lvt": 0.2857142857142857,
                     "crf:name:lv": 1,
-                    "el:street:s": 19.873055,
-                    "2:district:district:lvt": 1.0,
-                    "2:district:district:en": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
                     "cdd:city:lv": 1,
-                    "3:street:street:en": 0,
-                    "1:street:street:lvt": 1.0,
-                    "crf:street:lv": 1,
-                    "cdd:street:lv": 1,
-                    "1:street:street:jc": 1.0,
-                    "2:district:district:jc": 1.0,
-                    "bias": 1,
-                    "el:district:s": 8.023769,
-                    "3:street:street:jc": 0.0,
-                    "el:city:s": 0.0,
-                    "crf:district:lv": 1
-                },
-                "city_score": 0,
-                "street_score": 19.873055,
-                "addr_id": 7350,
-                "district_score": 8.023769
-            },
-            "type": "true_district",
-            "raw_add": "tòa nhà hoàng gia tô hiệu hà đông - đi 23 phan chu trinh , b nào đi được lh mình 0963 . 575 . 482",
-            "true_candidate": [
-                {
-                    "country": "việt nam",
-                    "country_score": 0,
-                    "score": 1.3890311682761519e-27,
-                    "district": "hà đông",
-                    "street": "phan chu trinh",
-                    "city": "hà nội",
-                    "features": {
-                        "1:street:street:en": 0,
-                        "els_cdd:min_lv": 19.854132,
-                        "isVietnamese": 1,
-                        "cdd:district:lv": 1,
-                        "3:street:street:lvt": 1.0,
-                        "crf:name:lv": 1,
-                        "el:street:s": 19.854132,
-                        "2:district:district:lvt": 1.0,
-                        "2:district:district:en": 1,
-                        "cdd:city:lv": 1,
-                        "3:street:street:en": 1,
-                        "1:street:street:lvt": 0.2857142857142857,
-                        "crf:street:lv": 1,
-                        "cdd:street:lv": 1,
-                        "1:street:street:jc": 0.0,
-                        "2:district:district:jc": 1.0,
-                        "bias": 1,
-                        "el:district:s": 8.023769,
-                        "3:street:street:jc": 1.0,
-                        "el:city:s": 0.0,
-                        "crf:district:lv": 1
-                    },
-                    "city_score": 0,
-                    "street_score": 19.854132,
-                    "addr_id": 7318,
-                    "district_score": 8.023769
-                }
-            ],
-            "crf_tag": [
-                [
-                    "tòa",
-                    "PRO_TYPE"
-                ],
-                [
-                    "nhà",
-                    "PRO_TYPE"
-                ],
-                [
-                    "hoàng",
-                    "B_PRO"
-                ],
-                [
-                    "gia",
-                    "I_PRO"
-                ],
-                [
-                    "tô",
-                    "B_STREET"
-                ],
-                [
-                    "hiệu",
-                    "I_STREET"
-                ],
-                [
-                    "hà",
-                    "B_DIST"
-                ],
-                [
-                    "đông",
-                    "I_DIST"
-                ],
-                [
-                    "-",
-                    "OTHER"
-                ],
-                [
-                    "đi",
-                    "OTHER"
-                ],
-                [
-                    "23",
-                    "NUMBER"
-                ],
-                [
-                    "phan",
-                    "B_STREET"
-                ],
-                [
-                    "chu",
-                    "I_STREET"
-                ],
-                [
-                    "trinh",
-                    "I_STREET"
-                ],
-                [
-                    ",",
-                    "OTHER"
-                ],
-                [
-                    "b",
-                    "OTHER"
-                ],
-                [
-                    "nào",
-                    "OTHER"
-                ],
-                [
-                    "đi",
-                    "OTHER"
-                ],
-                [
-                    "được",
-                    "OTHER"
-                ],
-                [
-                    "lh",
-                    "OTHER"
-                ],
-                [
-                    "mình",
-                    "OTHER"
-                ],
-                [
-                    "0963",
-                    "OTHER"
-                ],
-                [
-                    ".",
-                    "OTHER"
-                ],
-                [
-                    "575",
-                    "OTHER"
-                ],
-                [
-                    ".",
-                    "OTHER"
-                ],
-                [
-                    "482",
-                    "OTHER"
-                ]
-            ],
-            "crf_entities": [
-                [
-                    "hoàng gia",
-                    "name",
-                    "0"
-                ],
-                [
-                    "tô hiệu",
-                    "street",
-                    "1"
-                ],
-                [
-                    "hà đông",
-                    "district",
-                    "2"
-                ],
-                [
-                    "phan chu trinh",
-                    "street",
-                    "3"
-                ]
-            ]
-        },
-        {
-            "std_add": {
-                "14401": {
-                    "street": "None",
-                    "id": 14401,
-                    "ward": "cần giuộc",
-                    "district": "cần giuộc",
-                    "city": "long an"
-                }
-            },
-            "result": {
-                "country": "việt nam",
-                "country_score": 0,
-                "score": 0.9999995815627313,
-                "district": "cần giuộc",
-                "city": "long an",
-                "features": {
-                    "crf:street:lv": 1,
-                    "els_cdd:min_lv": 11.611537,
                     "cdd:district:lv": 1,
-                    "bias": 1,
-                    "el:district:s": 11.611537,
-                    "el:city:s": 0.0,
-                    "cdd:city:lv": 1
+                    "cdd:street:lv": 1,
+                    "el:city:s": 10.739391,
+                    "el:district:s": 10.739391,
+                    "el:street:s": 0.0,
+                    "rep_min:name:street": 0,
+                    "rep_min:name:street:in": 0,
+                    "rep_min:district:street": 0,
+                    "rep_min:district:street:in": 0,
+                    "rep_min:city:street": 0,
+                    "rep_min:city:street:in": 0,
+                    "1:district:district:en:nav": 1,
+                    "2:city:city:en:nav": 1,
+                    "1:district:district:jc:nav": 1.0,
+                    "2:city:city:jc:nav": 1.0,
+                    "1:district:district:lvt:nav": 1.0,
+                    "2:city:city:lvt:nav": 1.0
                 },
-                "city_score": 0,
-                "addr_id": 14422,
-                "district_score": 11.611537
+                "score": 0.1249999994910696
             },
-            "type": "true_district",
-            "raw_add": "thi can giuoc",
-            "true_candidate": [
-                {
-                    "ward": "cần giuộc",
-                    "score": 6.907598697660864e-09,
-                    "country_score": 0,
-                    "country": "việt nam",
-                    "district": "cần giuộc",
-                    "city": "long an",
-                    "ward_score": 14.904106,
-                    "city_score": 0,
-                    "features": {
-                        "crf:street:lv": 1,
-                        "els_cdd:min_lv": 14.904106,
-                        "cdd:city:lv": 1,
-                        "bias": 1,
-                        "el:district:s": 11.611537,
-                        "el:city:s": 0.0,
-                        "el:ward:s": 14.904106,
-                        "cdd:ward:lv": 1,
-                        "cdd:district:lv": 1
-                    },
-                    "addr_id": 14401,
-                    "district_score": 11.611537
-                }
-            ],
-            "crf_tag": [
-                [
-                    "thi",
-                    "B_STREET"
-                ],
-                [
-                    "can",
-                    "I_STREET"
-                ],
-                [
-                    "giuoc",
-                    "I_STREET"
-                ]
-            ],
-            "crf_entities": [
-                [
-                    "thi can giuoc",
-                    "street",
-                    "0"
-                ]
-            ]
-        },
-        {
             "std_add": {
                 "785": {
-                    "street": "None",
                     "id": 785,
+                    "city": "hồ chí minh",
                     "ward": "None",
                     "district": "bình tân",
-                    "city": "hồ chí minh"
+                    "street": "None"
                 }
             },
-            "result": {
-                "ward": "bình tân",
-                "score": 0.6707455104200992,
-                "country_score": 0,
-                "country": "việt nam",
-                "district": "kiến tường",
-                "city": "long an",
-                "ward_score": 15.194259,
-                "city_score": 0,
-                "features": {
-                    "1:district:district:jc:nav": 0.0,
-                    "els_cdd:min_lv": 15.194259,
-                    "cdd:district:lv": 1,
-                    "2:city:city:lvt:nav": 0.3333333333333333,
-                    "crf:name:lv": 1,
-                    "crf:city:lv": 1,
-                    "2:city:city:jc:nav": 0.0,
-                    "cdd:city:lv": 1,
-                    "1:district:district:lvt:nav": 0.5555555555555556,
-                    "crf:district:lv": 1,
-                    "bias": 1,
-                    "1:district:district:en:nav": 0,
-                    "el:district:s": 0.0,
-                    "el:city:s": 0.0,
-                    "el:ward:s": 15.194259,
-                    "cdd:ward:lv": 1,
-                    "2:city:city:en:nav": 0
-                },
-                "addr_id": 14588,
-                "district_score": 0
-            },
-            "raw_add": "du an can ho vinh tuong , binh tan , ho chi minh",
             "true_candidate": [],
+            "crf_entities": [
+                [
+                    "KDC Nam Hung Vuong",
+                    "name",
+                    "0"
+                ],
+                [
+                    "binh tan",
+                    "district",
+                    "1"
+                ],
+                [
+                    "ho chi minh",
+                    "city",
+                    "2"
+                ]
+            ],
             "crf_tag": [
                 [
-                    "du",
+                    "Du",
                     "PRO_TYPE"
                 ],
                 [
@@ -833,24 +76,20 @@
                     "PRO_TYPE"
                 ],
                 [
-                    "can",
+                    "KDC",
                     "B_PRO"
                 ],
                 [
-                    "ho",
+                    "Nam",
                     "I_PRO"
                 ],
                 [
-                    "vinh",
+                    "Hung",
                     "I_PRO"
                 ],
                 [
-                    "tuong",
+                    "Vuong",
                     "I_PRO"
-                ],
-                [
-                    ",",
-                    "OTHER"
                 ],
                 [
                     "binh",
@@ -876,405 +115,234 @@
                     "minh",
                     "I_CITY"
                 ]
-            ],
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Dự án Vĩnh Lộc Garden - Bình Chánh - Hồ Chí Minh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 12.537682,
+                "district": "bình chánh",
+                "district_score": 12.537682,
+                "ward": "vĩnh lộc a",
+                "ward_score": 18.448416,
+                "addr_id": 295,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 12.537682,
+                    "el:district:s": 12.537682,
+                    "el:ward:s": 18.448416,
+                    "els_cdd:min_lv": 18.448416,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.23265408328363196
+            },
+            "std_add": {
+                "347": {
+                    "id": 347,
+                    "district": "bình chánh",
+                    "city": "hồ chí minh",
+                    "ward": "None",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
             "crf_entities": [
                 [
-                    "can ho vinh tuong",
+                    "Vĩnh Lộc Garden",
                     "name",
                     "0"
                 ],
                 [
-                    "binh tan",
+                    "Bình Chánh",
                     "district",
                     "1"
                 ],
                 [
-                    "ho chi minh",
+                    "Hồ Chí Minh",
                     "city",
                     "2"
                 ]
-            ]
-        },
-        {
-            "std_add": {
-                "5374": {
-                    "street": "tân sơn hòa",
-                    "id": 5374,
-                    "ward": "None",
-                    "district": "tân bình",
-                    "city": "hồ chí minh"
-                },
-                "5435": {
-                    "street": "None",
-                    "id": 5435,
-                    "ward": "phường 2",
-                    "district": "tân bình",
-                    "city": "hồ chí minh"
-                }
-            },
-            "result": {
-                "ward": "tân sơn nhì",
-                "score": 0.6947042780667718,
-                "country_score": 0,
-                "country": "việt nam",
-                "district": "tân phú",
-                "city": "hồ chí minh",
-                "ward_score": 12.592328,
-                "city_score": 13.678653,
-                "features": {
-                    "0:ward:ward:en": 0,
-                    "els_cdd:min_lv": 12.592328,
-                    "0:ward:ward:lvt": 0.75,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "crf:city:lv": 1,
-                    "1:district:district:jc": 0.2222222222222222,
-                    "2:city:city:lvt": 1.0,
-                    "cdd:city:lv": 1,
-                    "crf:ward:lv": 1,
-                    "1:district:district:lvt": 0.6666666666666666,
-                    "2:city:city:en": 1,
-                    "crf:district:lv": 1,
-                    "bias": 1,
-                    "el:district:s": 0.0,
-                    "2:city:city:jc": 1.0,
-                    "1:district:district:en": 0,
-                    "el:city:s": 13.678653,
-                    "el:ward:s": 12.592328,
-                    "cdd:ward:lv": 1,
-                    "0:ward:ward:jc": 0.42857142857142855
-                },
-                "addr_id": 5835,
-                "district_score": 0
-            },
-            "raw_add": "phường 2 tân sơn hòa tân bình hồ chí minh",
-            "true_candidate": [
-                {
-                    "ward": "phường 2",
-                    "score": 0.2925749663820664,
-                    "country_score": 0,
-                    "country": "việt nam",
-                    "district": "tân bình",
-                    "city": "hồ chí minh",
-                    "ward_score": 22.076305,
-                    "city_score": 13.678653,
-                    "features": {
-                        "0:ward:ward:en": 0,
-                        "els_cdd:min_lv": 22.076305,
-                        "0:ward:ward:lvt": 0.19047619047619047,
-                        "isVietnamese": 1,
-                        "cdd:district:lv": 1,
-                        "crf:city:lv": 1,
-                        "1:district:district:jc": 1.0,
-                        "2:city:city:lvt": 1.0,
-                        "cdd:city:lv": 1,
-                        "crf:ward:lv": 1,
-                        "1:district:district:lvt": 1.0,
-                        "2:city:city:en": 1,
-                        "crf:district:lv": 1,
-                        "bias": 1,
-                        "el:district:s": 10.739391,
-                        "2:city:city:jc": 1.0,
-                        "1:district:district:en": 1,
-                        "el:city:s": 13.678653,
-                        "el:ward:s": 22.076305,
-                        "cdd:ward:lv": 1,
-                        "0:ward:ward:jc": 0.0
-                    },
-                    "addr_id": 5435,
-                    "district_score": 10.739391
-                },
-                {
-                    "country": "việt nam",
-                    "country_score": 0,
-                    "score": 0.012475123220377572,
-                    "district": "tân bình",
-                    "street": "tân sơn hòa",
-                    "city": "hồ chí minh",
-                    "features": {
-                        "els_cdd:min_lv": 21.716501,
-                        "isVietnamese": 1,
-                        "cdd:district:lv": 1,
-                        "crf:city:lv": 1,
-                        "el:street:s": 21.716501,
-                        "1:district:district:jc": 1.0,
-                        "2:city:city:lvt": 1.0,
-                        "cdd:city:lv": 1,
-                        "1:district:district:lvt": 1.0,
-                        "2:city:city:en": 1,
-                        "cdd:street:lv": 1,
-                        "bias": 1,
-                        "el:district:s": 10.739391,
-                        "2:city:city:jc": 1.0,
-                        "el:city:s": 13.678653,
-                        "crf:ward:lv": 1,
-                        "crf:district:lv": 1,
-                        "1:district:district:en": 1
-                    },
-                    "city_score": 13.678653,
-                    "street_score": 21.716501,
-                    "addr_id": 5374,
-                    "district_score": 10.739391
-                }
             ],
             "crf_tag": [
                 [
-                    "phường",
-                    "WARD_TYPE"
+                    "Dự",
+                    "PRO_TYPE"
                 ],
                 [
-                    "2",
-                    "B_WARD"
+                    "án",
+                    "PRO_TYPE"
                 ],
                 [
-                    "tân",
-                    "I_WARD"
-                ],
-                [
-                    "sơn",
-                    "I_WARD"
-                ],
-                [
-                    "hòa",
-                    "I_WARD"
-                ],
-                [
-                    "tân",
-                    "B_DIST"
-                ],
-                [
-                    "bình",
-                    "I_DIST"
-                ],
-                [
-                    "hồ",
-                    "B_CITY"
-                ],
-                [
-                    "chí",
-                    "I_CITY"
-                ],
-                [
-                    "minh",
-                    "I_CITY"
-                ]
-            ],
-            "crf_entities": [
-                [
-                    "2 tân sơn hòa",
-                    "ward",
-                    "0"
-                ],
-                [
-                    "tân bình",
-                    "district",
-                    "1"
-                ],
-                [
-                    "hồ chí minh",
-                    "city",
-                    "2"
-                ]
-            ]
-        },
-        {
-            "std_add": {
-                "6094": {
-                    "street": "sông đà",
-                    "id": 6094,
-                    "ward": "None",
-                    "district": "thủ đức",
-                    "city": "hồ chí minh"
-                }
-            },
-            "result": {
-                "country": "việt nam",
-                "country_score": 0,
-                "score": 0.9997845898228027,
-                "district": "thủ đức",
-                "city": "hồ chí minh",
-                "features": {
-                    "1:district:district:jc:nav": 1.0,
-                    "els_cdd:min_lv": 12.843462,
-                    "2:city:city:en:nav": 1,
-                    "2:city:city:lvt:nav": 1.0,
-                    "crf:name:lv": 1,
-                    "1:district:district:en:nav": 1,
-                    "2:city:city:jc:nav": 1.0,
-                    "cdd:city:lv": 1,
-                    "1:district:district:lvt:nav": 1.0,
-                    "bias": 1,
-                    "crf:city:lv": 1,
-                    "el:district:s": 12.843462,
-                    "el:city:s": 4.906722,
-                    "crf:district:lv": 1,
-                    "cdd:district:lv": 1
-                },
-                "city_score": 4.906722,
-                "addr_id": 6199,
-                "district_score": 12.843462
-            },
-            "type": "true_district",
-            "raw_add": "Song Da Thu Duc Ho Chi Minh",
-            "true_candidate": [
-                {
-                    "country": "việt nam",
-                    "country_score": 0,
-                    "score": 0.00021541017719736,
-                    "district": "thủ đức",
-                    "street": "sông đà",
-                    "city": "hồ chí minh",
-                    "features": {
-                        "1:district:district:jc:nav": 1.0,
-                        "els_cdd:min_lv": 25.320396,
-                        "cdd:district:lv": 1,
-                        "2:city:city:lvt:nav": 1.0,
-                        "crf:name:lv": 1,
-                        "crf:city:lv": 1,
-                        "el:street:s": 25.320396,
-                        "2:city:city:jc:nav": 1.0,
-                        "cdd:city:lv": 1,
-                        "1:district:district:lvt:nav": 1.0,
-                        "cdd:street:lv": 1,
-                        "bias": 1,
-                        "1:district:district:en:nav": 1,
-                        "el:district:s": 12.843462,
-                        "el:city:s": 4.906722,
-                        "crf:district:lv": 1,
-                        "2:city:city:en:nav": 1
-                    },
-                    "city_score": 4.906722,
-                    "street_score": 25.320396,
-                    "addr_id": 6094,
-                    "district_score": 12.843462
-                }
-            ],
-            "crf_tag": [
-                [
-                    "Song",
+                    "Vĩnh",
                     "B_PRO"
                 ],
                 [
-                    "Da",
+                    "Lộc",
                     "I_PRO"
                 ],
                 [
-                    "Thu",
+                    "Garden",
+                    "I_PRO"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Bình",
                     "B_DIST"
                 ],
                 [
-                    "Duc",
+                    "Chánh",
                     "I_DIST"
                 ],
                 [
-                    "Ho",
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Hồ",
                     "B_CITY"
                 ],
                 [
-                    "Chi",
+                    "Chí",
                     "I_CITY"
                 ],
                 [
                     "Minh",
                     "I_CITY"
                 ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Khu nhà phố Hưng Gia - Quận 7 - Hồ Chí Minh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 11.688041,
+                "district": "quận 7",
+                "district_score": 12.626178,
+                "street": "hưng gia 5",
+                "street_score": 21.832758,
+                "addr_id": 4164,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 11.688041,
+                    "el:district:s": 12.626178,
+                    "el:street:s": 21.832758,
+                    "els_cdd:min_lv": 21.832758,
+                    "isVietnamese": 1,
+                    "0:street:street:en": 0,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "0:street:street:jc": 0.75,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "0:street:street:lvt": 0.8888888888888888,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.4545705297061265
+            },
+            "std_add": {
+                "4435": {
+                    "id": 4435,
+                    "district": "quận 7",
+                    "city": "hồ chí minh",
+                    "ward": "None",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hồ chí minh",
+                    "city_score": 11.688041,
+                    "district": "quận 7",
+                    "district_score": 12.626178,
+                    "addr_id": 4435,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "el:city:s": 11.688041,
+                        "el:district:s": 12.626178,
+                        "els_cdd:min_lv": 12.626178,
+                        "isVietnamese": 1,
+                        "1:district:district:en": 1,
+                        "2:city:city:en": 1,
+                        "1:district:district:jc": 1.0,
+                        "2:city:city:jc": 1.0,
+                        "1:district:district:lvt": 1.0,
+                        "2:city:city:lvt": 1.0
+                    },
+                    "score": 0.08371615347857672
+                }
             ],
             "crf_entities": [
                 [
-                    "Song Da",
-                    "name",
+                    "Hưng Gia",
+                    "street",
                     "0"
                 ],
                 [
-                    "Thu Duc",
+                    "Quận 7",
                     "district",
                     "1"
                 ],
                 [
-                    "Ho Chi Minh",
+                    "Hồ Chí Minh",
                     "city",
                     "2"
                 ]
-            ]
-        },
-        {
-            "std_add": {
-                "30596": {
-                    "street": "None",
-                    "id": 30596,
-                    "ward": "bãi cháy",
-                    "district": "hạ long",
-                    "city": "quảng ninh"
-                }
-            },
-            "result": {
-                "country": "việt nam",
-                "country_score": 0,
-                "score": 0.9999999999999987,
-                "district": "hạ long",
-                "street": "bãi cháy",
-                "city": "quảng ninh",
-                "features": {
-                    "0:street:street:jc:nav": 1.0,
-                    "els_cdd:min_lv": 22.288582,
-                    "cdd:district:lv": 1,
-                    "crf:city:lv": 1,
-                    "el:street:s": 22.288582,
-                    "0:street:street:en:nav": 1,
-                    "cdd:city:lv": 1,
-                    "crf:street:lv": 1,
-                    "cdd:street:lv": 1,
-                    "1:city:city:lvt:nav": 1.0,
-                    "bias": 1,
-                    "1:city:city:jc:nav": 1.0,
-                    "el:district:s": 0.0,
-                    "1:city:city:en:nav": 1,
-                    "el:city:s": 6.0162287,
-                    "0:street:street:lvt:nav": 1.0
-                },
-                "city_score": 6.0162287,
-                "street_score": 22.288582,
-                "addr_id": 30440,
-                "district_score": 0
-            },
-            "type": "true_district",
-            "raw_add": "Bai Chay - Quang Ninh",
-            "true_candidate": [
-                {
-                    "ward": "bãi cháy",
-                    "score": 1.2695137812497918e-15,
-                    "country_score": 0,
-                    "country": "việt nam",
-                    "district": "hạ long",
-                    "city": "quảng ninh",
-                    "ward_score": 20.749374,
-                    "city_score": 6.0162287,
-                    "features": {
-                        "els_cdd:min_lv": 20.749374,
-                        "cdd:district:lv": 1,
-                        "crf:city:lv": 1,
-                        "cdd:city:lv": 1,
-                        "crf:street:lv": 1,
-                        "1:city:city:lvt:nav": 1.0,
-                        "bias": 1,
-                        "1:city:city:jc:nav": 1.0,
-                        "el:district:s": 0.0,
-                        "1:city:city:en:nav": 1,
-                        "el:city:s": 6.0162287,
-                        "el:ward:s": 20.749374,
-                        "cdd:ward:lv": 1
-                    },
-                    "addr_id": 30596,
-                    "district_score": 0
-                }
             ],
             "crf_tag": [
                 [
-                    "Bai",
+                    "Khu",
+                    "OTHER"
+                ],
+                [
+                    "nhà",
+                    "OTHER"
+                ],
+                [
+                    "phố",
+                    "STREET_TYPE"
+                ],
+                [
+                    "Hưng",
                     "B_STREET"
                 ],
                 [
-                    "Chay",
+                    "Gia",
                     "I_STREET"
                 ],
                 [
@@ -1282,150 +350,431 @@
                     "OTHER"
                 ],
                 [
-                    "Quang",
+                    "Quận",
+                    "B_DIST"
+                ],
+                [
+                    "7",
+                    "I_DIST"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Hồ",
                     "B_CITY"
                 ],
                 [
-                    "Ninh",
+                    "Chí",
                     "I_CITY"
-                ]
-            ],
-            "crf_entities": [
-                [
-                    "Bai Chay",
-                    "street",
-                    "0"
                 ],
                 [
-                    "Quang Ninh",
-                    "city",
-                    "1"
+                    "Minh",
+                    "I_CITY"
                 ]
             ]
         },
         {
-            "std_add": {
-                "21109": {
-                    "street": "đt 768",
-                    "id": 21109,
-                    "ward": "None",
-                    "district": "vĩnh cửu",
-                    "city": "đồng nai"
-                },
-                "21124": {
-                    "street": "None",
-                    "id": 21124,
-                    "ward": "thạnh phú",
-                    "district": "vĩnh cửu",
-                    "city": "đồng nai"
-                }
-            },
+            "type": "true_district",
+            "raw_add": "Dự án Căn hộ Vĩnh Tường , Bình Tân , Hồ Chí Minh",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.9994670983029186,
-                "district": "vĩnh cửu",
-                "city": "đồng nai",
+                "city": "hồ chí minh",
+                "city_score": 10.739391,
+                "district": "bình tân",
+                "district_score": 10.739391,
+                "street": "đường 5a",
+                "street_score": 0,
+                "addr_id": 470,
                 "features": {
-                    "2:district:district:lvt:nav": 1.0,
-                    "els_cdd:min_lv": 18.566463,
-                    "3:city:city:en:nav": 1,
-                    "crf:name:lv": 1,
-                    "crf:city:lv": 1,
-                    "el:city:s": 10.457261,
-                    "cdd:city:lv": 1,
-                    "3:city:city:jc:nav": 1.0,
-                    "3:city:city:lvt:nav": 1.0,
                     "bias": 1,
-                    "el:district:s": 18.566463,
-                    "cdd:district:lv": 1,
-                    "2:district:district:en:nav": 1,
-                    "crf:ward:lv": 1,
+                    "crf:name:lv": 1,
                     "crf:district:lv": 1,
-                    "2:district:district:jc:nav": 1.0
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 10.739391,
+                    "el:district:s": 10.739391,
+                    "el:street:s": 0.0,
+                    "rep_min:name:street": 0,
+                    "rep_min:name:street:in": 0,
+                    "rep_min:district:street": 0,
+                    "rep_min:district:street:in": 0,
+                    "rep_min:city:street": 0,
+                    "rep_min:city:street:in": 0,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
                 },
-                "city_score": 10.457261,
-                "addr_id": 21130,
-                "district_score": 18.566463
+                "score": 0.12499999999998837
             },
+            "std_add": {
+                "785": {
+                    "id": 785,
+                    "district": "bình tân",
+                    "city": "hồ chí minh",
+                    "ward": "None",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "Căn hộ Vĩnh Tường",
+                    "name",
+                    "0"
+                ],
+                [
+                    "Bình Tân",
+                    "district",
+                    "1"
+                ],
+                [
+                    "Hồ Chí Minh",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Dự",
+                    "PRO_TYPE"
+                ],
+                [
+                    "án",
+                    "PRO_TYPE"
+                ],
+                [
+                    "Căn",
+                    "B_PRO"
+                ],
+                [
+                    "hộ",
+                    "I_PRO"
+                ],
+                [
+                    "Vĩnh",
+                    "I_PRO"
+                ],
+                [
+                    "Tường",
+                    "I_PRO"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "Bình",
+                    "B_DIST"
+                ],
+                [
+                    "Tân",
+                    "I_DIST"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "Hồ",
+                    "B_CITY"
+                ],
+                [
+                    "Chí",
+                    "I_CITY"
+                ],
+                [
+                    "Minh",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
             "type": "true_district",
-            "raw_add": "lavender city - dt 768 - thanh phu vinh cuu dong nai",
+            "raw_add": "hoàng gia tô hiệu hà đông - đi 23 phan chu trinh , b nào đi được lh mình 0963 . 575 482",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hà đông",
+                "district_score": 8.023769,
+                "street": "tô hiệu",
+                "street_score": 19.873055,
+                "addr_id": 7350,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:street:lv": 1,
+                    "crf:district:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 8.023769,
+                    "el:street:s": 19.873055,
+                    "els_cdd:min_lv": 19.873055,
+                    "isVietnamese": 1,
+                    "1:street:street:en": 1,
+                    "2:district:district:en": 1,
+                    "3:street:street:en": 0,
+                    "1:street:street:jc": 1.0,
+                    "2:district:district:jc": 1.0,
+                    "3:street:street:jc": 0.0,
+                    "1:street:street:lvt": 1.0,
+                    "2:district:district:lvt": 1.0,
+                    "3:street:street:lvt": 0.2857142857142857
+                },
+                "score": 0.9999999999999977
+            },
+            "std_add": {
+                "7318": {
+                    "id": 7318,
+                    "city": "hà nội",
+                    "ward": "None",
+                    "district": "hà đông",
+                    "street": "phan chu trinh"
+                }
+            },
             "true_candidate": [
                 {
                     "country": "việt nam",
                     "country_score": 0,
-                    "score": 0.0005323819493555002,
-                    "district": "vĩnh cửu",
-                    "street": "đt 768",
-                    "city": "đồng nai",
+                    "city": "hà nội",
+                    "city_score": 0,
+                    "district": "hà đông",
+                    "district_score": 8.023769,
+                    "street": "phan chu trinh",
+                    "street_score": 19.854132,
+                    "addr_id": 7318,
                     "features": {
-                        "2:district:district:lvt:nav": 1.0,
-                        "els_cdd:min_lv": 33.669647,
-                        "3:city:city:en:nav": 1,
+                        "bias": 1,
                         "crf:name:lv": 1,
-                        "2:district:district:en:nav": 1,
-                        "crf:city:lv": 1,
-                        "el:street:s": 33.669647,
+                        "crf:street:lv": 1,
+                        "crf:district:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
                         "cdd:street:lv": 1,
-                        "cdd:city:lv": 1,
-                        "3:city:city:jc:nav": 1.0,
-                        "2:district:district:jc:nav": 1.0,
-                        "cdd:district:lv": 1,
-                        "el:district:s": 18.566463,
-                        "bias": 1,
-                        "el:city:s": 10.457261,
-                        "crf:ward:lv": 1,
-                        "crf:district:lv": 1,
-                        "3:city:city:lvt:nav": 1.0
+                        "el:city:s": 0.0,
+                        "el:district:s": 8.023769,
+                        "el:street:s": 19.854132,
+                        "els_cdd:min_lv": 19.854132,
+                        "isVietnamese": 1,
+                        "1:street:street:en": 0,
+                        "2:district:district:en": 1,
+                        "3:street:street:en": 1,
+                        "1:street:street:jc": 0.0,
+                        "2:district:district:jc": 1.0,
+                        "3:street:street:jc": 1.0,
+                        "1:street:street:lvt": 0.2857142857142857,
+                        "2:district:district:lvt": 1.0,
+                        "3:street:street:lvt": 1.0
                     },
-                    "city_score": 10.457261,
-                    "street_score": 33.669647,
-                    "addr_id": 21109,
-                    "district_score": 18.566463
-                },
-                {
-                    "ward": "thạnh phú",
-                    "score": 5.136182877757378e-07,
-                    "country_score": 0,
-                    "country": "việt nam",
-                    "district": "vĩnh cửu",
-                    "city": "đồng nai",
-                    "ward_score": 24.28979,
-                    "city_score": 10.457261,
-                    "features": {
-                        "crf:district:lv": 1,
-                        "2:district:district:lvt:nav": 1.0,
-                        "els_cdd:min_lv": 24.28979,
-                        "3:city:city:en:nav": 1,
-                        "crf:ward:lv": 1,
-                        "crf:name:lv": 1,
-                        "1:ward:ward:lvt:nav": 1.0,
-                        "crf:city:lv": 1,
-                        "2:district:district:en:nav": 1,
-                        "cdd:city:lv": 1,
-                        "1:ward:ward:en:nav": 1,
-                        "3:city:city:jc:nav": 1.0,
-                        "3:city:city:lvt:nav": 1.0,
-                        "cdd:district:lv": 1,
-                        "1:ward:ward:jc:nav": 1.0,
-                        "el:district:s": 18.566463,
-                        "bias": 1,
-                        "el:city:s": 10.457261,
-                        "el:ward:s": 24.28979,
-                        "cdd:ward:lv": 1,
-                        "2:district:district:jc:nav": 1.0
-                    },
-                    "addr_id": 21124,
-                    "district_score": 18.566463
+                    "score": 9.158259990524772e-31
                 }
+            ],
+            "crf_entities": [
+                [
+                    "hoàng gia",
+                    "name",
+                    "0"
+                ],
+                [
+                    "tô hiệu",
+                    "street",
+                    "1"
+                ],
+                [
+                    "hà đông",
+                    "district",
+                    "2"
+                ],
+                [
+                    "phan chu trinh",
+                    "street",
+                    "3"
+                ]
             ],
             "crf_tag": [
                 [
-                    "lavender",
+                    "hoàng",
                     "B_PRO"
                 ],
                 [
+                    "gia",
+                    "I_PRO"
+                ],
+                [
+                    "tô",
+                    "B_STREET"
+                ],
+                [
+                    "hiệu",
+                    "I_STREET"
+                ],
+                [
+                    "hà",
+                    "B_DIST"
+                ],
+                [
+                    "đông",
+                    "I_DIST"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "đi",
+                    "OTHER"
+                ],
+                [
+                    "23",
+                    "NUMBER"
+                ],
+                [
+                    "phan",
+                    "B_STREET"
+                ],
+                [
+                    "chu",
+                    "I_STREET"
+                ],
+                [
+                    "trinh",
+                    "I_STREET"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "b",
+                    "OTHER"
+                ],
+                [
+                    "nào",
+                    "OTHER"
+                ],
+                [
+                    "đi",
+                    "OTHER"
+                ],
+                [
+                    "được",
+                    "OTHER"
+                ],
+                [
+                    "lh",
+                    "OTHER"
+                ],
+                [
+                    "mình",
+                    "OTHER"
+                ],
+                [
+                    "0963",
+                    "OTHER"
+                ],
+                [
+                    ".",
+                    "OTHER"
+                ],
+                [
+                    "575",
+                    "OTHER"
+                ],
+                [
+                    "482",
+                    "OTHER"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Dự án Contentment Plaza - Thuận An - Bình Dương",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình dương",
+                "city_score": 12.745567,
+                "district": "thuận an",
+                "district_score": 12.745567,
+                "street": "bình chuẩn",
+                "street_score": 14.3414545,
+                "addr_id": 10601,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 12.745567,
+                    "el:district:s": 12.745567,
+                    "el:street:s": 14.3414545,
+                    "els_cdd:min_lv": 14.3414545,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.12499999999999997
+            },
+            "std_add": {
+                "10909": {
+                    "id": 10909,
+                    "district": "thuận an",
+                    "city": "bình dương",
+                    "ward": "None",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "Contentment Plaza",
+                    "name",
+                    "0"
+                ],
+                [
+                    "Thuận An",
+                    "district",
+                    "1"
+                ],
+                [
+                    "Bình Dương",
                     "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Dự",
+                    "PRO_TYPE"
+                ],
+                [
+                    "án",
+                    "PRO_TYPE"
+                ],
+                [
+                    "Contentment",
+                    "B_PRO"
+                ],
+                [
+                    "Plaza",
                     "I_PRO"
                 ],
                 [
@@ -1433,31 +782,198 @@
                     "OTHER"
                 ],
                 [
-                    "dt",
-                    "OTHER"
+                    "Thuận",
+                    "B_DIST"
                 ],
                 [
-                    "768",
-                    "NUMBER"
+                    "An",
+                    "I_DIST"
                 ],
                 [
                     "-",
                     "OTHER"
                 ],
                 [
-                    "thanh",
+                    "Bình",
+                    "B_CITY"
+                ],
+                [
+                    "Dương",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "an hoa - nguyen van to xa an hoa - bien hoa dong nai",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "đồng nai",
+                "city_score": 21.277367,
+                "district": "biên hòa",
+                "district_score": 14.9025,
+                "street": "nguyễn văn hoa",
+                "street_score": 24.400703,
+                "addr_id": 20610,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 21.277367,
+                    "el:district:s": 14.9025,
+                    "el:street:s": 24.400703,
+                    "els_cdd:min_lv": 24.400703,
+                    "0:street:street:en:nav": 0,
+                    "1:street:street:en:nav": 0,
+                    "3:district:district:en:nav": 1,
+                    "4:city:city:en:nav": 1,
+                    "0:street:street:jc:nav": 0.3333333333333333,
+                    "1:street:street:jc:nav": 0.6428571428571429,
+                    "3:district:district:jc:nav": 1.0,
+                    "4:city:city:jc:nav": 1.0,
+                    "0:street:street:lvt:nav": 0.6,
+                    "1:street:street:lvt:nav": 0.8888888888888888,
+                    "3:district:district:lvt:nav": 1.0,
+                    "4:city:city:lvt:nav": 1.0
+                },
+                "score": 0.8475707770040084
+            },
+            "std_add": {
+                "20617": {
+                    "id": 20617,
+                    "city": "đồng nai",
+                    "ward": "None",
+                    "district": "biên hòa",
+                    "street": "nguyễn văn tỏ"
+                },
+                "20665": {
+                    "id": 20665,
+                    "city": "đồng nai",
+                    "ward": "an hòa",
+                    "district": "biên hòa",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "đồng nai",
+                    "city_score": 21.277367,
+                    "district": "biên hòa",
+                    "district_score": 14.9025,
+                    "street": "nguyễn văn tỏ",
+                    "street_score": 28.680431,
+                    "addr_id": 20617,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 21.277367,
+                        "el:district:s": 14.9025,
+                        "el:street:s": 28.680431,
+                        "els_cdd:min_lv": 28.680431,
+                        "0:street:street:en:nav": 0,
+                        "1:street:street:en:nav": 1,
+                        "3:district:district:en:nav": 1,
+                        "4:city:city:en:nav": 1,
+                        "0:street:street:jc:nav": 0.07142857142857142,
+                        "1:street:street:jc:nav": 1.0,
+                        "3:district:district:jc:nav": 1.0,
+                        "4:city:city:jc:nav": 1.0,
+                        "0:street:street:lvt:nav": 0.42105263157894735,
+                        "1:street:street:lvt:nav": 1.0,
+                        "3:district:district:lvt:nav": 1.0,
+                        "4:city:city:lvt:nav": 1.0
+                    },
+                    "score": 0.0009734590733111761
+                }
+            ],
+            "crf_entities": [
+                [
+                    "an hoa",
+                    "street",
+                    "0"
+                ],
+                [
+                    "nguyen van to",
+                    "street",
+                    "1"
+                ],
+                [
+                    "an hoa",
+                    "ward",
+                    "2"
+                ],
+                [
+                    "bien hoa",
+                    "district",
+                    "3"
+                ],
+                [
+                    "dong nai",
+                    "city",
+                    "4"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "an",
+                    "B_STREET"
+                ],
+                [
+                    "hoa",
+                    "I_STREET"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "nguyen",
+                    "B_STREET"
+                ],
+                [
+                    "van",
+                    "I_STREET"
+                ],
+                [
+                    "to",
+                    "I_STREET"
+                ],
+                [
+                    "xa",
+                    "WARD_TYPE"
+                ],
+                [
+                    "an",
                     "B_WARD"
                 ],
                 [
-                    "phu",
+                    "hoa",
                     "I_WARD"
                 ],
                 [
-                    "vinh",
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "bien",
                     "B_DIST"
                 ],
                 [
-                    "cuu",
+                    "hoa",
                     "I_DIST"
                 ],
                 [
@@ -1468,315 +984,773 @@
                     "nai",
                     "I_CITY"
                 ]
-            ],
-            "crf_entities": [
-                [
-                    "lavender city",
-                    "name",
-                    "0"
-                ],
-                [
-                    "thanh phu",
-                    "ward",
-                    "1"
-                ],
-                [
-                    "vinh cuu",
-                    "district",
-                    "2"
-                ],
-                [
-                    "dong nai",
-                    "city",
-                    "3"
-                ]
             ]
         },
         {
-            "std_add": {
-                "9629": {
-                    "street": "None",
-                    "id": 9629,
-                    "ward": "None",
-                    "district": "bến cát",
-                    "city": "bình dương"
-                }
-            },
+            "raw_add": "đường an dương 1 an dương",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.9999999860149043,
-                "district": "bến cát",
-                "street": "đại lộ bình dương",
-                "city": "bình dương",
+                "city": "hải dương",
+                "city_score": 0,
+                "district": "hải dương",
+                "district_score": 0,
+                "street": "an dương vương",
+                "street_score": 10.689688,
+                "addr_id": 22841,
                 "features": {
-                    "els_cdd:min_lv": 16.156193,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "crf:name:lv": 1,
-                    "crf:city:lv": 1,
-                    "el:street:s": 16.156193,
-                    "2:city:city:lvt": 1.0,
-                    "cdd:city:lv": 1,
-                    "1:district:district:lvt": 1.0,
-                    "2:city:city:en": 1,
-                    "cdd:street:lv": 1,
                     "bias": 1,
-                    "el:district:s": 14.3708105,
-                    "2:city:city:jc": 1.0,
-                    "el:city:s": 14.37081,
-                    "1:district:district:jc": 1.0,
-                    "crf:district:lv": 1,
-                    "1:district:district:en": 1
+                    "crf:street:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 0.0,
+                    "el:street:s": 10.689688,
+                    "els_cdd:min_lv": 10.689688,
+                    "isVietnamese": 1,
+                    "0:street:street:en": 0,
+                    "1:city:city:en": 0,
+                    "0:street:street:jc": 0.5384615384615384,
+                    "1:city:city:jc": 0.4444444444444444,
+                    "0:street:street:lvt": 0.75,
+                    "1:city:city:lvt": 0.7058823529411765
                 },
-                "city_score": 14.37081,
-                "street_score": 16.156193,
-                "addr_id": 9373,
-                "district_score": 14.3708105
+                "score": 0.8991703879281596
             },
-            "type": "true_district",
-            "raw_add": "dự án bencat center point bến cát bình dương",
-            "true_candidate": [],
+            "std_add": {
+                "13349": {
+                    "id": 13349,
+                    "city": "hải phòng",
+                    "ward": "None",
+                    "district": "an dương",
+                    "street": "an dương 1"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hải phòng",
+                    "city_score": 0,
+                    "district": "an dương",
+                    "district_score": 7.495748,
+                    "street": "an dương 1",
+                    "street_score": 17.340511,
+                    "addr_id": 13349,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 7.495748,
+                        "el:street:s": 17.340511,
+                        "els_cdd:min_lv": 17.340511,
+                        "isVietnamese": 1,
+                        "0:street:street:en": 1,
+                        "1:city:city:en": 0,
+                        "0:street:street:jc": 1.0,
+                        "1:city:city:jc": 0.0,
+                        "0:street:street:lvt": 1.0,
+                        "1:city:city:lvt": 0.35294117647058826
+                    },
+                    "score": 0.09935259441843768
+                }
+            ],
+            "crf_entities": [
+                [
+                    "an dương 1",
+                    "street",
+                    "0"
+                ],
+                [
+                    "an dương",
+                    "city",
+                    "1"
+                ]
+            ],
             "crf_tag": [
                 [
-                    "dự",
-                    "PRO_TYPE"
+                    "đường",
+                    "STREET_TYPE"
                 ],
                 [
-                    "án",
-                    "PRO_TYPE"
+                    "an",
+                    "B_STREET"
                 ],
                 [
-                    "bencat",
-                    "B_PRO"
+                    "dương",
+                    "I_STREET"
                 ],
                 [
-                    "center",
-                    "I_PRO"
+                    "1",
+                    "I_STREET"
                 ],
                 [
-                    "point",
-                    "I_PRO"
-                ],
-                [
-                    "bến",
-                    "B_DIST"
-                ],
-                [
-                    "cát",
-                    "I_DIST"
-                ],
-                [
-                    "bình",
+                    "an",
                     "B_CITY"
                 ],
                 [
                     "dương",
                     "I_CITY"
                 ]
+            ]
+        },
+        {
+            "raw_add": "- hòa mã",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hòa bình",
+                "city_score": 3.6509063,
+                "district": "hòa bình",
+                "district_score": 3.7270763,
+                "street": "hòa bình",
+                "street_score": 4.758269,
+                "addr_id": 23492,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 3.6509063,
+                    "el:district:s": 3.7270763,
+                    "el:street:s": 4.758269,
+                    "els_cdd:min_lv": 4.758269,
+                    "isVietnamese": 1,
+                    "0:street:street:en": 0,
+                    "0:street:street:jc": 0.25,
+                    "0:street:street:lvt": 0.5714285714285714
+                },
+                "score": 0.0837343602349592
+            },
+            "std_add": {
+                "7521": {
+                    "id": 7521,
+                    "district": "hai bà trưng",
+                    "city": "hà nội",
+                    "ward": "None",
+                    "street": "hòa mã"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 0,
+                    "district": "hai bà trưng",
+                    "district_score": 0,
+                    "street": "hòa mã",
+                    "street_score": 12.636431,
+                    "addr_id": 7521,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 0.0,
+                        "el:street:s": 12.636431,
+                        "els_cdd:min_lv": 12.636431,
+                        "isVietnamese": 1,
+                        "0:street:street:en": 1,
+                        "0:street:street:jc": 1.0,
+                        "0:street:street:lvt": 1.0
+                    },
+                    "score": 0.0693521027981044
+                }
             ],
             "crf_entities": [
                 [
-                    "bencat center point",
+                    "hòa mã",
+                    "street",
+                    "0"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "hòa",
+                    "B_STREET"
+                ],
+                [
+                    "mã",
+                    "I_STREET"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "du an kdc phu gia 2 bien hoa dong nai",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "đồng nai",
+                "city_score": 14.9025,
+                "district": "biên hòa",
+                "district_score": 14.9025,
+                "street": "số 3",
+                "street_score": 0,
+                "addr_id": 20637,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 14.9025,
+                    "el:district:s": 14.9025,
+                    "el:street:s": 0.0,
+                    "rep_min:name:street": 0,
+                    "rep_min:name:street:in": 0,
+                    "rep_min:district:street": 0,
+                    "rep_min:district:street:in": 0,
+                    "rep_min:city:street": 0,
+                    "rep_min:city:street:in": 0,
+                    "1:district:district:en:nav": 1,
+                    "2:city:city:en:nav": 1,
+                    "1:district:district:jc:nav": 1.0,
+                    "2:city:city:jc:nav": 1.0,
+                    "1:district:district:lvt:nav": 1.0,
+                    "2:city:city:lvt:nav": 1.0
+                },
+                "score": 0.125
+            },
+            "std_add": {
+                "20716": {
+                    "id": 20716,
+                    "city": "đồng nai",
+                    "ward": "None",
+                    "district": "biên hòa",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "kdc phu gia 2",
                     "name",
                     "0"
                 ],
                 [
-                    "bến cát",
+                    "bien hoa",
                     "district",
                     "1"
                 ],
                 [
-                    "bình dương",
+                    "dong nai",
                     "city",
                     "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "du",
+                    "PRO_TYPE"
+                ],
+                [
+                    "an",
+                    "PRO_TYPE"
+                ],
+                [
+                    "kdc",
+                    "B_PRO"
+                ],
+                [
+                    "phu",
+                    "I_PRO"
+                ],
+                [
+                    "gia",
+                    "I_PRO"
+                ],
+                [
+                    "2",
+                    "I_PRO"
+                ],
+                [
+                    "bien",
+                    "B_DIST"
+                ],
+                [
+                    "hoa",
+                    "I_DIST"
+                ],
+                [
+                    "dong",
+                    "B_CITY"
+                ],
+                [
+                    "nai",
+                    "I_CITY"
                 ]
             ]
         },
         {
-            "std_add": {
-                "25002": {
-                    "street": "None",
-                    "id": 25002,
-                    "ward": "dương tơ",
-                    "district": "phú quốc",
-                    "city": "kiên giang"
-                }
-            },
+            "type": "true_district",
+            "raw_add": "lang ha dong da - ha noi",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.9999913770081803,
-                "district": "phú quốc",
-                "street": "chùa ông cửa lấp",
-                "city": "kiên giang",
+                "city": "hà nội",
+                "city_score": 7.7136292,
+                "district": "đống đa",
+                "district_score": 15.761211,
+                "street": "láng hạ",
+                "street_score": 22.160313,
+                "addr_id": 6981,
                 "features": {
-                    "0:street:street:jc": 0.35714285714285715,
-                    "0:street:street:en": 0,
-                    "els_cdd:min_lv": 13.475284,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "el:street:s": 13.475284,
-                    "cdd:city:lv": 1,
-                    "1:district:district:lvt": 0.125,
-                    "crf:street:lv": 1,
-                    "cdd:street:lv": 1,
                     "bias": 1,
-                    "0:street:street:lvt": 0.6086956521739131,
-                    "el:district:s": 0.0,
-                    "el:city:s": 0.0,
-                    "1:district:district:jc": 0.0,
+                    "crf:street:lv": 1,
                     "crf:district:lv": 1,
-                    "1:district:district:en": 0
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 7.7136292,
+                    "el:district:s": 15.761211,
+                    "el:street:s": 22.160313,
+                    "els_cdd:min_lv": 22.160313,
+                    "0:street:street:en:nav": 1,
+                    "1:district:district:en:nav": 1,
+                    "2:city:city:en:nav": 1,
+                    "0:street:street:jc:nav": 1.0,
+                    "1:district:district:jc:nav": 1.0,
+                    "2:city:city:jc:nav": 1.0,
+                    "0:street:street:lvt:nav": 1.0,
+                    "1:district:district:lvt:nav": 1.0,
+                    "2:city:city:lvt:nav": 1.0
                 },
-                "city_score": 0,
-                "street_score": 13.475284,
-                "addr_id": 24972,
-                "district_score": 0
+                "score": 0.9999999999999144
             },
-            "type": "true_district",
-            "raw_add": "Cửa Lấp Dương Tơ",
+            "std_add": {
+                "7055": {
+                    "id": 7055,
+                    "city": "hà nội",
+                    "ward": "láng hạ",
+                    "district": "đống đa",
+                    "street": "None"
+                }
+            },
             "true_candidate": [
                 {
-                    "ward": "dương tơ",
-                    "score": 7.360474126985436e-06,
-                    "country_score": 0,
                     "country": "việt nam",
-                    "district": "phú quốc",
-                    "city": "kiên giang",
-                    "ward_score": 12.315972,
-                    "city_score": 0,
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 7.7136292,
+                    "district": "đống đa",
+                    "district_score": 15.761211,
+                    "ward": "láng hạ",
+                    "ward_score": 20.225197,
+                    "addr_id": 7055,
                     "features": {
-                        "els_cdd:min_lv": 12.315972,
-                        "isVietnamese": 1,
-                        "cdd:district:lv": 1,
-                        "1:district:district:jc": 0.0,
-                        "cdd:city:lv": 1,
-                        "1:district:district:lvt": 0.125,
-                        "crf:street:lv": 1,
-                        "cdd:ward:lv": 1,
                         "bias": 1,
-                        "el:district:s": 0.0,
-                        "el:city:s": 0.0,
-                        "el:ward:s": 12.315972,
+                        "crf:street:lv": 1,
                         "crf:district:lv": 1,
-                        "1:district:district:en": 0
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:ward:lv": 1,
+                        "el:city:s": 7.7136292,
+                        "el:district:s": 15.761211,
+                        "el:ward:s": 20.225197,
+                        "els_cdd:min_lv": 20.225197,
+                        "1:district:district:en:nav": 1,
+                        "2:city:city:en:nav": 1,
+                        "1:district:district:jc:nav": 1.0,
+                        "2:city:city:jc:nav": 1.0,
+                        "1:district:district:lvt:nav": 1.0,
+                        "2:city:city:lvt:nav": 1.0
                     },
-                    "addr_id": 25002,
-                    "district_score": 0
+                    "score": 2.0965285386359736e-34
                 }
-            ],
-            "crf_tag": [
-                [
-                    "Cửa",
-                    "B_STREET"
-                ],
-                [
-                    "Lấp",
-                    "I_STREET"
-                ],
-                [
-                    "Dương",
-                    "B_DIST"
-                ],
-                [
-                    "Tơ",
-                    "I_DIST"
-                ]
             ],
             "crf_entities": [
                 [
-                    "Cửa Lấp",
+                    "lang ha",
                     "street",
                     "0"
                 ],
                 [
-                    "Dương Tơ",
+                    "dong da",
                     "district",
                     "1"
+                ],
+                [
+                    "ha noi",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "lang",
+                    "B_STREET"
+                ],
+                [
+                    "ha",
+                    "I_STREET"
+                ],
+                [
+                    "dong",
+                    "B_DIST"
+                ],
+                [
+                    "da",
+                    "I_DIST"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "ha",
+                    "B_CITY"
+                ],
+                [
+                    "noi",
+                    "I_CITY"
                 ]
             ]
         },
         {
-            "std_add": {
-                "9629": {
-                    "street": "None",
-                    "id": 9629,
-                    "ward": "None",
-                    "district": "bến cát",
-                    "city": "bình dương"
-                }
-            },
+            "raw_add": "Don tu So 9 Thanh Ha Dong Xuan Hoan Kiem di 76 Nguyen Trai , Thanh Xuan Ha Noi Ung 850k ship 30k , 0902634688",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.9999999965768073,
-                "district": "bến cát",
-                "street": "đại lộ bình dương",
-                "city": "bình dương",
+                "city": "hà nội",
+                "city_score": 19.617533,
+                "district": "hoàn kiếm",
+                "district_score": 17.839466,
+                "street": "thanh hà",
+                "street_score": 24.28779,
+                "addr_id": 7913,
                 "features": {
-                    "1:district:district:jc:nav": 1.0,
-                    "els_cdd:min_lv": 14.04632,
-                    "cdd:district:lv": 1,
-                    "2:city:city:lvt:nav": 1.0,
-                    "crf:name:lv": 1,
-                    "crf:city:lv": 1,
-                    "el:street:s": 14.04632,
-                    "2:city:city:jc:nav": 1.0,
-                    "cdd:city:lv": 1,
-                    "1:district:district:lvt:nav": 1.0,
-                    "cdd:street:lv": 1,
                     "bias": 1,
-                    "1:district:district:en:nav": 1,
-                    "el:district:s": 14.109743,
-                    "el:city:s": 14.37081,
+                    "crf:street:lv": 1,
+                    "crf:ward:lv": 1,
                     "crf:district:lv": 1,
-                    "2:city:city:en:nav": 1
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 19.617533,
+                    "el:district:s": 17.839466,
+                    "el:street:s": 24.28779,
+                    "els_cdd:min_lv": 24.28779,
+                    "0:street:street:en:nav": 0,
+                    "1:street:street:en:nav": 0,
+                    "3:district:district:en:nav": 1,
+                    "4:street:street:en:nav": 0,
+                    "5:district:district:en:nav": 0,
+                    "6:city:city:en:nav": 1,
+                    "0:street:street:jc:nav": 0.5,
+                    "1:street:street:jc:nav": 0.0,
+                    "3:district:district:jc:nav": 1.0,
+                    "4:street:street:jc:nav": 0.0,
+                    "5:district:district:jc:nav": 0.0,
+                    "6:city:city:jc:nav": 1.0,
+                    "0:street:street:lvt:nav": 0.7692307692307693,
+                    "1:street:street:lvt:nav": 0.4,
+                    "3:district:district:lvt:nav": 1.0,
+                    "4:street:street:lvt:nav": 0.3157894736842105,
+                    "5:district:district:lvt:nav": 0.42105263157894735,
+                    "6:city:city:lvt:nav": 1.0
                 },
-                "city_score": 14.37081,
-                "street_score": 14.04632,
-                "addr_id": 9373,
-                "district_score": 14.109743
+                "score": 0.9999999999983372
             },
-            "type": "true_district",
-            "raw_add": "pho thuong mai starlight city , ben cat , binh duong",
-            "true_candidate": [],
+            "std_add": {
+                "9136": {
+                    "id": 9136,
+                    "city": "hà nội",
+                    "ward": "None",
+                    "district": "thanh xuân",
+                    "street": "nguyễn trãi"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 19.617533,
+                    "district": "thanh xuân",
+                    "district_score": 15.69953,
+                    "street": "nguyễn trãi",
+                    "street_score": 31.10265,
+                    "addr_id": 9136,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 19.617533,
+                        "el:district:s": 15.69953,
+                        "el:street:s": 31.10265,
+                        "els_cdd:min_lv": 31.10265,
+                        "0:street:street:en:nav": 0,
+                        "1:street:street:en:nav": 0,
+                        "3:district:district:en:nav": 0,
+                        "4:street:street:en:nav": 1,
+                        "5:district:district:en:nav": 1,
+                        "6:city:city:en:nav": 1,
+                        "0:street:street:jc:nav": 0.0,
+                        "1:street:street:jc:nav": 0.0,
+                        "3:district:district:jc:nav": 0.0,
+                        "4:street:street:jc:nav": 1.0,
+                        "5:district:district:jc:nav": 1.0,
+                        "6:city:city:jc:nav": 1.0,
+                        "0:street:street:lvt:nav": 0.25,
+                        "1:street:street:lvt:nav": 0.15384615384615385,
+                        "3:district:district:lvt:nav": 0.42105263157894735,
+                        "4:street:street:lvt:nav": 1.0,
+                        "5:district:district:lvt:nav": 1.0,
+                        "6:city:city:lvt:nav": 1.0
+                    },
+                    "score": 3.525260917473444e-19
+                }
+            ],
+            "crf_entities": [
+                [
+                    "Thanh",
+                    "street",
+                    "0"
+                ],
+                [
+                    "Ha",
+                    "street",
+                    "1"
+                ],
+                [
+                    "Dong Xuan",
+                    "ward",
+                    "2"
+                ],
+                [
+                    "Hoan Kiem",
+                    "district",
+                    "3"
+                ],
+                [
+                    "Nguyen Trai",
+                    "street",
+                    "4"
+                ],
+                [
+                    "Thanh Xuan",
+                    "district",
+                    "5"
+                ],
+                [
+                    "Ha Noi",
+                    "city",
+                    "6"
+                ]
+            ],
             "crf_tag": [
                 [
-                    "pho",
-                    "B_PRO"
+                    "Don",
+                    "NUMBER_TYPE"
                 ],
                 [
-                    "thuong",
-                    "I_PRO"
-                ],
-                [
-                    "mai",
-                    "I_PRO"
-                ],
-                [
-                    "starlight",
-                    "I_PRO"
-                ],
-                [
-                    "city",
-                    "I_PRO"
-                ],
-                [
-                    ",",
+                    "tu",
                     "OTHER"
                 ],
                 [
-                    "ben",
+                    "So",
+                    "NUMBER_TYPE"
+                ],
+                [
+                    "9",
+                    "NUMBER"
+                ],
+                [
+                    "Thanh",
+                    "B_STREET"
+                ],
+                [
+                    "Ha",
+                    "B_STREET"
+                ],
+                [
+                    "Dong",
+                    "B_WARD"
+                ],
+                [
+                    "Xuan",
+                    "I_WARD"
+                ],
+                [
+                    "Hoan",
                     "B_DIST"
                 ],
                 [
-                    "cat",
+                    "Kiem",
                     "I_DIST"
+                ],
+                [
+                    "di",
+                    "OTHER"
+                ],
+                [
+                    "76",
+                    "NUMBER"
+                ],
+                [
+                    "Nguyen",
+                    "B_STREET"
+                ],
+                [
+                    "Trai",
+                    "I_STREET"
                 ],
                 [
                     ",",
                     "OTHER"
+                ],
+                [
+                    "Thanh",
+                    "B_DIST"
+                ],
+                [
+                    "Xuan",
+                    "I_DIST"
+                ],
+                [
+                    "Ha",
+                    "B_CITY"
+                ],
+                [
+                    "Noi",
+                    "I_CITY"
+                ],
+                [
+                    "Ung",
+                    "OTHER"
+                ],
+                [
+                    "850k",
+                    "OTHER"
+                ],
+                [
+                    "ship",
+                    "OTHER"
+                ],
+                [
+                    "30k",
+                    "OTHER"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "0902634688",
+                    "OTHER"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "du an contentment plaza thuan an binh duong",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình dương",
+                "city_score": 15.9795065,
+                "district": "thuận an",
+                "district_score": 12.455864,
+                "street": "thuận an hòa",
+                "street_score": 16.413244,
+                "addr_id": 10825,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 15.9795065,
+                    "el:district:s": 12.455864,
+                    "el:street:s": 16.413244,
+                    "els_cdd:min_lv": 16.413244,
+                    "1:district:district:en:nav": 1,
+                    "2:city:city:en:nav": 1,
+                    "1:district:district:jc:nav": 1.0,
+                    "2:city:city:jc:nav": 1.0,
+                    "1:district:district:lvt:nav": 1.0,
+                    "2:city:city:lvt:nav": 1.0
+                },
+                "score": 0.6932069672413315
+            },
+            "std_add": {
+                "10909": {
+                    "id": 10909,
+                    "city": "bình dương",
+                    "ward": "None",
+                    "district": "thuận an",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "contentment plaza",
+                    "name",
+                    "0"
+                ],
+                [
+                    "thuan an",
+                    "district",
+                    "1"
+                ],
+                [
+                    "binh duong",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "du",
+                    "PRO_TYPE"
+                ],
+                [
+                    "an",
+                    "PRO_TYPE"
+                ],
+                [
+                    "contentment",
+                    "B_PRO"
+                ],
+                [
+                    "plaza",
+                    "I_PRO"
+                ],
+                [
+                    "thuan",
+                    "B_DIST"
+                ],
+                [
+                    "an",
+                    "I_DIST"
                 ],
                 [
                     "binh",
@@ -1786,81 +1760,310 @@
                     "duong",
                     "I_CITY"
                 ]
-            ],
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Dự án nam việt á giai đoạn 2 Khu đô thị Nam Cầu Tuyên Sơn , Ngũ Hành Sơn , Đà Nẵng",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "đà nẵng",
+                "city_score": 17.68132,
+                "district": "ngũ hành sơn",
+                "district_score": 15.340893,
+                "street": "ngũ hành sơn",
+                "street_score": 23.124931,
+                "addr_id": 12439,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 17.68132,
+                    "el:district:s": 15.340893,
+                    "el:street:s": 23.124931,
+                    "els_cdd:min_lv": 23.124931,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.7089224581932153
+            },
+            "std_add": {
+                "12628": {
+                    "id": 12628,
+                    "district": "ngũ hành sơn",
+                    "city": "đà nẵng",
+                    "ward": "None",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
             "crf_entities": [
                 [
-                    "pho thuong mai starlight city",
+                    "nam việt á",
                     "name",
                     "0"
                 ],
                 [
-                    "ben cat",
+                    "Ngũ Hành Sơn",
                     "district",
                     "1"
                 ],
                 [
-                    "binh duong",
+                    "Đà Nẵng",
                     "city",
                     "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Dự",
+                    "PRO_TYPE"
+                ],
+                [
+                    "án",
+                    "PRO_TYPE"
+                ],
+                [
+                    "nam",
+                    "B_PRO"
+                ],
+                [
+                    "việt",
+                    "I_PRO"
+                ],
+                [
+                    "á",
+                    "I_PRO"
+                ],
+                [
+                    "giai",
+                    "OTHER"
+                ],
+                [
+                    "đoạn",
+                    "OTHER"
+                ],
+                [
+                    "2",
+                    "OTHER"
+                ],
+                [
+                    "Khu",
+                    "OTHER"
+                ],
+                [
+                    "đô",
+                    "OTHER"
+                ],
+                [
+                    "thị",
+                    "OTHER"
+                ],
+                [
+                    "Nam",
+                    "OTHER"
+                ],
+                [
+                    "Cầu",
+                    "OTHER"
+                ],
+                [
+                    "Tuyên",
+                    "OTHER"
+                ],
+                [
+                    "Sơn",
+                    "OTHER"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "Ngũ",
+                    "B_DIST"
+                ],
+                [
+                    "Hành",
+                    "I_DIST"
+                ],
+                [
+                    "Sơn",
+                    "I_DIST"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "Đà",
+                    "B_CITY"
+                ],
+                [
+                    "Nẵng",
+                    "I_CITY"
                 ]
             ]
         },
         {
-            "std_add": {
-                "3077": {
-                    "street": "None",
-                    "id": 3077,
-                    "ward": "tân chánh hiệp",
-                    "district": "quận 12",
-                    "city": "hồ chí minh"
-                }
-            },
+            "type": "true_district",
+            "raw_add": "thạnh xuân 31 quận 12",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.7687735473735278,
-                "district": "quận 12",
-                "street": "tân chánh hiệp",
                 "city": "hồ chí minh",
+                "city_score": 0,
+                "district": "quận 12",
+                "district_score": 7.080066,
+                "street": "thạnh xuân 31",
+                "street_score": 21.123173,
+                "addr_id": 2979,
                 "features": {
-                    "els_cdd:min_lv": 24.940321,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "crf:city:lv": 1,
-                    "el:street:s": 24.940321,
-                    "1:district:district:jc": 1.0,
-                    "2:city:city:lvt": 1.0,
-                    "cdd:city:lv": 1,
-                    "1:district:district:lvt": 1.0,
-                    "2:city:city:en": 1,
-                    "cdd:street:lv": 1,
                     "bias": 1,
-                    "el:district:s": 11.986788,
-                    "2:city:city:jc": 1.0,
-                    "el:city:s": 11.986788,
                     "crf:ward:lv": 1,
                     "crf:district:lv": 1,
-                    "1:district:district:en": 1
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 7.080066,
+                    "el:street:s": 21.123173,
+                    "els_cdd:min_lv": 21.123173,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "1:district:district:lvt": 1.0
                 },
-                "city_score": 11.986788,
-                "street_score": 24.940321,
-                "addr_id": 2861,
-                "district_score": 11.986788
+                "score": 0.6844674149116228
             },
-            "type": "true_district",
-            "raw_add": "Tân Chánh Hiệp , Quận 12 , Hồ Chí Minh",
+            "std_add": {
+                "3082": {
+                    "id": 3082,
+                    "city": "hồ chí minh",
+                    "ward": "thạnh xuân",
+                    "district": "quận 12",
+                    "street": "None"
+                }
+            },
             "true_candidate": [],
+            "crf_entities": [
+                [
+                    "thạnh xuân",
+                    "ward",
+                    "0"
+                ],
+                [
+                    "quận 12",
+                    "district",
+                    "1"
+                ]
+            ],
             "crf_tag": [
                 [
-                    "Tân",
+                    "thạnh",
                     "B_WARD"
                 ],
                 [
-                    "Chánh",
+                    "xuân",
                     "I_WARD"
                 ],
                 [
+                    "31",
+                    "OTHER"
+                ],
+                [
+                    "quận",
+                    "B_DIST"
+                ],
+                [
+                    "12",
+                    "I_DIST"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": " 80 , Hiệp Thành , Quận 12 , Hồ Chí Minh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 11.569321,
+                "district": "quận 12",
+                "district_score": 11.986788,
+                "addr_id": 3113,
+                "features": {
+                    "bias": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "el:city:s": 11.569321,
+                    "el:district:s": 11.986788,
+                    "els_cdd:min_lv": 11.986788,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.7027796574623489
+            },
+            "std_add": {
+                "3076": {
+                    "id": 3076,
+                    "city": "hồ chí minh",
+                    "ward": "hiệp thành",
+                    "district": "quận 12",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "Hiệp Thành",
+                    "ward",
+                    "0"
+                ],
+                [
+                    "Quận 12",
+                    "district",
+                    "1"
+                ],
+                [
+                    "Hồ Chí Minh",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "80",
+                    "NUMBER"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
                     "Hiệp",
+                    "B_WARD"
+                ],
+                [
+                    "Thành",
                     "I_WARD"
                 ],
                 [
@@ -1891,7 +2094,425 @@
                     "Minh",
                     "I_CITY"
                 ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Phố Hà Trung - Phường Hàng Bông - Hoàn Kiếm - Hà Nội",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 10.0754795,
+                "district": "hoàn kiếm",
+                "district_score": 17.839466,
+                "street": "hàng bông",
+                "street_score": 32.184677,
+                "addr_id": 7792,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 10.0754795,
+                    "el:district:s": 17.839466,
+                    "el:street:s": 32.184677,
+                    "els_cdd:min_lv": 32.184677,
+                    "isVietnamese": 1,
+                    "0:street:street:en": 0,
+                    "2:district:district:en": 1,
+                    "3:city:city:en": 1,
+                    "0:street:street:jc": 0.0,
+                    "2:district:district:jc": 1.0,
+                    "3:city:city:jc": 1.0,
+                    "0:street:street:lvt": 0.5882352941176471,
+                    "2:district:district:lvt": 1.0,
+                    "3:city:city:lvt": 1.0
+                },
+                "score": 0.6131532896260276
+            },
+            "std_add": {
+                "7784": {
+                    "id": 7784,
+                    "district": "hoàn kiếm",
+                    "city": "hà nội",
+                    "ward": "None",
+                    "street": "hà trung"
+                },
+                "7956": {
+                    "id": 7956,
+                    "district": "hoàn kiếm",
+                    "city": "hà nội",
+                    "ward": "hàng bông",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 10.0754795,
+                    "district": "hoàn kiếm",
+                    "district_score": 17.839466,
+                    "street": "hà trung",
+                    "street_score": 25.39132,
+                    "addr_id": 7784,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 10.0754795,
+                        "el:district:s": 17.839466,
+                        "el:street:s": 25.39132,
+                        "els_cdd:min_lv": 25.39132,
+                        "isVietnamese": 1,
+                        "0:street:street:en": 1,
+                        "2:district:district:en": 1,
+                        "3:city:city:en": 1,
+                        "0:street:street:jc": 1.0,
+                        "2:district:district:jc": 1.0,
+                        "3:city:city:jc": 1.0,
+                        "0:street:street:lvt": 1.0,
+                        "2:district:district:lvt": 1.0,
+                        "3:city:city:lvt": 1.0
+                    },
+                    "score": 0.32578777752558474
+                },
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 10.0754795,
+                    "district": "hoàn kiếm",
+                    "district_score": 17.839466,
+                    "ward": "hàng bông",
+                    "ward_score": 31.784184,
+                    "addr_id": 7956,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:ward:lv": 1,
+                        "el:city:s": 10.0754795,
+                        "el:district:s": 17.839466,
+                        "el:ward:s": 31.784184,
+                        "els_cdd:min_lv": 31.784184,
+                        "isVietnamese": 1,
+                        "1:ward:ward:en": 1,
+                        "2:district:district:en": 1,
+                        "3:city:city:en": 1,
+                        "1:ward:ward:jc": 1.0,
+                        "2:district:district:jc": 1.0,
+                        "3:city:city:jc": 1.0,
+                        "1:ward:ward:lvt": 1.0,
+                        "2:district:district:lvt": 1.0,
+                        "3:city:city:lvt": 1.0
+                    },
+                    "score": 0.037316109117087534
+                }
             ],
+            "crf_entities": [
+                [
+                    "Hà Trung",
+                    "street",
+                    "0"
+                ],
+                [
+                    "Hàng Bông",
+                    "ward",
+                    "1"
+                ],
+                [
+                    "Hoàn Kiếm",
+                    "district",
+                    "2"
+                ],
+                [
+                    "Hà Nội",
+                    "city",
+                    "3"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Phố",
+                    "STREET_TYPE"
+                ],
+                [
+                    "Hà",
+                    "B_STREET"
+                ],
+                [
+                    "Trung",
+                    "I_STREET"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Phường",
+                    "WARD_TYPE"
+                ],
+                [
+                    "Hàng",
+                    "B_WARD"
+                ],
+                [
+                    "Bông",
+                    "I_WARD"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Hoàn",
+                    "B_DIST"
+                ],
+                [
+                    "Kiếm",
+                    "I_DIST"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Hà",
+                    "B_CITY"
+                ],
+                [
+                    "Nội",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "28/46/5 nguyễn lương bằng p. quang trung quận đống đa",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "đống đa",
+                "district_score": 11.218753,
+                "ward": "quang trung",
+                "ward_score": 19.272797,
+                "addr_id": 7062,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 11.218753,
+                    "el:ward:s": 19.272797,
+                    "els_cdd:min_lv": 19.272797,
+                    "isVietnamese": 1,
+                    "1:ward:ward:en": 0,
+                    "2:ward:ward:en": 0,
+                    "3:district:district:en": 1,
+                    "1:ward:ward:jc": 0.3333333333333333,
+                    "2:ward:ward:jc": 0.3333333333333333,
+                    "3:district:district:jc": 1.0,
+                    "1:ward:ward:lvt": 0.625,
+                    "2:ward:ward:lvt": 0.625,
+                    "3:district:district:lvt": 1.0
+                },
+                "score": 0.4792081009571876
+            },
+            "std_add": {
+                "7001": {
+                    "id": 7001,
+                    "city": "hà nội",
+                    "ward": "None",
+                    "district": "đống đa",
+                    "street": "nguyễn lương bằng"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 0,
+                    "district": "đống đa",
+                    "district_score": 11.218753,
+                    "street": "nguyễn lương bằng",
+                    "street_score": 23.16036,
+                    "addr_id": 7001,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 11.218753,
+                        "el:street:s": 23.16036,
+                        "els_cdd:min_lv": 23.16036,
+                        "isVietnamese": 1,
+                        "0:street:street:en": 1,
+                        "3:district:district:en": 1,
+                        "0:street:street:jc": 1.0,
+                        "3:district:district:jc": 1.0,
+                        "0:street:street:lvt": 1.0,
+                        "3:district:district:lvt": 1.0
+                    },
+                    "score": 0.40587320192323495
+                }
+            ],
+            "crf_entities": [
+                [
+                    "nguyễn lương bằng",
+                    "street",
+                    "0"
+                ],
+                [
+                    "quang",
+                    "ward",
+                    "1"
+                ],
+                [
+                    "trung",
+                    "ward",
+                    "2"
+                ],
+                [
+                    "đống đa",
+                    "district",
+                    "3"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "28",
+                    "NUMBER"
+                ],
+                [
+                    "/",
+                    "NUMBER"
+                ],
+                [
+                    "46",
+                    "NUMBER"
+                ],
+                [
+                    "/",
+                    "NUMBER"
+                ],
+                [
+                    "5",
+                    "NUMBER"
+                ],
+                [
+                    "nguyễn",
+                    "B_STREET"
+                ],
+                [
+                    "lương",
+                    "I_STREET"
+                ],
+                [
+                    "bằng",
+                    "I_STREET"
+                ],
+                [
+                    "p",
+                    "WARD_TYPE"
+                ],
+                [
+                    ".",
+                    "WARD_TYPE"
+                ],
+                [
+                    "quang",
+                    "B_WARD"
+                ],
+                [
+                    "trung",
+                    "B_WARD"
+                ],
+                [
+                    "quận",
+                    "DIST_TYPE"
+                ],
+                [
+                    "đống",
+                    "B_DIST"
+                ],
+                [
+                    "đa",
+                    "I_DIST"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Tân Chánh Hiệp - Quận 12 - Hồ Chí Minh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 11.986788,
+                "district": "quận 12",
+                "district_score": 11.986788,
+                "street": "tân chánh hiệp",
+                "street_score": 24.940321,
+                "addr_id": 2861,
+                "features": {
+                    "bias": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 11.986788,
+                    "el:district:s": 11.986788,
+                    "el:street:s": 24.940321,
+                    "els_cdd:min_lv": 24.940321,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.24110657219280004
+            },
+            "std_add": {
+                "3077": {
+                    "id": 3077,
+                    "district": "quận 12",
+                    "city": "hồ chí minh",
+                    "ward": "tân chánh hiệp",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
             "crf_entities": [
                 [
                     "Tân Chánh Hiệp",
@@ -1908,90 +2529,557 @@
                     "city",
                     "2"
                 ]
+            ],
+            "crf_tag": [
+                [
+                    "Tân",
+                    "B_WARD"
+                ],
+                [
+                    "Chánh",
+                    "I_WARD"
+                ],
+                [
+                    "Hiệp",
+                    "I_WARD"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Quận",
+                    "B_DIST"
+                ],
+                [
+                    "12",
+                    "I_DIST"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Hồ",
+                    "B_CITY"
+                ],
+                [
+                    "Chí",
+                    "I_CITY"
+                ],
+                [
+                    "Minh",
+                    "I_CITY"
+                ]
             ]
         },
         {
-            "std_add": {
-                "10885": {
-                    "street": "None",
-                    "id": 10885,
-                    "ward": "bình hòa",
-                    "district": "thuận an",
-                    "city": "bình dương"
-                }
-            },
+            "type": "true_district",
+            "raw_add": "vinhomes paradise mễ trì",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.999993290036176,
-                "district": "thuận an",
-                "street": "khu dân cư vĩnh phú",
-                "city": "bình dương",
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "nam từ liêm",
+                "district_score": 0,
+                "ward": "mễ trì",
+                "ward_score": 15.352831,
+                "addr_id": 8556,
                 "features": {
-                    "els_cdd:min_lv": 31.44584,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "3:city:city:jc": 1.0,
-                    "crf:name:lv": 1,
-                    "crf:city:lv": 1,
-                    "el:street:s": 31.44584,
-                    "2:district:district:lvt": 1.0,
-                    "2:district:district:en": 1,
-                    "cdd:city:lv": 1,
-                    "3:city:city:lvt": 1.0,
-                    "3:city:city:en": 1,
-                    "cdd:street:lv": 1,
-                    "2:district:district:jc": 1.0,
                     "bias": 1,
-                    "el:district:s": 15.015264,
-                    "el:city:s": 18.3382,
+                    "crf:name:lv": 1,
                     "crf:ward:lv": 1,
-                    "crf:district:lv": 1
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 0.0,
+                    "el:ward:s": 15.352831,
+                    "els_cdd:min_lv": 15.352831,
+                    "isVietnamese": 1,
+                    "1:ward:ward:en": 1,
+                    "1:ward:ward:jc": 1.0,
+                    "1:ward:ward:lvt": 1.0
                 },
-                "city_score": 18.3382,
-                "street_score": 31.44584,
-                "addr_id": 10753,
-                "district_score": 15.015264
+                "score": 0.9843646442796543
             },
-            "type": "true_district",
-            "raw_add": "Khu dân cư Đồng An , Phường Bình Hòa , Thuận An , Bình Dương",
-            "true_candidate": [],
+            "std_add": {
+                "8494": {
+                    "id": 8494,
+                    "city": "hà nội",
+                    "ward": "None",
+                    "district": "nam từ liêm",
+                    "street": "mễ trì"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 0,
+                    "district": "nam từ liêm",
+                    "district_score": 0,
+                    "street": "mễ trì",
+                    "street_score": 16.09301,
+                    "addr_id": 8494,
+                    "features": {
+                        "bias": 1,
+                        "crf:name:lv": 1,
+                        "crf:ward:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 0.0,
+                        "el:street:s": 16.09301,
+                        "els_cdd:min_lv": 16.09301,
+                        "isVietnamese": 1
+                    },
+                    "score": 0.009542349194039757
+                }
+            ],
+            "crf_entities": [
+                [
+                    "vinhomes paradise",
+                    "name",
+                    "0"
+                ],
+                [
+                    "mễ trì",
+                    "ward",
+                    "1"
+                ]
+            ],
             "crf_tag": [
                 [
-                    "Khu",
+                    "vinhomes",
                     "B_PRO"
                 ],
                 [
-                    "dân",
+                    "paradise",
                     "I_PRO"
                 ],
                 [
-                    "cư",
+                    "mễ",
+                    "B_WARD"
+                ],
+                [
+                    "trì",
+                    "I_WARD"
+                ]
+            ]
+        },
+        {
+            "raw_add": "đường s4 hồ chí minh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 7.3752575,
+                "district": "bình thạnh",
+                "district_score": 0,
+                "street": "đường 4",
+                "street_score": 0,
+                "addr_id": 801,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 7.3752575,
+                    "el:district:s": 0.0,
+                    "el:street:s": 0.0,
+                    "rep_min:street:street": 0,
+                    "rep_min:street:street:in": 0,
+                    "rep_min:city:street": 0,
+                    "rep_min:city:street:in": 0,
+                    "isVietnamese": 1,
+                    "0:street:street:en": 0,
+                    "1:city:city:en": 1,
+                    "0:street:street:jc": 0.0,
+                    "1:city:city:jc": 1.0,
+                    "0:street:street:lvt": 0.2222222222222222,
+                    "1:city:city:lvt": 1.0
+                },
+                "score": 0.07776021090880748
+            },
+            "std_add": {
+                "5749": {
+                    "id": 5749,
+                    "city": "hồ chí minh",
+                    "ward": "None",
+                    "district": "tân phú",
+                    "street": "s4"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "s4",
+                    "street",
+                    "0"
+                ],
+                [
+                    "hồ chí minh",
+                    "city",
+                    "1"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "đường",
+                    "STREET_TYPE"
+                ],
+                [
+                    "s4",
+                    "B_STREET"
+                ],
+                [
+                    "hồ",
+                    "B_CITY"
+                ],
+                [
+                    "chí",
+                    "I_CITY"
+                ],
+                [
+                    "minh",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Dự án Mễ Trì Hạ - Nam Từ Liêm - Hà Nội",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 10.516008,
+                "district": "nam từ liêm",
+                "district_score": 16.937983,
+                "street": "mễ trì hạ",
+                "street_score": 36.265396,
+                "addr_id": 8495,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 10.516008,
+                    "el:district:s": 16.937983,
+                    "el:street:s": 36.265396,
+                    "els_cdd:min_lv": 36.265396,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.48022647209878894
+            },
+            "std_add": {
+                "8636": {
+                    "id": 8636,
+                    "district": "nam từ liêm",
+                    "city": "hà nội",
+                    "ward": "None",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 10.516008,
+                    "district": "nam từ liêm",
+                    "district_score": 16.937983,
+                    "addr_id": 8636,
+                    "features": {
+                        "bias": 1,
+                        "crf:name:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "el:city:s": 10.516008,
+                        "el:district:s": 16.937983,
+                        "els_cdd:min_lv": 16.937983,
+                        "isVietnamese": 1,
+                        "1:district:district:en": 1,
+                        "2:city:city:en": 1,
+                        "1:district:district:jc": 1.0,
+                        "2:city:city:jc": 1.0,
+                        "1:district:district:lvt": 1.0,
+                        "2:city:city:lvt": 1.0
+                    },
+                    "score": 0.31606718877004597
+                }
+            ],
+            "crf_entities": [
+                [
+                    "Mễ Trì Hạ",
+                    "name",
+                    "0"
+                ],
+                [
+                    "Nam Từ Liêm",
+                    "district",
+                    "1"
+                ],
+                [
+                    "Hà Nội",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Dự",
+                    "PRO_TYPE"
+                ],
+                [
+                    "án",
+                    "PRO_TYPE"
+                ],
+                [
+                    "Mễ",
+                    "B_PRO"
+                ],
+                [
+                    "Trì",
                     "I_PRO"
                 ],
                 [
-                    "Đồng",
+                    "Hạ",
                     "I_PRO"
                 ],
                 [
-                    "An",
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Nam",
+                    "B_DIST"
+                ],
+                [
+                    "Từ",
+                    "I_DIST"
+                ],
+                [
+                    "Liêm",
+                    "I_DIST"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Hà",
+                    "B_CITY"
+                ],
+                [
+                    "Nội",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
+            "raw_add": "Dự án Huy Hoàng - Nguyễn Thanh Sơn - Phường",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "sơn la",
+                "city_score": 5.9398255,
+                "district": "sơn la",
+                "district_score": 6.440104,
+                "street": "nguyễn chí thanh",
+                "street_score": 4.94967,
+                "addr_id": 31718,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:street:lv": 1,
+                    "crf:ward:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 5.9398255,
+                    "el:district:s": 6.440104,
+                    "el:street:s": 4.94967,
+                    "els_cdd:min_lv": 4.94967,
+                    "isVietnamese": 1,
+                    "1:street:street:en": 0,
+                    "1:street:street:jc": 0.47368421052631576,
+                    "1:street:street:lvt": 0.75
+                },
+                "score": 0.7757311985907426
+            },
+            "std_add": {
+                "15951": {
+                    "id": 15951,
+                    "city": "an giang",
+                    "ward": "None",
+                    "district": "long xuyên",
+                    "street": "nguyễn thanh sơn"
+                },
+                "3287": {
+                    "id": 3287,
+                    "city": "hồ chí minh",
+                    "ward": "None",
+                    "district": "quận 2",
+                    "street": "nguyễn thanh sơn"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "Huy Hoàng",
+                    "name",
+                    "0"
+                ],
+                [
+                    "Nguyễn Thanh Sơn",
+                    "street",
+                    "1"
+                ],
+                [
+                    "Phường",
+                    "ward",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Dự",
+                    "PRO_TYPE"
+                ],
+                [
+                    "án",
+                    "PRO_TYPE"
+                ],
+                [
+                    "Huy",
+                    "B_PRO"
+                ],
+                [
+                    "Hoàng",
                     "I_PRO"
                 ],
                 [
-                    ",",
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "Nguyễn",
+                    "B_STREET"
+                ],
+                [
+                    "Thanh",
+                    "I_STREET"
+                ],
+                [
+                    "Sơn",
+                    "I_STREET"
+                ],
+                [
+                    "-",
                     "OTHER"
                 ],
                 [
                     "Phường",
-                    "WARD_TYPE"
-                ],
-                [
-                    "Bình",
                     "B_WARD"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Dự án Contentment Plaza , Thuận An , Bình Dương",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "bình dương",
+                "city_score": 12.745567,
+                "district": "thuận an",
+                "district_score": 12.745567,
+                "street": "đại lộ bình dương",
+                "street_score": 13.992407,
+                "addr_id": 10704,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 12.745567,
+                    "el:district:s": 12.745567,
+                    "el:street:s": 13.992407,
+                    "els_cdd:min_lv": 13.992407,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.5407807769110018
+            },
+            "std_add": {
+                "10909": {
+                    "id": 10909,
+                    "district": "thuận an",
+                    "city": "bình dương",
+                    "ward": "None",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "Contentment Plaza",
+                    "name",
+                    "0"
                 ],
                 [
-                    "Hòa",
-                    "I_WARD"
+                    "Thuận An",
+                    "district",
+                    "1"
+                ],
+                [
+                    "Bình Dương",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Dự",
+                    "PRO_TYPE"
+                ],
+                [
+                    "án",
+                    "PRO_TYPE"
+                ],
+                [
+                    "Contentment",
+                    "B_PRO"
+                ],
+                [
+                    "Plaza",
+                    "I_PRO"
                 ],
                 [
                     ",",
@@ -2017,191 +3105,846 @@
                     "Dương",
                     "I_CITY"
                 ]
+            ]
+        },
+        {
+            "raw_add": "tuu liet di nghia tan cau giay . hang sieu nhe . ung 900k phi 40k . di ngay lh 0976 881 808",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hoàng mai",
+                "district_score": 0,
+                "street": "tựu liệt",
+                "street_score": 16.473038,
+                "addr_id": 8077,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:district:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 0.0,
+                    "el:street:s": 16.473038,
+                    "els_cdd:min_lv": 16.473038,
+                    "0:street:street:en:nav": 1,
+                    "1:street:street:en:nav": 0,
+                    "2:district:district:en:nav": 0,
+                    "0:street:street:jc:nav": 1.0,
+                    "1:street:street:jc:nav": 0.0,
+                    "2:district:district:jc:nav": 0.0,
+                    "0:street:street:lvt:nav": 1.0,
+                    "1:street:street:lvt:nav": 0.23529411764705882,
+                    "2:district:district:lvt:nav": 0.35294117647058826
+                },
+                "score": 0.5
+            },
+            "std_add": {
+                "6575": {
+                    "id": 6575,
+                    "city": "hà nội",
+                    "ward": "None",
+                    "district": "cầu giấy",
+                    "street": "nghĩa tân"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 0,
+                    "district": "cầu giấy",
+                    "district_score": 10.761009,
+                    "street": "nghĩa tân",
+                    "street_score": 20.4402,
+                    "addr_id": 6575,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:district:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 10.761009,
+                        "el:street:s": 20.4402,
+                        "els_cdd:min_lv": 20.4402,
+                        "0:street:street:en:nav": 0,
+                        "1:street:street:en:nav": 1,
+                        "2:district:district:en:nav": 1,
+                        "0:street:street:jc:nav": 0.0,
+                        "1:street:street:jc:nav": 1.0,
+                        "2:district:district:jc:nav": 1.0,
+                        "0:street:street:lvt:nav": 0.23529411764705882,
+                        "1:street:street:lvt:nav": 1.0,
+                        "2:district:district:lvt:nav": 1.0
+                    },
+                    "score": 5.017173501697273e-17
+                }
             ],
             "crf_entities": [
                 [
-                    "Khu dân cư Đồng An",
-                    "name",
+                    "tuu liet",
+                    "street",
                     "0"
                 ],
                 [
-                    "Bình Hòa",
-                    "ward",
+                    "nghia tan",
+                    "street",
                     "1"
                 ],
                 [
-                    "Thuận An",
+                    "cau giay",
                     "district",
                     "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "tuu",
+                    "B_STREET"
                 ],
                 [
-                    "Bình Dương",
-                    "city",
-                    "3"
+                    "liet",
+                    "I_STREET"
+                ],
+                [
+                    "di",
+                    "OTHER"
+                ],
+                [
+                    "nghia",
+                    "B_STREET"
+                ],
+                [
+                    "tan",
+                    "I_STREET"
+                ],
+                [
+                    "cau",
+                    "B_DIST"
+                ],
+                [
+                    "giay",
+                    "I_DIST"
+                ],
+                [
+                    ".",
+                    "OTHER"
+                ],
+                [
+                    "hang",
+                    "OTHER"
+                ],
+                [
+                    "sieu",
+                    "OTHER"
+                ],
+                [
+                    "nhe",
+                    "OTHER"
+                ],
+                [
+                    ".",
+                    "OTHER"
+                ],
+                [
+                    "ung",
+                    "OTHER"
+                ],
+                [
+                    "900k",
+                    "OTHER"
+                ],
+                [
+                    "phi",
+                    "OTHER"
+                ],
+                [
+                    "40k",
+                    "OTHER"
+                ],
+                [
+                    ".",
+                    "OTHER"
+                ],
+                [
+                    "di",
+                    "OTHER"
+                ],
+                [
+                    "ngay",
+                    "OTHER"
+                ],
+                [
+                    "lh",
+                    "OTHER"
+                ],
+                [
+                    "0976",
+                    "OTHER"
+                ],
+                [
+                    "881",
+                    "OTHER"
+                ],
+                [
+                    "808",
+                    "OTHER"
                 ]
             ]
         },
         {
-            "std_add": {
-                "1943": {
-                    "street": "lê văn lương",
-                    "id": 1943,
-                    "ward": "None",
-                    "district": "nhà bè",
-                    "city": "hồ chí minh"
-                },
-                "1971": {
-                    "street": "None",
-                    "id": 1971,
-                    "ward": "phước kiển",
-                    "district": "nhà bè",
-                    "city": "hồ chí minh"
-                }
-            },
+            "raw_add": "xa ham hiep ham thuan bac",
             "result": {
                 "country": "việt nam",
                 "country_score": 0,
-                "score": 0.6591702471770596,
-                "district": "nhà bè",
-                "city": "hồ chí minh",
+                "city": "ninh thuận",
+                "city_score": 0,
+                "district": "thuận bắc",
+                "district_score": 8.257738,
+                "ward": "bắc sơn",
+                "ward_score": 0,
+                "addr_id": 28445,
                 "features": {
-                    "els_cdd:min_lv": 29.891582,
-                    "isVietnamese": 1,
-                    "cdd:district:lv": 1,
-                    "3:city:city:jc": 1.0,
-                    "crf:city:lv": 1,
-                    "2:district:district:lvt": 1.0,
-                    "2:district:district:en": 1,
-                    "cdd:city:lv": 1,
-                    "3:city:city:lvt": 1.0,
-                    "3:city:city:en": 1,
-                    "crf:street:lv": 1,
-                    "2:district:district:jc": 1.0,
                     "bias": 1,
-                    "el:district:s": 29.891582,
-                    "el:city:s": 7.796204,
                     "crf:ward:lv": 1,
-                    "crf:district:lv": 1
+                    "crf:district:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 8.257738,
+                    "el:ward:s": 0.0,
+                    "rep_min:ward:ward": 0,
+                    "rep_min:ward:ward:in": 0,
+                    "rep_min:district:ward": 0,
+                    "rep_min:district:ward:in": 0,
+                    "0:ward:ward:en:nav": 0,
+                    "1:district:district:en:nav": 1,
+                    "0:ward:ward:jc:nav": 0.0,
+                    "1:district:district:jc:nav": 1.0,
+                    "0:ward:ward:lvt:nav": 0.21052631578947367,
+                    "1:district:district:lvt:nav": 1.0
                 },
-                "city_score": 7.796204,
-                "addr_id": 2017,
-                "district_score": 29.891582
+                "score": 0.286500036508773
             },
-            "type": "true_district",
-            "raw_add": "Đường Lê Văn Lương , phước kiển - Nhà Bè , Hồ Chí Minh",
+            "std_add": {
+                "18516": {
+                    "id": 18516,
+                    "city": "bình thuận",
+                    "ward": "hàm hiệp",
+                    "district": "hàm thuận bắc",
+                    "street": "None"
+                }
+            },
             "true_candidate": [
                 {
-                    "ward": "phước kiển",
-                    "score": 2.1919182082850244e-07,
-                    "country_score": 0,
                     "country": "việt nam",
-                    "district": "nhà bè",
-                    "city": "hồ chí minh",
-                    "ward_score": 30.119297,
-                    "city_score": 7.796204,
+                    "country_score": 0,
+                    "city": "bình thuận",
+                    "city_score": 0,
+                    "district": "hàm thuận bắc",
+                    "district_score": 11.997528,
+                    "ward": "hàm hiệp",
+                    "ward_score": 23.016018,
+                    "addr_id": 18516,
                     "features": {
-                        "els_cdd:min_lv": 30.119297,
-                        "isVietnamese": 1,
                         "bias": 1,
-                        "2:district:district:en": 1,
-                        "cdd:city:lv": 1,
-                        "2:district:district:jc": 1.0,
-                        "el:district:s": 29.891582,
-                        "el:city:s": 7.796204,
-                        "el:ward:s": 30.119297,
-                        "crf:district:lv": 1,
-                        "1:ward:ward:lvt": 1.0,
-                        "3:city:city:jc": 1.0,
-                        "crf:city:lv": 1,
-                        "2:district:district:lvt": 1.0,
-                        "1:ward:ward:jc": 1.0,
-                        "3:city:city:lvt": 1.0,
-                        "3:city:city:en": 1,
-                        "crf:street:lv": 1,
-                        "cdd:district:lv": 1,
-                        "1:ward:ward:en": 1,
                         "crf:ward:lv": 1,
-                        "cdd:ward:lv": 1
-                    },
-                    "addr_id": 1971,
-                    "district_score": 29.891582
-                },
-                {
-                    "country": "việt nam",
-                    "country_score": 0,
-                    "score": 0.3408295336311195,
-                    "district": "nhà bè",
-                    "street": "lê văn lương",
-                    "city": "hồ chí minh",
-                    "features": {
-                        "0:street:street:jc": 1.0,
-                        "0:street:street:en": 1,
-                        "els_cdd:min_lv": 26.876991,
-                        "isVietnamese": 1,
-                        "bias": 1,
-                        "el:street:s": 26.876991,
-                        "2:district:district:en": 1,
-                        "cdd:city:lv": 1,
-                        "2:district:district:jc": 1.0,
-                        "el:district:s": 29.891582,
-                        "el:city:s": 7.796204,
                         "crf:district:lv": 1,
-                        "0:street:street:lvt": 1.0,
-                        "3:city:city:jc": 1.0,
-                        "crf:city:lv": 1,
-                        "2:district:district:lvt": 1.0,
-                        "3:city:city:lvt": 1.0,
-                        "3:city:city:en": 1,
-                        "crf:street:lv": 1,
-                        "cdd:street:lv": 1,
+                        "cdd:city:lv": 1,
                         "cdd:district:lv": 1,
-                        "crf:ward:lv": 1
+                        "cdd:ward:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 11.997528,
+                        "el:ward:s": 23.016018,
+                        "els_cdd:min_lv": 23.016018,
+                        "0:ward:ward:en:nav": 0,
+                        "1:district:district:en:nav": 0,
+                        "0:ward:ward:jc:nav": 0.6,
+                        "1:district:district:jc:nav": 0.6363636363636364,
+                        "0:ward:ward:lvt:nav": 0.8,
+                        "1:district:district:lvt:nav": 0.8181818181818182
                     },
-                    "city_score": 7.796204,
-                    "street_score": 26.876991,
-                    "addr_id": 1943,
-                    "district_score": 29.891582
+                    "score": 0.0002412881293702331
                 }
+            ],
+            "crf_entities": [
+                [
+                    "ham hiep ham",
+                    "ward",
+                    "0"
+                ],
+                [
+                    "thuan bac",
+                    "district",
+                    "1"
+                ]
             ],
             "crf_tag": [
                 [
-                    "Đường",
-                    "STREET_TYPE"
+                    "xa",
+                    "WARD_TYPE"
                 ],
                 [
-                    "Lê",
-                    "B_STREET"
+                    "ham",
+                    "B_WARD"
                 ],
                 [
-                    "Văn",
-                    "I_STREET"
+                    "hiep",
+                    "I_WARD"
                 ],
                 [
-                    "Lương",
-                    "I_STREET"
+                    "ham",
+                    "I_WARD"
+                ],
+                [
+                    "thuan",
+                    "B_DIST"
+                ],
+                [
+                    "bac",
+                    "I_DIST"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Mỗ Lao",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 0,
+                "district": "hà đông",
+                "district_score": 0,
+                "ward": "mỗ lao",
+                "ward_score": 14.397772,
+                "addr_id": 7388,
+                "features": {
+                    "bias": 1,
+                    "crf:ward:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 0.0,
+                    "el:ward:s": 14.397772,
+                    "els_cdd:min_lv": 14.397772,
+                    "isVietnamese": 1,
+                    "0:ward:ward:en": 1,
+                    "0:ward:ward:jc": 1.0,
+                    "0:ward:ward:lvt": 1.0
+                },
+                "score": 0.9999999996014338
+            },
+            "std_add": {
+                "7294": {
+                    "id": 7294,
+                    "city": "hà nội",
+                    "ward": "None",
+                    "district": "hà đông",
+                    "street": "mỗ lao"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hà nội",
+                    "city_score": 0,
+                    "district": "hà đông",
+                    "district_score": 0,
+                    "street": "mỗ lao",
+                    "street_score": 17.393694,
+                    "addr_id": 7294,
+                    "features": {
+                        "bias": 1,
+                        "crf:ward:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 0.0,
+                        "el:street:s": 17.393694,
+                        "els_cdd:min_lv": 17.393694,
+                        "isVietnamese": 1
+                    },
+                    "score": 3.985661273624741e-10
+                }
+            ],
+            "crf_entities": [
+                [
+                    "Mỗ Lao",
+                    "ward",
+                    "0"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Mỗ",
+                    "B_WARD"
+                ],
+                [
+                    "Lao",
+                    "I_WARD"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "Thi tran Bo , Kim Boi , Hoa Binh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hòa bình",
+                "city_score": 5.1112223,
+                "district": "kim bôi",
+                "district_score": 17.918648,
+                "ward": "kim bôi",
+                "ward_score": 17.40378,
+                "addr_id": 23551,
+                "features": {
+                    "bias": 1,
+                    "crf:ward:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 5.1112223,
+                    "el:district:s": 17.918648,
+                    "el:ward:s": 17.40378,
+                    "els_cdd:min_lv": 17.40378,
+                    "0:ward:ward:en:nav": 0,
+                    "1:ward:ward:en:nav": 1,
+                    "2:city:city:en:nav": 1,
+                    "0:ward:ward:jc:nav": 0.0,
+                    "1:ward:ward:jc:nav": 1.0,
+                    "2:city:city:jc:nav": 1.0,
+                    "0:ward:ward:lvt:nav": 0.4444444444444444,
+                    "1:ward:ward:lvt:nav": 1.0,
+                    "2:city:city:lvt:nav": 1.0
+                },
+                "score": 1.0
+            },
+            "std_add": {
+                "23542": {
+                    "id": 23542,
+                    "city": "hòa bình",
+                    "ward": "bo",
+                    "district": "kim bôi",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "Bo",
+                    "ward",
+                    "0"
+                ],
+                [
+                    "Kim Boi",
+                    "ward",
+                    "1"
+                ],
+                [
+                    "Hoa Binh",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "Thi",
+                    "WARD_TYPE"
+                ],
+                [
+                    "tran",
+                    "WARD_TYPE"
+                ],
+                [
+                    "Bo",
+                    "B_WARD"
                 ],
                 [
                     ",",
                     "OTHER"
                 ],
                 [
-                    "phước",
+                    "Kim",
                     "B_WARD"
                 ],
                 [
-                    "kiển",
+                    "Boi",
                     "I_WARD"
                 ],
                 [
-                    "-",
+                    ",",
                     "OTHER"
                 ],
                 [
-                    "Nhà",
+                    "Hoa",
+                    "B_CITY"
+                ],
+                [
+                    "Binh",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
+            "raw_add": "duong thoi tay tan hiep",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "kiên giang",
+                "city_score": 0,
+                "district": "tân hiệp",
+                "district_score": 9.002332,
+                "street": "đường kinh c1",
+                "street_score": 0,
+                "addr_id": 25169,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:district:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 0.0,
+                    "el:district:s": 9.002332,
+                    "el:street:s": 0.0,
+                    "rep_min:street:street": 0,
+                    "rep_min:street:street:in": 0,
+                    "rep_min:district:street": 0,
+                    "rep_min:district:street:in": 0,
+                    "0:street:street:en:nav": 0,
+                    "1:district:district:en:nav": 1,
+                    "0:street:street:jc:nav": 0.0,
+                    "1:district:district:jc:nav": 1.0,
+                    "0:street:street:lvt:nav": 0.2857142857142857,
+                    "1:district:district:lvt:nav": 1.0
+                },
+                "score": 0.3101533223583711
+            },
+            "std_add": {
+                "1781": {
+                    "id": 1781,
+                    "city": "hồ chí minh",
+                    "ward": "None",
+                    "district": "hóc môn",
+                    "street": "thới tây tân hiệp"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hồ chí minh",
+                    "city_score": 0,
+                    "district": "hóc môn",
+                    "district_score": 0,
+                    "street": "thới tây tân hiệp",
+                    "street_score": 11.197277,
+                    "addr_id": 1781,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:district:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 0.0,
+                        "el:district:s": 0.0,
+                        "el:street:s": 11.197277,
+                        "els_cdd:min_lv": 11.197277,
+                        "0:street:street:en:nav": 0,
+                        "1:district:district:en:nav": 0,
+                        "0:street:street:jc:nav": 0.4,
+                        "1:district:district:jc:nav": 0.0,
+                        "0:street:street:lvt:nav": 0.64,
+                        "1:district:district:lvt:nav": 0.13333333333333333
+                    },
+                    "score": 0.058959615707690524
+                }
+            ],
+            "crf_entities": [
+                [
+                    "thoi tay",
+                    "street",
+                    "0"
+                ],
+                [
+                    "tan hiep",
+                    "district",
+                    "1"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "duong",
+                    "STREET_TYPE"
+                ],
+                [
+                    "thoi",
+                    "B_STREET"
+                ],
+                [
+                    "tay",
+                    "I_STREET"
+                ],
+                [
+                    "tan",
                     "B_DIST"
                 ],
                 [
-                    "Bè",
+                    "hiep",
+                    "I_DIST"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "xa tinh an tay son tinh quang ngai",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "quảng ngãi",
+                "city_score": 7.7017546,
+                "district": "sơn tịnh",
+                "district_score": 15.592522,
+                "ward": "tịnh an",
+                "ward_score": 23.085974,
+                "addr_id": 30207,
+                "features": {
+                    "bias": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 7.7017546,
+                    "el:district:s": 15.592522,
+                    "el:ward:s": 23.085974,
+                    "els_cdd:min_lv": 23.085974,
+                    "0:ward:ward:en:nav": 1,
+                    "1:district:district:en:nav": 0,
+                    "2:city:city:en:nav": 0,
+                    "0:ward:ward:jc:nav": 1.0,
+                    "1:district:district:jc:nav": 0.1,
+                    "2:city:city:jc:nav": 0.6153846153846154,
+                    "0:ward:ward:lvt:nav": 1.0,
+                    "1:district:district:lvt:nav": 0.4,
+                    "2:city:city:lvt:nav": 0.8
+                },
+                "score": 0.9908327733489187
+            },
+            "std_add": {
+                "30209": {
+                    "id": 30209,
+                    "city": "quảng ngãi",
+                    "ward": "tịnh ấn tây",
+                    "district": "sơn tịnh",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "quảng ngãi",
+                    "city_score": 7.7017546,
+                    "district": "sơn tịnh",
+                    "district_score": 15.592522,
+                    "ward": "tịnh ấn tây",
+                    "ward_score": 25.406403,
+                    "addr_id": 30209,
+                    "features": {
+                        "bias": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:ward:lv": 1,
+                        "el:city:s": 7.7017546,
+                        "el:district:s": 15.592522,
+                        "el:ward:s": 25.406403,
+                        "els_cdd:min_lv": 25.406403,
+                        "0:ward:ward:en:nav": 0,
+                        "1:district:district:en:nav": 0,
+                        "2:city:city:en:nav": 0,
+                        "0:ward:ward:jc:nav": 0.5555555555555556,
+                        "1:district:district:jc:nav": 0.1,
+                        "2:city:city:jc:nav": 0.6153846153846154,
+                        "0:ward:ward:lvt:nav": 0.7777777777777778,
+                        "1:district:district:lvt:nav": 0.4,
+                        "2:city:city:lvt:nav": 0.8
+                    },
+                    "score": 0.0001267501486346916
+                }
+            ],
+            "crf_entities": [
+                [
+                    "tinh an",
+                    "ward",
+                    "0"
+                ],
+                [
+                    "tay son",
+                    "district",
+                    "1"
+                ],
+                [
+                    "tinh quang ngai",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "xa",
+                    "WARD_TYPE"
+                ],
+                [
+                    "tinh",
+                    "B_WARD"
+                ],
+                [
+                    "an",
+                    "I_WARD"
+                ],
+                [
+                    "tay",
+                    "B_DIST"
+                ],
+                [
+                    "son",
+                    "I_DIST"
+                ],
+                [
+                    "tinh",
+                    "B_CITY"
+                ],
+                [
+                    "quang",
+                    "I_CITY"
+                ],
+                [
+                    "ngai",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "dự án khu đô thị văn khê hà đông , hà nội",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hà nội",
+                "city_score": 13.291281,
+                "district": "hà đông",
+                "district_score": 13.29128,
+                "ward": "văn quán",
+                "ward_score": 0,
+                "addr_id": 7396,
+                "features": {
+                    "bias": 1,
+                    "crf:name:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:ward:lv": 1,
+                    "el:city:s": 13.291281,
+                    "el:district:s": 13.29128,
+                    "el:ward:s": 0.0,
+                    "rep_min:name:ward": 0,
+                    "rep_min:name:ward:in": 0,
+                    "rep_min:district:ward": 0,
+                    "rep_min:district:ward:in": 0,
+                    "rep_min:city:ward": 0,
+                    "rep_min:city:ward:in": 0,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.9250295609214199
+            },
+            "std_add": {
+                "7480": {
+                    "id": 7480,
+                    "city": "hà nội",
+                    "ward": "None",
+                    "district": "hà đông",
+                    "street": "None"
+                }
+            },
+            "true_candidate": [],
+            "crf_entities": [
+                [
+                    "khu đô thị văn khê",
+                    "name",
+                    "0"
+                ],
+                [
+                    "hà đông",
+                    "district",
+                    "1"
+                ],
+                [
+                    "hà nội",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "dự",
+                    "PRO_TYPE"
+                ],
+                [
+                    "án",
+                    "PRO_TYPE"
+                ],
+                [
+                    "khu",
+                    "B_PRO"
+                ],
+                [
+                    "đô",
+                    "I_PRO"
+                ],
+                [
+                    "thị",
+                    "I_PRO"
+                ],
+                [
+                    "văn",
+                    "I_PRO"
+                ],
+                [
+                    "khê",
+                    "I_PRO"
+                ],
+                [
+                    "hà",
+                    "B_DIST"
+                ],
+                [
+                    "đông",
                     "I_DIST"
                 ],
                 [
@@ -2209,38 +3952,310 @@
                     "OTHER"
                 ],
                 [
-                    "Hồ",
+                    "hà",
                     "B_CITY"
                 ],
                 [
-                    "Chí",
-                    "I_CITY"
-                ],
-                [
-                    "Minh",
+                    "nội",
                     "I_CITY"
                 ]
+            ]
+        },
+        {
+            "raw_add": "đường d5 , phường 26 , bình thạnh , hồ chí minh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "hồ chí minh",
+                "city_score": 10.268665,
+                "district": "quận 9",
+                "district_score": 0,
+                "street": "d5",
+                "street_score": 0,
+                "addr_id": 4874,
+                "features": {
+                    "bias": 1,
+                    "crf:street:lv": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "cdd:street:lv": 1,
+                    "el:city:s": 10.268665,
+                    "el:district:s": 0.0,
+                    "el:street:s": 0.0,
+                    "rep_min:street:street": 1,
+                    "rep_min:street:street:in": 1,
+                    "rep_min:ward:street": 0,
+                    "rep_min:ward:street:in": 0,
+                    "rep_min:district:street": 0,
+                    "rep_min:district:street:in": 0,
+                    "rep_min:city:street": 0,
+                    "rep_min:city:street:in": 0,
+                    "isVietnamese": 1,
+                    "0:street:street:en": 1,
+                    "2:district:district:en": 0,
+                    "3:city:city:en": 1,
+                    "0:street:street:jc": 0.0,
+                    "2:district:district:jc": 0.0,
+                    "3:city:city:jc": 1.0,
+                    "0:street:street:lvt": 1.0,
+                    "2:district:district:lvt": 0.25,
+                    "3:city:city:lvt": 1.0
+                },
+                "score": 0.7904838277143769
+            },
+            "std_add": {
+                "942": {
+                    "id": 942,
+                    "city": "hồ chí minh",
+                    "ward": "phường 26",
+                    "district": "bình thạnh",
+                    "street": "None"
+                },
+                "823": {
+                    "id": 823,
+                    "city": "hồ chí minh",
+                    "ward": "None",
+                    "district": "bình thạnh",
+                    "street": "d5"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "hồ chí minh",
+                    "city_score": 10.268665,
+                    "district": "bình thạnh",
+                    "district_score": 12.642345,
+                    "ward": "phường 26",
+                    "ward_score": 24.586731,
+                    "addr_id": 942,
+                    "features": {
+                        "bias": 1,
+                        "crf:street:lv": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:ward:lv": 1,
+                        "el:city:s": 10.268665,
+                        "el:district:s": 12.642345,
+                        "el:ward:s": 24.586731,
+                        "els_cdd:min_lv": 24.586731,
+                        "isVietnamese": 1,
+                        "1:ward:ward:en": 1,
+                        "2:district:district:en": 1,
+                        "3:city:city:en": 1,
+                        "1:ward:ward:jc": 1.0,
+                        "2:district:district:jc": 1.0,
+                        "3:city:city:jc": 1.0,
+                        "1:ward:ward:lvt": 1.0,
+                        "2:district:district:lvt": 1.0,
+                        "3:city:city:lvt": 1.0
+                    },
+                    "score": 0.1895196255656058
+                }
             ],
             "crf_entities": [
                 [
-                    "Lê Văn Lương",
+                    "d5",
                     "street",
                     "0"
                 ],
                 [
-                    "phước kiển",
+                    "phường 26",
                     "ward",
                     "1"
                 ],
                 [
-                    "Nhà Bè",
+                    "bình thạnh",
                     "district",
                     "2"
                 ],
                 [
-                    "Hồ Chí Minh",
+                    "hồ chí minh",
                     "city",
                     "3"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "đường",
+                    "STREET_TYPE"
+                ],
+                [
+                    "d5",
+                    "B_STREET"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "phường",
+                    "B_WARD"
+                ],
+                [
+                    "26",
+                    "I_WARD"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "bình",
+                    "B_DIST"
+                ],
+                [
+                    "thạnh",
+                    "I_DIST"
+                ],
+                [
+                    ",",
+                    "OTHER"
+                ],
+                [
+                    "hồ",
+                    "B_CITY"
+                ],
+                [
+                    "chí",
+                    "I_CITY"
+                ],
+                [
+                    "minh",
+                    "I_CITY"
+                ]
+            ]
+        },
+        {
+            "type": "true_district",
+            "raw_add": "bến đoan - hạ long - quảng ninh",
+            "result": {
+                "country": "việt nam",
+                "country_score": 0,
+                "city": "quảng ninh",
+                "city_score": 6.1140933,
+                "district": "hạ long",
+                "district_score": 14.349657,
+                "addr_id": 30630,
+                "features": {
+                    "bias": 1,
+                    "crf:ward:lv": 1,
+                    "crf:district:lv": 1,
+                    "crf:city:lv": 1,
+                    "cdd:city:lv": 1,
+                    "cdd:district:lv": 1,
+                    "el:city:s": 6.1140933,
+                    "el:district:s": 14.349657,
+                    "els_cdd:min_lv": 14.349657,
+                    "isVietnamese": 1,
+                    "1:district:district:en": 1,
+                    "2:city:city:en": 1,
+                    "1:district:district:jc": 1.0,
+                    "2:city:city:jc": 1.0,
+                    "1:district:district:lvt": 1.0,
+                    "2:city:city:lvt": 1.0
+                },
+                "score": 0.5519159012027257
+            },
+            "std_add": {
+                "30444": {
+                    "id": 30444,
+                    "city": "quảng ninh",
+                    "ward": "None",
+                    "district": "hạ long",
+                    "street": "bến đoan"
+                }
+            },
+            "true_candidate": [
+                {
+                    "country": "việt nam",
+                    "country_score": 0,
+                    "city": "quảng ninh",
+                    "city_score": 6.1140933,
+                    "district": "hạ long",
+                    "district_score": 14.349657,
+                    "street": "bến đoan",
+                    "street_score": 30.477268,
+                    "addr_id": 30444,
+                    "features": {
+                        "bias": 1,
+                        "crf:ward:lv": 1,
+                        "crf:district:lv": 1,
+                        "crf:city:lv": 1,
+                        "cdd:city:lv": 1,
+                        "cdd:district:lv": 1,
+                        "cdd:street:lv": 1,
+                        "el:city:s": 6.1140933,
+                        "el:district:s": 14.349657,
+                        "el:street:s": 30.477268,
+                        "els_cdd:min_lv": 30.477268,
+                        "isVietnamese": 1,
+                        "1:district:district:en": 1,
+                        "2:city:city:en": 1,
+                        "1:district:district:jc": 1.0,
+                        "2:city:city:jc": 1.0,
+                        "1:district:district:lvt": 1.0,
+                        "2:city:city:lvt": 1.0
+                    },
+                    "score": 0.4432239200292866
+                }
+            ],
+            "crf_entities": [
+                [
+                    "bến đoan",
+                    "ward",
+                    "0"
+                ],
+                [
+                    "hạ long",
+                    "district",
+                    "1"
+                ],
+                [
+                    "quảng ninh",
+                    "city",
+                    "2"
+                ]
+            ],
+            "crf_tag": [
+                [
+                    "bến",
+                    "B_WARD"
+                ],
+                [
+                    "đoan",
+                    "I_WARD"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "hạ",
+                    "B_DIST"
+                ],
+                [
+                    "long",
+                    "I_DIST"
+                ],
+                [
+                    "-",
+                    "OTHER"
+                ],
+                [
+                    "quảng",
+                    "B_CITY"
+                ],
+                [
+                    "ninh",
+                    "I_CITY"
                 ]
             ]
         }

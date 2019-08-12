@@ -133,6 +133,11 @@ def extract_features(raw_add, entities, candidate):
 				else:
 					value = 1 if no_accent_vietnamese(entity.lower()) == no_accent_vietnamese(candidate[min_field_cdd].lower()) else 0
 				features.update({'rep_min:{}:{}'.format(label,min_field_cdd): value})
+				if cvc == True:
+					value = 1 if candidate[min_field_cdd] in entity.lower() else 0
+				else:
+					value = 1 if no_accent_vietnamese(candidate[min_field_cdd].lower()) in no_accent_vietnamese(entity.lower()) else 0
+				features.update({'rep_min:{}:{}:in'.format(label,min_field_cdd): value})
 
 	#other score
 	
