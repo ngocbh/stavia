@@ -1,0 +1,9 @@
+371 400
+sagel_error10
+accuracy = 0.9275 
+score =1161/1200=0.9675
+partial score
+city_score =396
+district_score =394
+ward_score =371
+street_score =371

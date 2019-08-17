@@ -11,7 +11,7 @@ PARAMS_ID=1
 
 #TOSTR
 DATASET_ID=str(DATASET_ID)
-MODEL_ID= '{}.{}'.format(DATASET_ID, PARAMS_ID)
+MODEL_ID= '{}.{}.{}'.format(1-IS_BUILDING_STAGE, DATASET_ID, PARAMS_ID)
 
 #GLOBAL
 PUNCTUATIONS=',.-()#|/\\'
@@ -47,6 +47,6 @@ RAT_DICT_FILE=os.path.join(WORKING_DIR, '_data/rat_dict.json')
 TRAIN_FINAL_FILE=os.path.join(WORKING_DIR, '_data/train_final{}_{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '', DATASET_ID))
 MODEL_FINAL_FILE=os.path.join(WORKING_DIR, '_data/final_{}_{}.model'.format(METHOD, MODEL_ID))
 USE_LEXICAL_FEATURES=False
-NUM_ITER=400
+NUM_ITER=1200
 LAMBDA_REG=0.00001
 

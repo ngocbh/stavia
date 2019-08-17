@@ -8,7 +8,7 @@ from stavia.utils.parameters import *
 
 import stavia
 
-graph = CandidateGraph.build_graph('Lô F8 - đường Võ Thị Sáu - Khu phố... - Quảng Nam')
+graph = CandidateGraph.build_graph('quận hai bà trưng - hà nội')
 result = sagel.get_sagel_answer(graph)
 print(result)
-print(stavia.standardize('Lô F8 - đường Võ Thị Sáu - Khu phố... - Quảng Nam'))
+print(stavia.standardize('đường hai bà trưng - hà nội'))

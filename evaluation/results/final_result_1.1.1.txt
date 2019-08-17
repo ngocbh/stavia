@@ -1,0 +1,9 @@
+9728 10390
+sagel_error343
+accuracy = 0.9362848893166507 
+score =30284/31170=0.9715752325954443
+partial score
+city_score =10324
+district_score =10232
+ward_score =9728
+street_score =9728

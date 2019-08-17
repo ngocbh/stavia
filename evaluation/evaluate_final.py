@@ -13,8 +13,6 @@ import json
 import stavia
 import numpy as np
 
-IS_BUILDING_STAGE = 0
-
 TEST_FINAL_FILE='data/test_final{}_{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '', DATASET_ID)
 
 
