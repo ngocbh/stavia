@@ -6,6 +6,8 @@ import os
 from ..utils import utils
 from ..utils.parameters import *
 
+s = requests.Session()
+
 def match(ngram, rest, field, rest_field, query_size=100):
 	query = json.dumps({
 		"from": 0, "size": query_size,
@@ -29,7 +31,7 @@ def match(ngram, rest, field, rest_field, query_size=100):
 	})
 
 	headers = {'Content-Type': 'application/json'}
-	response = requests.get(SEARCHING_URI, data=query, headers=headers)
+	response = s.get(SEARCHING_URI, data=query, headers=headers)
 	results = json.loads(response.text)
 	return results["hits"]["hits"]
 
