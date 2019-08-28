@@ -1,0 +1,8 @@
+7924 10397
+accuracy = 0.7621429258439935 
+score =27822/31191=0.8919880734827355
+partial score
+city_score =10081
+district_score =9817
+ward_score =7924
+street_score =7924

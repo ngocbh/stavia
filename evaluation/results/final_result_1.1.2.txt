@@ -1,0 +1,9 @@
+9787 10390
+sagel_error349
+accuracy = 0.9419634263715111 
+score =30391/31170=0.9750080205325634
+partial score
+city_score =10339
+district_score =10265
+ward_score =9787
+street_score =9787

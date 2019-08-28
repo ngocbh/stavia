@@ -40,6 +40,7 @@ class LogLinearModel:
 	feature_set = None
 	learning_rate = 0.01
 	num_iter = 10000
+	mini_num_iter = 500 #for regularized train
 	fit_intercept = True
 	verbose = False
 
@@ -98,9 +99,10 @@ class LogLinearModel:
 
 			total_logZ += log(Z)
 
-
-		log_likelihood = total_logProb - total_logZ - (lambda_reg/2) * np.sum(np.multiply(params,params))
-		gradients = empirical_weights - expected_weights - lambda_reg * params
+		# _params = feature_set.get_regularized_params(params, 'bias')
+		_params = params
+		log_likelihood = total_logProb - total_logZ - (lambda_reg/2) * np.sum(np.multiply(_params,_params))
+		gradients = empirical_weights - expected_weights - lambda_reg * _params
 
 		global SUB_ITERATION_NUM
 		if verbose:
@@ -122,7 +124,7 @@ class LogLinearModel:
 		return sign * self.GRADIENT
 
 
-	def __estimate_parameters(self, X, y, lambda_reg, verbose):
+	def __estimate_parameters(self, X, y, lambda_reg, num_iter, verbose):
 		print('* Lambda:', lambda_reg)
 		print('* Start L-BGFS')
 		print('   ========================')
@@ -135,7 +137,7 @@ class LogLinearModel:
 							  args=(X, y, self.feature_set, lambda_reg, 
 							  	self.feature_set.get_empirical_weights(), verbose, -1.0),
 							  maxls=100,
-							  maxiter=self.num_iter,
+							  maxiter=num_iter,
 							  callback=_callback)
 
 		print('   ========================')
@@ -157,13 +159,13 @@ class LogLinearModel:
 		X = self.feature_set.scan(X, y)
 		print('Number of feature = ', len(self.feature_set))
 
-		self.params = self.__estimate_parameters(X, y, self.lambda_reg, verbose = self.verbose)
+		self.params = self.__estimate_parameters(X, y, self.lambda_reg, self.num_iter, verbose = self.verbose)
 
 		elapsed_time = time.time() - start_time
 		print('* Elapsed time: %f' % elapsed_time)
 		print('* [%s] Training done' % datetime.datetime.now())
 
-	def fit_regularized(self, X_train, y_train, X_dev, y_dev):
+	def fit_regularized(self, X_train, y_train, X_dev, y_dev, verbose=False):
 		start_time = time.time()
 		print('[%s] Start training' % datetime.datetime.now())
 		X_train = self.feature_set.scan(X_train, y_train)
@@ -171,7 +173,7 @@ class LogLinearModel:
 		max_acc = 0
 		self.lambda_reg = -1
 		for lambda_reg in self.lambda_regs:
-			self.params = self.__estimate_parameters(X_train, y_train, lambda_reg, verbose = False)
+			self.params = self.__estimate_parameters(X_train, y_train, lambda_reg, self.mini_num_iter, verbose = verbose)
 			acc = self.score(X_dev, y_dev)
 			if acc > max_acc:
 				max_acc = acc
@@ -180,7 +182,7 @@ class LogLinearModel:
 
 		print('Choose hyperparameter for regularization, lambda = ' , self.lambda_reg)
 		print('---------Final Round--------')
-		self.params = self.__estimate_parameters(X_train, y_train, self.lambda_reg, verbose = False)
+		self.params = self.__estimate_parameters(X_train, y_train, self.lambda_reg, self.num_iter, verbose = verbose)
 		acc = self.score(X_train, y_train, hashed=True)
 		print('Training Score = ', acc)
 		acc = self.score(X_dev, y_dev)
@@ -291,8 +293,8 @@ def train():
 	X_train, X_dev, y_train, y_dev = train_test_split(X_data, Y_data, test_size=0.13, random_state=42)
 
 	model = LogLinearModel(lambda_reg=LAMBDA_REG,num_iter=NUM_ITER, verbose=VERBOSE)
-	# model.fit_regularized(X_train, y_train, X_dev, y_dev)
-	model.fit(X_train, y_train)
+	model.fit_regularized(X_train, y_train, X_dev, y_dev, verbose=VERBOSE)
+	# model.fit(X_train, y_train)
 	print('Training score = ', model.score(X_train, y_train))
 	print('Development score = ', model.score(X_dev, y_dev))
 

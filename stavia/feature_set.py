@@ -98,6 +98,13 @@ class FeatureSet:
 			except KeyError:
 				pass
 
+	def get_regularized_params(self, params, bias_feature_name):
+		ret_params = params
+		try:
+			ret_params[self.feature_dict[bias_feature_name]] = 0
+		except KeyError:
+			pass
 
+		return ret_params
 
 

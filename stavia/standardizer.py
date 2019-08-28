@@ -40,6 +40,7 @@ def standardize(addr, method=METHOD):
 	
 	candidates = graph.extract_address()
 	crf_entities = tagger.detect_entity(addr)
+	print(crf_entities)
 	if METHOD == 'lr':
 		ranked_list = lr_judge(addr, crf_entities, candidates)
 	else:

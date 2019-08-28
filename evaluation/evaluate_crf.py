@@ -30,6 +30,8 @@ def detect_entity(labels):
 		label = labels[i]
 		if label[0] == 'I':
 			buff += '|' + str(i) 
+			if lbuff == '':
+				lbuff = label[2:]
 		else:
 			if isEntity == True:
 				ret[lbuff].add(buff)
@@ -40,6 +42,9 @@ def detect_entity(labels):
 			else:
 				isEntity = False
 	if len(buff) > 0:
+		if lbuff == '':
+			print(buff)
+			print(labels)
 		ret[lbuff].add(buff)
 
 	return ret

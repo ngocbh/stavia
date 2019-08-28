@@ -1,0 +1,8 @@
+463 500
+accuracy = 0.926 
+score =1398/1500=0.932
+partial score
+city_score =468
+district_score =467
+ward_score =463
+street_score =463

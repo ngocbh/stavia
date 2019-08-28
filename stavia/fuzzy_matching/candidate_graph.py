@@ -150,7 +150,7 @@ class CandidateGraph():
 			ret.append(addr)
 		return ret
 
-	def display_graph(self):
+	def display_graph(self, filename='candidate_graph.png'):
 		G = pydot.Dot(graph_type='digraph')
 		
 		for key, node in self.nodes.items():
@@ -165,7 +165,7 @@ class CandidateGraph():
 					str(tonode.id) + '\n' + str(tonode.label) + '\n' + tonode.value + '\n' + str(tonode.score))
 				G.add_edge(edge)
 
-		G.write_png('candidate_graph.png')
+		G.write_png(filename)
 		print('Created candidate graph image!')
 
 

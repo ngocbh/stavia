@@ -13,7 +13,7 @@ import json
 
 TEST_FINAL_FILE='data/test_final{}_{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '', DATASET_ID)
 
-IS_BUILDING_STAGE = 1
+IS_BUILDING_STAGE = 0
 
 def evaluate_sagel():
 	data = load_data(TEST_FINAL_FILE)
@@ -31,7 +31,14 @@ def evaluate_sagel():
 		result = sagel.get_sagel_answer(graph)
 		if result == None:
 			print('result error')
-		if str(result['addr_id']) in std_add:
+		elif 'addr_id' not in result:
+			total_sample += 1
+			error_sample = {}
+			error_sample['raw_add'] = raw_add
+			error_sample['result'] = result
+			error_sample['std_add'] = std_add
+			errors.append(error_sample)
+		elif str(result['addr_id']) in std_add:
 			true_sample += 1
 			score += 3
 			for field in FIELDS:

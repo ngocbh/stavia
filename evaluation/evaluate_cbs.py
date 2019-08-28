@@ -31,16 +31,11 @@ def evaluate_final():
 	sagel_error_list = []
 	status = iter(create_status(len(data)))
 	for raw_add, std_add in data:
-		result, ranked_list, crf_entities, words, labels = stavia.standardize4testing(raw_add)
+		result = stavia.cbs.standardize(raw_add)
 		if result == None:
-			print('result error')
-		if 'addr_id' not in result:
-			error_sample['raw_add'] = raw_add
-			error_sample['std_add'] = std_add
-			error_sample['result'] = result
-			error_sample['type'] = 'key error'
-			error_sample['crf_entities'] = crf_entities
-		elif str(result['addr_id']) in std_add:
+			# print('result error')
+			pass
+		elif str(result['id']) in std_add:
 			true_sample += 1
 			score += 3
 			for field in FIELDS:
@@ -68,54 +63,23 @@ def evaluate_final():
 			for field in FIELDS:
 				pscore[field] += max_pscore[field]
 
-			error_sample['raw_add'] = raw_add
-			error_sample['result'] = result
-			error_sample['std_add'] = std_add
-
-			true_candidate = []
-			for candidate in ranked_list:
-				if str(candidate['addr_id']) in std_add:
-					true_candidate.append(candidate)
-
-			error_sample['true_candidate'] = true_candidate
-			error_sample['crf_entities'] = crf_entities
-			error_sample['crf_tag'] = [[word,label] for word, label in zip(words,labels)]
-			if len(true_candidate) == 0:
-				sagel_error += 1
-				sagel_error_list.append(error_sample)
-			errors.append(error_sample)
-
-
-
 		total_sample += 1
 		next(status)
 
 	print(str(true_sample) + ' ' + str(total_sample) + '\n')
-	print('sagel_error' + str(sagel_error))
 	print('accuracy = ' + str(true_sample/float(total_sample)) +' \n')
 	print('score =' + str(score) + '/' + str(total_sample*3) + '=' + str(score/float(total_sample*3)) + '\n')
 	print('partial score' + '\n')
 	for field in FIELDS:
 		print(field + '_score =' + str(pscore[field]) + '\n')
 
-	with codecs.open('results/final_result_{}.txt'.format(MODEL_ID), encoding='utf8', mode='w') as f:
+	with codecs.open('results/cbs_result_{}.txt'.format(MODEL_ID), encoding='utf8', mode='w') as f:
 		f.write(str(true_sample) + ' ' + str(total_sample) + '\n')
-		f.write('sagel_error' + str(sagel_error) + '\n')
 		f.write('accuracy = ' + str(true_sample/float(total_sample)) +' \n')
 		f.write('score =' + str(score) + '/' + str(total_sample*3) + '=' + str(score/float(total_sample*3)) + '\n')
 		f.write('partial score' + '\n')
 		for field in FIELDS:
 			f.write(field + '_score =' + str(pscore[field]) + '\n')
-
-	with codecs.open('results/error_pattern_final_{}.json'.format(MODEL_ID), encoding='utf8', mode='w') as f:
-		js_data = {'error': errors}
-		jstr = json.dumps(js_data,ensure_ascii=False, indent=4)
-		f.write(jstr)
-	
-	with codecs.open('results/error_sagel_final_{}.json'.format(MODEL_ID), encoding='utf8', mode='w') as f:
-		js_data = {'error': sagel_error_list}
-		jstr = json.dumps(js_data,ensure_ascii=False, indent=4)
-		f.write(jstr)
 
 if __name__ == "__main__":
 	evaluate_final()

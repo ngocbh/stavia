@@ -135,8 +135,8 @@ def extract_features(raw_add, entities, candidate):
 					continue
 				value = 1 if entity.lower() == candidate[field] else 0
 				if field == label:
-					features.update({'{}:{}:{}:{}'.format(loc, label, field, 'en'): value})
 					matched_entities[field] = value
+				features.update({'{}:{}:{}:{}'.format(loc, label, field, 'en'): value})
 
 		#Jaccard Score
 		for entity, label, loc in entities:
@@ -144,8 +144,8 @@ def extract_features(raw_add, entities, candidate):
 				if field not in candidate:
 					continue
 				value = jaccard_similarity(entity, candidate[field])
-				if field == label:
-					features.update({'{}:{}:{}:{}'.format(loc, label, field, 'jc'): value})
+				# if field == label:
+				features.update({'{}:{}:{}:{}'.format(loc, label, field, 'jc'): value})
 
 		#Levenshtein Score
 		for entity, label, loc in entities:
@@ -153,8 +153,8 @@ def extract_features(raw_add, entities, candidate):
 				if field not in candidate:
 					continue
 				value = levenshtein_ratio_and_distance(entity.lower(), candidate[field].lower())
-				if field == label:
-					features.update({'{}:{}:{}:{}'.format(loc, label, field, 'lvt'): value})
+				# if field == label:
+				features.update({'{}:{}:{}:{}'.format(loc, label, field, 'lvt'): value})
 		
 		if min_field_cdd != '':
 			if matched_entities[min_field_cdd] == 0:
@@ -176,24 +176,25 @@ def extract_features(raw_add, entities, candidate):
 					continue
 				value = 1 if no_accent_vietnamese(entity.lower()) == no_accent_vietnamese(candidate[field].lower()) else 0
 				if field == label:
-					features.update({'{}:{}:{}:{}:{}'.format(loc, label, field, 'en', 'nav'): value})
 					matched_entities[field] = value
+				features.update({'{}:{}:{}:{}:{}'.format(loc, label, field, 'en', 'nav'): value})
+				
 		#Jaccard Score with no_accent_vietnamese
 		for entity, label, loc in entities:
 			for field in FIELDS:
 				if field not in candidate:
 					continue
 				value = jaccard_similarity(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower()))
-				if field == label:
-					features.update({'{}:{}:{}:{}:{}'.format(loc, label, field, 'jc', 'nav'): value})
+				# if field == label:
+				features.update({'{}:{}:{}:{}:{}'.format(loc, label, field, 'jc', 'nav'): value})
 		#Levenshtein Score with no_accent_vietnamese
 		for entity, label, loc in entities:
 			for field in FIELDS:
 				if field not in candidate:
 					continue
 				value = levenshtein_ratio_and_distance(no_accent_vietnamese(entity.lower()), no_accent_vietnamese(candidate[field].lower()))
-				if field == label:
-					features.update({'{}:{}:{}:{}:{}'.format(loc, label, field, 'lvt', 'nav'): value})
+				# if field == label:
+				features.update({'{}:{}:{}:{}:{}'.format(loc, label, field, 'lvt', 'nav'): value})
 
 		if min_field_cdd != '':
 			if matched_entities[min_field_cdd] == 0:

@@ -1,0 +1,8 @@
+8189 8916
+accuracy = 0.9184611933602512 
+score =24765/26748=0.9258636159712875
+partial score
+city_score =8299
+district_score =8277
+ward_score =8189
+street_score =8189
