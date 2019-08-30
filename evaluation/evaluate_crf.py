@@ -10,7 +10,7 @@ from sklearn.metrics import classification_report
 import pycrfsuite
 import numpy as np
 
-CRF_TEST_FILE='data/test_crf.txt'
+CRF_TEST_FILE='data/test_crf_{}.txt'.format(DATASET_ID)
 
 FIELDS = ['CITY','DIST', 'WARD', 'STREET', 'PRO']
 ENTITY_PREDS = {'CITY': 0, 'DIST': 0, 'WARD': 0, 'STREET': 0, 'PRO': 0}
@@ -103,7 +103,7 @@ def evaluate_crf():
 	total_truth = 0
 	total_pred = 0
 	# Print out the classification report
-	with codecs.open('results/crf_metrics{}.txt'.format('_norat' if USE_RAT == False else '_rat'),encoding='utf8', mode='w') as f:
+	with codecs.open('results/crf_metrics{}_{}.txt'.format('_norat' if USE_RAT == False else '_rat', DATASET_ID),encoding='utf8', mode='w') as f:
 		f.write(classification_report(
 		    truths, predictions,
 		    target_names=target_names,digits=4))

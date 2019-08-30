@@ -6,8 +6,8 @@ WORKING_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), '../')
 IS_BUILDING_STAGE=0
 VERBOSE=True
 METHOD='llm' #llm for log-linear model and lr for logistic regression
-DATASET_ID=1
-PARAMS_ID=1
+DATASET_ID=3
+PARAMS_ID=2
 
 #TOSTR
 DATASET_ID=str(DATASET_ID)
@@ -32,6 +32,8 @@ RAT_NV_FILE_CSV=os.path.join(WORKING_DIR, '_data/rat_data_nv.csv')
 FUZZINESS=1
 QUERY_SIZE=3000
 SLOP=0
+MIN_NGRAMS=2
+MAX_NGRAMS=4
 
 #CANDIDATE GRAPH
 FIELDS=['city', 'district', 'ward', 'street']
@@ -40,15 +42,15 @@ MAP_FIELD={0: 'country', 1: 'city', 2:'district', 3: 'ward', 4: 'street', 5: 'na
 BEAM_SIZE=8
 
 #CRF
-CRF_TRAIN_FILE=os.path.join(WORKING_DIR, '_data/train_crf{}.txt'.format('_small' if IS_BUILDING_STAGE == 1 else ''))
+CRF_TRAIN_FILE=os.path.join(WORKING_DIR, '_data/train_crf{}_{}.txt'.format('_small' if IS_BUILDING_STAGE == 1 else '', DATASET_ID))
 USE_RAT=True
-CRF_MODEL_FILE=os.path.join(WORKING_DIR, '_data/crf{}.model'.format('_norat' if USE_RAT == False else '_rat'))
+CRF_MODEL_FILE=os.path.join(WORKING_DIR, '_data/crf{}_{}.model'.format('_norat' if USE_RAT == False else '_rat', DATASET_ID))
 RAT_DICT_FILE=os.path.join(WORKING_DIR, '_data/rat_dict.json')
 
 #RERANKING
 TRAIN_FINAL_FILE=os.path.join(WORKING_DIR, '_data/train_final{}_{}.json'.format('_small' if IS_BUILDING_STAGE == 1 else '', DATASET_ID))
 MODEL_FINAL_FILE=os.path.join(WORKING_DIR, '_data/final_{}_{}.model'.format(METHOD, MODEL_ID))
 USE_LEXICAL_FEATURES=False
-NUM_ITER=1200
-LAMBDA_REG=0.00001
+NUM_ITER=400
+LAMBDA_REG=0.00005
 

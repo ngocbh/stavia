@@ -1,0 +1,8 @@
+374 500
+accuracy = 0.748 
+score =1338/1500=0.892
+partial score
+city_score =491
+district_score =473
+ward_score =374
+street_score =374

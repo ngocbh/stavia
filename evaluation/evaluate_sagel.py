@@ -23,6 +23,8 @@ def evaluate_sagel():
 	total_sample = 0
 
 	errors = []
+	MIN_NGRAMS=1
+	MAX_NGRAMS=4
 
 	status = iter(create_status(len(data)))
 	for raw_add, std_add in data:
@@ -32,7 +34,6 @@ def evaluate_sagel():
 		if result == None:
 			print('result error')
 		elif 'addr_id' not in result:
-			total_sample += 1
 			error_sample = {}
 			error_sample['raw_add'] = raw_add
 			error_sample['result'] = result
@@ -72,7 +73,7 @@ def evaluate_sagel():
 		total_sample += 1
 		next(status)
 
-	with codecs.open('results/sagel_result.txt', encoding='utf8', mode='w') as f:
+	with codecs.open('results/sagel_result_{}.txt'.format(MODEL_ID), encoding='utf8', mode='w') as f:
 		f.write(str(true_sample) + ' ' + str(total_sample) + '\n')
 		f.write('accuracy = ' + str(true_sample/float(total_sample)) +' \n')
 		f.write('score =' + str(score) + '/' + str(total_sample*3) + '=' + str(score/float(total_sample*3)) + '\n')
@@ -80,7 +81,7 @@ def evaluate_sagel():
 		for field in FIELDS:
 			f.write(field + '_score =' + str(pscore[field]) + '\n')
 
-	with codecs.open('results/error_pattern_sagel.json', encoding='utf8', mode='w') as f:
+	with codecs.open('results/error_pattern_sagel_{}.json'.format(MODEL_ID), encoding='utf8', mode='w') as f:
 		js_data = {'error': errors}
 		jstr = json.dumps(js_data,ensure_ascii=False, indent=4)
 		f.write(jstr)

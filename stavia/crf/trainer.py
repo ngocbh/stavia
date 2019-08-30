@@ -22,7 +22,7 @@ def train_crf():
 	trainer.set_params({
 	    'c1': 0.1,
 	    'c2': 0.01,  
-	    'max_iterations': 200,
+	    'max_iterations': 500,
 	    'feature.possible_transitions': True
 	})
 

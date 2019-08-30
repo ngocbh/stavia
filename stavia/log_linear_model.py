@@ -293,8 +293,8 @@ def train():
 	X_train, X_dev, y_train, y_dev = train_test_split(X_data, Y_data, test_size=0.13, random_state=42)
 
 	model = LogLinearModel(lambda_reg=LAMBDA_REG,num_iter=NUM_ITER, verbose=VERBOSE)
-	model.fit_regularized(X_train, y_train, X_dev, y_dev, verbose=VERBOSE)
-	# model.fit(X_train, y_train)
+	# model.fit_regularized(X_train, y_train, X_dev, y_dev, verbose=VERBOSE)
+	model.fit(X_train, y_train)
 	print('Training score = ', model.score(X_train, y_train))
 	print('Development score = ', model.score(X_dev, y_dev))
 

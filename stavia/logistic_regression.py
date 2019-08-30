@@ -174,6 +174,51 @@ def extract_features(raw_add, entities, candidate):
 
 	return features
 
+
+def lr_detect_entity(inp, tokens=None, labels=None):
+	if tokens == None or labels == None:
+		tokens, labels = tagger.tag(inp)
+	entities = {}
+
+	n = len(tokens)
+	buff = ''
+	lbuff = ''
+	isEntity = False
+
+	for i in range(n):
+		if (labels[i][0] == 'I'):
+			buff += ' ' + tokens[i]
+		else:
+			if isEntity == True:
+				key = lbuff.lower() 
+				if key not in entities:
+					entities[key] = [buff]
+				else:
+					entities[key].append(buff)
+
+			buff = tokens[i]
+			if labels[i][0] == 'B':
+				if labels[i] == 'B_DIST':
+					lbuff = 'DISTRICT'
+				elif labels[i] == 'B_PRO':
+					lbuff = 'NAME'
+				else:
+					lbuff = labels[i][2:]
+				isEntity = True
+			else:
+				lbuff = labels[i]
+				isEntity = False
+
+	if isEntity == True:
+		key = lbuff.lower() 
+		if key not in entities :
+			entities[key] = [buff]
+		else:
+			entities[key].append(buff)
+
+
+	return entities
+
 def lr_judge(raw_add, entities, candidates):
 	global model
 	X = []
@@ -207,7 +252,7 @@ def train():
 		graph = CandidateGraph.build_graph(raw_add)
 		graph.prune_by_beam_search(k=BEAM_SIZE)
 		candidates = graph.extract_address()
-		crf_entities = tagger.detect_entity(raw_add)
+		crf_entities = lr_detect_entity(raw_add)
 
 		for candidate in candidates:
 			X_data.append(extract_features(raw_add, crf_entities, candidate))

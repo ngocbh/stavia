@@ -1,8 +1,0 @@
-7846 10397
-accuracy = 0.7546407617581995 
-score =27628/31191=0.8857683306081883
-partial score
-city_score =10060
-district_score =9722
-ward_score =7846
-street_score =7846

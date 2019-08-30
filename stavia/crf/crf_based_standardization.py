@@ -40,22 +40,20 @@ def match_std_add(entities, rat_df):
 				continue
 			res_df = res_df.loc[res_df[field] == entities[field]]
 
-	if res_df.shape[0] > 0:
-		i = random.randint(0,res_df.shape[0]-1)
-		_id = int(res_df.iloc[i]['id'])
-		std_add = {}
-		std_add['id'] = _id
-		if res_df.iloc[i]['street'] != 'None':
-			std_add['street'] = res_df.iloc[i]['street']
-		if res_df.iloc[i]['ward'] != 'None':
-			std_add['ward'] = res_df.iloc[i]['ward']
-		if res_df.iloc[i]['district'] != 'None':
-			std_add['district'] = res_df.iloc[i]['district']
-		if res_df.iloc[i]['city'] != 'None':
-			std_add['city'] = res_df.iloc[i]['city']
-		return std_add
-	else:
+	if res_df.shape[0] == 0:
 		return None
+	_id = int(res_df.iloc[0]['id'])
+	std_add = {}
+	std_add['id'] = _id
+	if res_df.iloc[0]['street'] != 'None':
+		std_add['street'] = res_df.iloc[0]['street']
+	if res_df.iloc[0]['ward'] != 'None':
+		std_add['ward'] = res_df.iloc[0]['ward']
+	if res_df.iloc[0]['district'] != 'None':
+		std_add['district'] = res_df.iloc[0]['district']
+	if res_df.iloc[0]['city'] != 'None':
+		std_add['city'] = res_df.iloc[0]['city']
+		return std_add
 
 def standardize(addr):
 	useVietChar = utils.contains_Vietchar(addr)

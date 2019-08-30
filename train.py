@@ -3,6 +3,8 @@ from stavia import logistic_regression as lr
 from stavia.crf import trainer
 from stavia.utils.parameters import *
 #test rsync
+# print('METHOD=',METHOD)
+# print('MODEL_ID=',MODEL_ID)
 # trainer.train_crf()
 print('METHOD=',METHOD)
 print('MODEL_ID=',MODEL_ID)

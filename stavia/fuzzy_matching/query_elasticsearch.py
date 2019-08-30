@@ -46,7 +46,7 @@ def get_candidate(address, field):
 			rest_field[i] = rest_field[i] + '_no'
 
 	candidates_dict = {}
-	for i in range(2,4):
+	for i in range(MIN_NGRAMS,MAX_NGRAMS):
 		ngrams = utils.generate_ngrams_word_level(address, n=i)
 		if len(ngrams) == 0:
 			continue

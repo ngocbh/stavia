@@ -6,7 +6,7 @@ from .crf import tagger
 from .feature_extraction import extract_features
 from .utils.parameters import *
 from .log_linear_model import LogLinearModel
-from .logistic_regression import lr_judge
+from .logistic_regression import lr_judge, lr_detect_entity
 from .fuzzy_matching import sagel
 import copy
 import pickle
@@ -39,11 +39,11 @@ def standardize(addr, method=METHOD):
 	graph.prune_by_beam_search(k=BEAM_SIZE)
 	
 	candidates = graph.extract_address()
-	crf_entities = tagger.detect_entity(addr)
-	print(crf_entities)
 	if METHOD == 'lr':
+		crf_entities = lr_detect_entity(addr)
 		ranked_list = lr_judge(addr, crf_entities, candidates)
 	else:
+		crf_entities = tagger.detect_entity(addr)
 		ranked_list = llm_judge(addr, crf_entities, candidates)
 	# print(ranked_list)
 	if len(ranked_list) == 0:
@@ -86,10 +86,12 @@ def standardize4testing(addr, method=METHOD):
 	
 	candidates = graph.extract_address()
 	words, labels = tagger.tag(addr)
-	crf_entities = tagger.detect_entity(addr, words, labels)
+	
 	if METHOD == 'lr':
+		crf_entities = lr_detect_entity(addr, words, labels)
 		ranked_list = lr_judge(addr, crf_entities, candidates)
 	else:
+		crf_entities = tagger.detect_entity(addr, words, labels)
 		ranked_list = llm_judge_4_testing(addr, crf_entities, candidates)
 		
 	if len(ranked_list) == 0:
