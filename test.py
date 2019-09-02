@@ -6,12 +6,16 @@ from stavia.fuzzy_matching import sagel
 from stavia.utils.utils import create_status
 from stavia.utils.parameters import *
 from stavia.crf import crf_based_standardization as cbs
+from stavia.crf import tagger
 import stavia
 
-graph = CandidateGraph.build_graph('quán phở hà nội ở võ thị sáu quảng nam')
+crf_entities = tagger.detect_entity('phường vân giang ninh bình ninh bình')
+print(crf_entities)
+
+graph = CandidateGraph.build_graph('phường vân giang ninh bình ninh bình')
 result = sagel.get_sagel_answer(graph)
 print(result)
 
-print(stavia.standardize('quán phở hà nội ở võ thị sáu quảng nam'))
+print(stavia.standardize('vinh lai phu tho'))
 
-print(cbs.standardize('quán phở hà nội ở võ thị sáu quảng nam'))
+print(cbs.standardize('vinh lai phu tho'))

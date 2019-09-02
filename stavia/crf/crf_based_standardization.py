@@ -55,6 +55,21 @@ def match_std_add(entities, rat_df):
 		std_add['city'] = res_df.iloc[0]['city']
 		return std_add
 
+def rematch(sug, rat_df):
+	res_df = rat_df.loc[(rat_df['id'] == sug['id'])]
+	_id = int(res_df.iloc[0]['id'])
+	std_add = {}
+	std_add['id'] = _id
+	if res_df.iloc[0]['street'] != 'None':
+		std_add['street'] = res_df.iloc[0]['street']
+	if res_df.iloc[0]['ward'] != 'None':
+		std_add['ward'] = res_df.iloc[0]['ward']
+	if res_df.iloc[0]['district'] != 'None':
+		std_add['district'] = res_df.iloc[0]['district']
+	if res_df.iloc[0]['city'] != 'None':
+		std_add['city'] = res_df.iloc[0]['city']
+	return std_add
+
 def standardize(addr):
 	useVietChar = utils.contains_Vietchar(addr)
 	ret = None
@@ -66,6 +81,8 @@ def standardize(addr):
 		ret = match_std_add(entities_dict, RAT_DF)
 	else:
 		ret = match_std_add(entities_dict, RAT_DF_NV)
+		if ret != None:
+			ret = rematch(ret,RAT_DF)
 	return ret
 
 
