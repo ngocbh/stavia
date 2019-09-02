@@ -56,7 +56,7 @@ def find_entities(std_add):
 def evaluate_final():
 	data = load_data(TEST_FINAL_FILE)
 	data = preprocess(data)
-	
+
 	print('DATASET_ID =',DATASET_ID)
 	print('MODEL_ID =',MODEL_ID)
 	true_sample = 0
@@ -101,7 +101,7 @@ def evaluate_final():
 				pscore[field] += 1
 			std_entities = find_entities(std_add)
 			for field in FIELDS: 
-				if field in std_entities:
+				if field in std_entities  and std_entities[field] != 'None':
 					truepos_example[field] += 1
 					relevant_examples[field] += 1
 					selected_examples[field] += 1
