@@ -1,0 +1,41 @@
+"1.1.2":
+	train trên model dữ liệu đã đc augment. 
+	llm
+	USE_LEXICAL_FEATURES=False
+	NUM_ITER=1200
+	LAMBDA_REG=0.00001
+	USE_RAT=True
+	BEAM_SIZE=8
+	FUZZINESS=1
+	QUERY_SIZE=3000
+	SLOP=0
+	MIN_NGRAMS=2
+	MAX_NGRAMS=4
+
+"1.3.2":
+	train trên dữ liệu ít, ko augment. train với 1000 sentences
+	llm
+	USE_LEXICAL_FEATURES=False
+	NUM_ITER=400
+	LAMBDA_REG=0.00005
+	USE_RAT=True
+	BEAM_SIZE=8
+	FUZZINESS=1
+	QUERY_SIZE=3000
+	SLOP=0
+	MIN_NGRAMS=2
+	MAX_NGRAMS=4
+
+"1.3.3":
+	train trên dữ liệu ít, ko augment. train với 1000 sentences
+	lr
+	USE_LEXICAL_FEATURES=False
+	NUM_ITER=400
+	LAMBDA_REG=0.00005
+	USE_RAT=True
+	BEAM_SIZE=8
+	FUZZINESS=1
+	QUERY_SIZE=3000
+	SLOP=0
+	MIN_NGRAMS=2
+	MAX_NGRAMS=4

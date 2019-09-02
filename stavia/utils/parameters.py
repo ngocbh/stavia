@@ -7,7 +7,7 @@ IS_BUILDING_STAGE=0
 VERBOSE=True
 METHOD='llm' #llm for log-linear model and lr for logistic regression
 DATASET_ID=3
-PARAMS_ID=2
+PARAMS_ID=4
 
 #TOSTR
 DATASET_ID=str(DATASET_ID)

@@ -17,6 +17,33 @@ TEST_FINAL_FILE='data/test_final{}_{}.json'.format('_small' if IS_BUILDING_STAGE
 
 # TEST_FINAL_FILE='data/test_final_small_1.json'
 
+def preprocess(raw_data):
+	ret_data = []
+	for raw_add, std_add in raw_data:
+		if len(std_add) == 0:
+			continue
+		elif len(std_add) == 1:
+			ret_data.append((raw_add, std_add))
+		else:
+			best_add_lv = -1
+			best_add = {}
+			best_id = -1
+			for _id, add in std_add.items():
+				add_lv = 0
+				for key, value in add.items():
+					if key in MAP_LEVEL and value != 'None':
+						add_lv = max(add_lv, MAP_LEVEL[key])
+
+				if add_lv > best_add_lv:
+					best_add_lv = add_lv
+					best_add = add
+					best_id = _id
+
+			if best_add_lv != -1:
+				new_std_add = {str(best_id): best_add}
+				ret_data.append((raw_add, new_std_add))
+	return ret_data
+
 def find_entities(std_add):
 	std_entities = {}
 	for _id, addr in std_add.items():
@@ -26,6 +53,8 @@ def find_entities(std_add):
 
 def evaluate_final():
 	data = load_data(TEST_FINAL_FILE)
+	data = preprocess(data)
+	
 	print('DATASET_ID =',DATASET_ID)
 	print('MODEL_ID =',MODEL_ID)
 	true_sample = 0
@@ -43,6 +72,12 @@ def evaluate_final():
 	sum_relevant = 0
 	sum_selected = 0
 
+	sum_precision = 0
+	sum_recall = 0
+	sum_f1score = 0
+
+	num_field = 0
+
 	average_precision = 0
 	average_recall = 0
 	average_f1score = 0
@@ -54,8 +89,9 @@ def evaluate_final():
 		result = stavia.cbs.standardize(raw_add)
 		if result != None and str(result['id']) in std_add:
 			true_sample += 1
+			std_entities = find_entities(std_add)
 			for field in FIELDS: 
-				if field in result:
+				if field in std_entities:
 					truepos_example[field] += 1
 					relevant_examples[field] += 1
 					selected_examples[field] += 1
@@ -98,9 +134,19 @@ def evaluate_final():
 		sum_selected += selected_examples[field]
 		sum_relevant += relevant_examples[field]
 
-	average_precision = sum_truepos/float(sum_selected)
-	average_recall = sum_truepos/float(sum_relevant)
-	average_f1score = 2*average_precision*average_recall/(average_precision + average_recall)
+		sum_precision += partial_precision[field]
+		sum_recall +=  partial_recall[field]
+		sum_f1score += partial_f1score[field]
+		num_field += 1
+
+	average_precision = sum_precision/float(num_field)
+	average_recall = sum_recall/float(num_field)
+	average_f1score = sum_f1score/float(num_field)
+
+
+	# average_precision = sum_truepos/float(sum_selected)
+	# average_recall = sum_truepos/float(sum_relevant)
+	# average_f1score = 2*average_precision*average_recall/(average_precision + average_recall)
 
 	print(str(true_sample) + ' ' + str(total_sample) + '\n')
 	print('accuracy = ' + str(true_sample/float(total_sample)) +' \n')

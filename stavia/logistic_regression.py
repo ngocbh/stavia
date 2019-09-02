@@ -225,8 +225,12 @@ def lr_judge(raw_add, entities, candidates):
 	for candidate in candidates:
 		X.append(extract_features(raw_add, entities, candidate))
 
+	if len(X) == 0:
+		return []
+		
 	if model == None:
 		model = pickle.load(open(MODEL_FINAL_FILE, 'rb'))
+	
 	y_preds = model.predict_proba(X)
 
 	ret = []
