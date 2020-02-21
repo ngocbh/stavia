@@ -1,3 +1,4 @@
+# -*- encoding: utf-8 -*-
 from stavia.fuzzy_matching import query_elasticsearch
 from stavia.fuzzy_matching.candidate_graph import CandidateGraph
 from stavia.fuzzy_matching.node import Node
@@ -9,6 +10,7 @@ from stavia.crf import crf_based_standardization as cbs
 from stavia.crf import tagger
 import stavia
 
+stavia.init_es.init_es()
 crf_entities = tagger.detect_entity('phường vân giang ninh bình ninh bình')
 print(crf_entities)
 
